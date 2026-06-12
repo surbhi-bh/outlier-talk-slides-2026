@@ -1,0 +1,3152 @@
+[
+  {
+    "rank": 1,
+    "movie": "Dil",
+    "year": 1990,
+    "movie_db_link": "https://www.themoviedb.org/movie/65683",
+    "img_link": "1_1990",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 2,
+    "movie": "Ghayal",
+    "year": 1990,
+    "movie_db_link": "https://www.themoviedb.org/movie/71308",
+    "img_link": "2_1990",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Aaj Ka Arjun",
+    "year": 1990,
+    "movie_db_link": "https://www.themoviedb.org/movie/307490-aaj-ka-arjun",
+    "img_link": "3_1990",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 4,
+    "movie": "Agneepath (1990)",
+    "year": 1990,
+    "movie_db_link": "https://www.themoviedb.org/movie/37403",
+    "img_link": "4_1990",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Kishen Kanhaiya",
+    "year": 1990,
+    "movie_db_link": "https://www.themoviedb.org/movie/125297",
+    "img_link": "5_1990",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 6,
+    "movie": "Thaanedaar",
+    "year": 1990,
+    "movie_db_link": "https://www.themoviedb.org/movie/230431",
+    "img_link": "6_1990",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Baaghi",
+    "year": 1990,
+    "movie_db_link": "https://www.themoviedb.org/movie/161392-baaghi-a-rebel-for-love",
+    "img_link": "7_1990",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Baap Numbri Beta Dus Numbri",
+    "year": 1990,
+    "movie_db_link": "https://www.themoviedb.org/movie/46372-baap-numbri-beta-dus-numbri",
+    "img_link": "8_1990",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Police Public",
+    "year": 1990,
+    "movie_db_link": "https://www.themoviedb.org/movie/305876-police-public",
+    "img_link": "9_1990",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Jeevan Ek Sungursh",
+    "year": 1990,
+    "movie_db_link": "https://www.themoviedb.org/movie/305251-jeevan-ek-sanghursh",
+    "img_link": "10_1990",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Saudagar",
+    "year": 1991,
+    "movie_db_link": "https://www.themoviedb.org/movie/166017",
+    "img_link": "1_1991",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 2,
+    "movie": "Hum",
+    "year": 1991,
+    "movie_db_link": "https://www.themoviedb.org/movie/65954-hum",
+    "img_link": "2_1991",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Saajan",
+    "year": 1991,
+    "movie_db_link": "https://www.themoviedb.org/movie/107745",
+    "img_link": "3_1991",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 4,
+    "movie": "Phool Aur Kaante",
+    "year": 1991,
+    "movie_db_link": "https://www.themoviedb.org/movie/230437",
+    "img_link": "4_1991",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Sadak",
+    "year": 1991,
+    "movie_db_link": "https://www.themoviedb.org/movie/230435",
+    "img_link": "5_1991",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 6,
+    "movie": "Sanam Bewafa",
+    "year": 1991,
+    "movie_db_link": "https://www.themoviedb.org/movie/161396",
+    "img_link": "6_1991",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Akayla",
+    "year": 1991,
+    "movie_db_link": "https://www.themoviedb.org/movie/380593-akayla",
+    "img_link": "7_1991",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Narsimha",
+    "year": 1991,
+    "movie_db_link": "https://www.themoviedb.org/movie/198343-narsimha",
+    "img_link": "8_1991",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Henna",
+    "year": 1991,
+    "movie_db_link": "https://www.themoviedb.org/movie/168495-henna",
+    "img_link": "9_1991",
+    "primary_genre": "Romance",
+    "nationalist": true
+  },
+  {
+    "rank": 10,
+    "movie": "Izzat",
+    "year": 1991,
+    "movie_db_link": "https://www.themoviedb.org/movie/619091-izzat",
+    "img_link": "10_1991",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Beta",
+    "year": 1992,
+    "movie_db_link": "https://www.themoviedb.org/movie/107747-beta",
+    "img_link": "1_1992",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 2,
+    "movie": "Deewana",
+    "year": 1992,
+    "movie_db_link": "https://www.themoviedb.org/movie/45001",
+    "img_link": "2_1992",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Khuda Gawah",
+    "year": 1992,
+    "movie_db_link": "https://www.themoviedb.org/movie/51725",
+    "img_link": "3_1992",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 4,
+    "movie": "Shola Aur Shabnam",
+    "year": 1992,
+    "movie_db_link": "https://www.themoviedb.org/movie/103015-shola-aur-shabnam",
+    "img_link": "4_1992",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Tahelka",
+    "year": 1992,
+    "movie_db_link": "https://www.themoviedb.org/movie/345988-tahalka",
+    "img_link": "5_1992",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 6,
+    "movie": "Vishwatma",
+    "year": 1992,
+    "movie_db_link": "https://www.themoviedb.org/movie/357131",
+    "img_link": "6_1992",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Jigar",
+    "year": 1992,
+    "movie_db_link": "https://www.themoviedb.org/movie/118809-jigar",
+    "img_link": "7_1992",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Bol Radha Bol",
+    "year": 1992,
+    "movie_db_link": "https://www.themoviedb.org/movie/168489",
+    "img_link": "8_1992",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Angaar",
+    "year": 1992,
+    "movie_db_link": "https://www.themoviedb.org/movie/89490-angaar",
+    "img_link": "9_1992",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Khiladi",
+    "year": 1992,
+    "movie_db_link": "https://www.themoviedb.org/movie/161436-khiladi",
+    "img_link": "10_1992",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Aankhen",
+    "year": 1993,
+    "movie_db_link": "https://www.themoviedb.org/movie/96147-aankhen",
+    "img_link": "1_1993",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 2,
+    "movie": "Khalnayak",
+    "year": 1993,
+    "movie_db_link": "https://www.themoviedb.org/movie/32295",
+    "img_link": "2_1993",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Darr",
+    "year": 1993,
+    "movie_db_link": "https://www.themoviedb.org/movie/35053",
+    "img_link": "3_1993",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 4,
+    "movie": "Baazigar",
+    "year": 1993,
+    "movie_db_link": "https://www.themoviedb.org/movie/19657",
+    "img_link": "4_1993",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Tirangaa",
+    "year": 1993,
+    "movie_db_link": "https://www.themoviedb.org/movie/272662",
+    "img_link": "5_1993",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 6,
+    "movie": "Damini",
+    "year": 1993,
+    "movie_db_link": "https://www.themoviedb.org/movie/138934-damini",
+    "img_link": "6_1993",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Dalal",
+    "year": 1993,
+    "movie_db_link": "https://www.themoviedb.org/movie/128631",
+    "img_link": "7_1993",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Anari",
+    "year": 1993,
+    "movie_db_link": "https://www.themoviedb.org/movie/401772-anari",
+    "img_link": "8_1993",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Gardish",
+    "year": 1993,
+    "movie_db_link": "https://www.themoviedb.org/movie/270916",
+    "img_link": "9_1993",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Lootere",
+    "year": 1993,
+    "movie_db_link": "https://www.themoviedb.org/movie/359865",
+    "img_link": "10_1993",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Hum Aapke Hain Koun..!",
+    "year": 1994,
+    "movie_db_link": "https://www.themoviedb.org/movie/46387",
+    "img_link": "1_1994",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 2,
+    "movie": "Mohra",
+    "year": 1994,
+    "movie_db_link": "https://www.themoviedb.org/movie/109028-mohra",
+    "img_link": "2_1994",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Krantiveer",
+    "year": 1994,
+    "movie_db_link": "https://www.themoviedb.org/movie/143980-krantiveer",
+    "img_link": "3_1994",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 4,
+    "movie": "Raja Babu",
+    "year": 1994,
+    "movie_db_link": "https://www.themoviedb.org/movie/211819-raja-babu",
+    "img_link": "4_1994",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Main Khiladi Tu Anari",
+    "year": 1994,
+    "movie_db_link": "https://www.themoviedb.org/movie/46403",
+    "img_link": "5_1994",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 6,
+    "movie": "Laadla",
+    "year": 1994,
+    "movie_db_link": "https://www.themoviedb.org/movie/197483-laadla",
+    "img_link": "6_1994",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Suhaag",
+    "year": 1994,
+    "movie_db_link": "https://www.themoviedb.org/movie/143881-suhaag",
+    "img_link": "7_1994",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "1942 - A Love Story",
+    "year": 1994,
+    "movie_db_link": "https://www.themoviedb.org/movie/33124",
+    "img_link": "8_1994",
+    "primary_genre": "Romance",
+    "nationalist": true
+  },
+  {
+    "rank": 9,
+    "movie": "Vijaypath",
+    "year": 1994,
+    "movie_db_link": "https://www.themoviedb.org/movie/138155-aatish",
+    "img_link": "9_1994",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Aatish",
+    "year": 1994,
+    "movie_db_link": "https://www.themoviedb.org/movie/138155-aatish",
+    "img_link": "10_1994",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Dilwale Dulhania Le Jayenge",
+    "year": 1995,
+    "movie_db_link": "https://www.themoviedb.org/movie/19404",
+    "img_link": "1_1995",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 2,
+    "movie": "Karan Arjun",
+    "year": 1995,
+    "movie_db_link": "https://www.themoviedb.org/movie/93519",
+    "img_link": "2_1995",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Raja",
+    "year": 1995,
+    "movie_db_link": "https://www.themoviedb.org/movie/205075",
+    "img_link": "3_1995",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 4,
+    "movie": "Rangeela",
+    "year": 1995,
+    "movie_db_link": "https://www.themoviedb.org/movie/21570",
+    "img_link": "4_1995",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Barsaat",
+    "year": 1995,
+    "movie_db_link": "https://www.themoviedb.org/movie/46375-barsaat",
+    "img_link": "5_1995",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 6,
+    "movie": "Coolie No. 1",
+    "year": 1995,
+    "movie_db_link": "https://www.themoviedb.org/movie/63345-coolie-no-1",
+    "img_link": "6_1995",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Sabse Bada Khiladi",
+    "year": 1995,
+    "movie_db_link": "https://www.themoviedb.org/movie/309593-sabse-bada-khiladi",
+    "img_link": "7_1995",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Ram Jaane",
+    "year": 1995,
+    "movie_db_link": "https://www.themoviedb.org/movie/160242",
+    "img_link": "8_1995",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Trimurti",
+    "year": 1995,
+    "movie_db_link": "https://www.themoviedb.org/movie/102358",
+    "img_link": "9_1995",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Gambler",
+    "year": 1995,
+    "movie_db_link": "https://www.themoviedb.org/movie/138896-gambler",
+    "img_link": "10_1995",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Raja Hindustani",
+    "year": 1996,
+    "movie_db_link": "https://www.themoviedb.org/movie/21566-raja-hindustani",
+    "img_link": "1_1996",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 2,
+    "movie": "Agni Sakshi",
+    "year": 1996,
+    "movie_db_link": "https://www.themoviedb.org/movie/66292-agni-sakshi",
+    "img_link": "2_1996",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Jeet",
+    "year": 1996,
+    "movie_db_link": "https://www.themoviedb.org/movie/141613",
+    "img_link": "3_1996",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 4,
+    "movie": "Ghatak",
+    "year": 1996,
+    "movie_db_link": "https://www.themoviedb.org/movie/118632-ghatak-lethal",
+    "img_link": "4_1996",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Khiladiyon Ka Khiladi",
+    "year": 1996,
+    "movie_db_link": "https://www.themoviedb.org/movie/230454-khiladiyon-ka-khiladi",
+    "img_link": "5_1996",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 6,
+    "movie": "Bandit Queen",
+    "year": 1996,
+    "movie_db_link": "https://www.themoviedb.org/movie/14785",
+    "img_link": "6_1996",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Saajan Chale Sasural",
+    "year": 1996,
+    "movie_db_link": "https://www.themoviedb.org/movie/166871-saajan-chale-sasural",
+    "img_link": "7_1996",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Jaan",
+    "year": 1996,
+    "movie_db_link": "https://www.themoviedb.org/movie/512570-jaan",
+    "img_link": "8_1996",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Ajay",
+    "year": 1996,
+    "movie_db_link": "https://www.themoviedb.org/movie/303105-ajay",
+    "img_link": "9_1996",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Diljale",
+    "year": 1996,
+    "movie_db_link": "https://www.themoviedb.org/movie/243595-diljale",
+    "img_link": "10_1996",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Border",
+    "year": 1997,
+    "movie_db_link": "https://www.themoviedb.org/movie/33125-border",
+    "img_link": "1_1997",
+    "primary_genre": "Drama/Serious",
+    "nationalist": true
+  },
+  {
+    "rank": 2,
+    "movie": "Dil To Pagal Hai",
+    "year": 1997,
+    "movie_db_link": "https://www.themoviedb.org/movie/13986",
+    "img_link": "2_1997",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Ishq",
+    "year": 1997,
+    "movie_db_link": "https://www.themoviedb.org/movie/29988-ishq",
+    "img_link": "3_1997",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 4,
+    "movie": "Pardes",
+    "year": 1997,
+    "movie_db_link": "https://www.themoviedb.org/movie/25519",
+    "img_link": "4_1997",
+    "primary_genre": "Romance",
+    "nationalist": true
+  },
+  {
+    "rank": 5,
+    "movie": "Ziddi",
+    "year": 1997,
+    "movie_db_link": "https://www.themoviedb.org/movie/143976",
+    "img_link": "5_1997",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 6,
+    "movie": "Gupt",
+    "year": 1997,
+    "movie_db_link": "https://www.themoviedb.org/movie/21906-gupt-the-hidden-truth",
+    "img_link": "6_1997",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Hero No. 1",
+    "year": 1997,
+    "movie_db_link": "https://www.themoviedb.org/movie/30613-hero-no-1",
+    "img_link": "7_1997",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Koyla",
+    "year": 1997,
+    "movie_db_link": "https://www.themoviedb.org/movie/160265",
+    "img_link": "8_1997",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Judaai",
+    "year": 1997,
+    "movie_db_link": "https://www.themoviedb.org/movie/108368",
+    "img_link": "9_1997",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Deewana Mastana",
+    "year": 1997,
+    "movie_db_link": "https://www.themoviedb.org/movie/142673",
+    "img_link": "10_1997",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Kuch Kuch Hota Hai",
+    "year": 1998,
+    "movie_db_link": "https://www.themoviedb.org/movie/11854",
+    "img_link": "1_1998",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 2,
+    "movie": "Pyaar To Hona Hi Tha",
+    "year": 1998,
+    "movie_db_link": "https://www.themoviedb.org/movie/60397",
+    "img_link": "2_1998",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Soldier",
+    "year": 1998,
+    "movie_db_link": "https://www.themoviedb.org/movie/9425-soldier",
+    "img_link": "3_1998",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 4,
+    "movie": "Bade Miyan Chote Miyan",
+    "year": 1998,
+    "movie_db_link": "https://www.themoviedb.org/movie/46373-bade-miyan-chote-miyan",
+    "img_link": "4_1998",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Pyaar Kiya To Darna Kya",
+    "year": 1998,
+    "movie_db_link": "https://www.themoviedb.org/movie/45533",
+    "img_link": "5_1998",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 6,
+    "movie": "Satya",
+    "year": 1998,
+    "movie_db_link": "https://www.themoviedb.org/movie/21502",
+    "img_link": "6_1998",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Ghulam",
+    "year": 1998,
+    "movie_db_link": "https://www.themoviedb.org/movie/51216",
+    "img_link": "7_1998",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Major Saab",
+    "year": 1998,
+    "movie_db_link": "https://www.themoviedb.org/movie/84321",
+    "img_link": "8_1998",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 9,
+    "movie": "China Gate",
+    "year": 1998,
+    "movie_db_link": "https://www.themoviedb.org/movie/103048-china-gate",
+    "img_link": "9_1998",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 10,
+    "movie": "Dulhe Raja",
+    "year": 1998,
+    "movie_db_link": "https://www.themoviedb.org/movie/54971",
+    "img_link": "10_1998",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Hum Saath Saath Hain",
+    "year": 1999,
+    "movie_db_link": "https://www.themoviedb.org/movie/62883",
+    "img_link": "1_1999",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 2,
+    "movie": "Biwi No.1",
+    "year": 1999,
+    "movie_db_link": "https://www.themoviedb.org/movie/161226-1",
+    "img_link": "2_1999",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Hum Dil De Chuke Sanam",
+    "year": 1999,
+    "movie_db_link": "https://www.themoviedb.org/movie/5319",
+    "img_link": "3_1999",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 4,
+    "movie": "Taal",
+    "year": 1999,
+    "movie_db_link": "https://www.themoviedb.org/movie/20929",
+    "img_link": "4_1999",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Sarfarosh",
+    "year": 1999,
+    "movie_db_link": "https://www.themoviedb.org/movie/31524",
+    "img_link": "5_1999",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 6,
+    "movie": "Hum Aapke Dil Mein Rehte Hain",
+    "year": 1999,
+    "movie_db_link": "https://www.themoviedb.org/movie/52860",
+    "img_link": "6_1999",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Mann",
+    "year": 1999,
+    "movie_db_link": "https://www.themoviedb.org/movie/159664",
+    "img_link": "7_1999",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Kachche Dhaage",
+    "year": 1999,
+    "movie_db_link": "https://www.themoviedb.org/movie/211275/cast",
+    "img_link": "8_1999",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Haseena Maan Jayegi",
+    "year": 1999,
+    "movie_db_link": "https://www.themoviedb.org/movie/30321-haseena-maan-jaayegi",
+    "img_link": "9_1999",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Baadshah",
+    "year": 1999,
+    "movie_db_link": "https://www.themoviedb.org/movie/41902",
+    "img_link": "10_1999",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Kaho Naa... Pyaar Hai",
+    "year": 2000,
+    "movie_db_link": "https://www.themoviedb.org/movie/16987",
+    "img_link": "1_2000",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 2,
+    "movie": "Mohabbatein",
+    "year": 2000,
+    "movie_db_link": "https://www.themoviedb.org/movie/11518",
+    "img_link": "2_2000",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Mission Kashmir",
+    "year": 2000,
+    "movie_db_link": "https://www.themoviedb.org/movie/46406",
+    "img_link": "3_2000",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 4,
+    "movie": "Dulhan Hum Le Jayenge",
+    "year": 2000,
+    "movie_db_link": "https://www.themoviedb.org/movie/161223",
+    "img_link": "4_2000",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Josh",
+    "year": 2000,
+    "movie_db_link": "https://www.themoviedb.org/movie/131940",
+    "img_link": "5_2000",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 6,
+    "movie": "Refugee",
+    "year": 2000,
+    "movie_db_link": "https://www.themoviedb.org/movie/166231-refugee",
+    "img_link": "6_2000",
+    "primary_genre": "Romance",
+    "nationalist": true
+  },
+  {
+    "rank": 7,
+    "movie": "Badal",
+    "year": 2000,
+    "movie_db_link": "https://www.themoviedb.org/movie/276846",
+    "img_link": "7_2000",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Har Dil Jo Pyar Karega",
+    "year": 2000,
+    "movie_db_link": "https://www.themoviedb.org/movie/157800",
+    "img_link": "8_2000",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Mela",
+    "year": 2000,
+    "movie_db_link": "https://www.themoviedb.org/movie/159666-mela",
+    "img_link": "9_2000",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Fiza",
+    "year": 2000,
+    "movie_db_link": "https://www.themoviedb.org/movie/56666",
+    "img_link": "10_2000",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Gadar - Ek Prem Katha",
+    "year": 2001,
+    "movie_db_link": "https://www.themoviedb.org/movie/80156",
+    "img_link": "1_2001",
+    "primary_genre": "Romance",
+    "nationalist": true
+  },
+  {
+    "rank": 2,
+    "movie": "Kabhi Khushi Kabhie Gham...",
+    "year": 2001,
+    "movie_db_link": "https://www.themoviedb.org/movie/10757",
+    "img_link": "2_2001",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Lagaan",
+    "year": 2001,
+    "movie_db_link": "https://www.themoviedb.org/movie/19666",
+    "img_link": "3_2001",
+    "primary_genre": "Drama/Serious",
+    "nationalist": true
+  },
+  {
+    "rank": 4,
+    "movie": "Indian",
+    "year": 2001,
+    "movie_db_link": "https://www.themoviedb.org/movie/82575-indian",
+    "img_link": "4_2001",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 5,
+    "movie": "Dil Chahta Hai",
+    "year": 2001,
+    "movie_db_link": "https://www.themoviedb.org/movie/14752",
+    "img_link": "5_2001",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 6,
+    "movie": "Jodi No.1",
+    "year": 2001,
+    "movie_db_link": "https://www.themoviedb.org/movie/46430-jodi-no-1",
+    "img_link": "6_2001",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Chori Chori Chupke Chupke",
+    "year": 2001,
+    "movie_db_link": "https://www.themoviedb.org/movie/107548",
+    "img_link": "7_2001",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Ek Rishtaa - The Bond of Love",
+    "year": 2001,
+    "movie_db_link": "https://www.themoviedb.org/movie/174059",
+    "img_link": "8_2001",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Mujhe Kucch Kehna Hai",
+    "year": 2001,
+    "movie_db_link": "https://www.themoviedb.org/movie/210068",
+    "img_link": "9_2001",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Ajnabee",
+    "year": 2001,
+    "movie_db_link": "https://www.themoviedb.org/movie/22316",
+    "img_link": "10_2001",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Devdas",
+    "year": 2002,
+    "movie_db_link": "https://www.themoviedb.org/movie/15917",
+    "img_link": "1_2002",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 2,
+    "movie": "Raaz",
+    "year": 2002,
+    "movie_db_link": "https://www.themoviedb.org/movie/20731",
+    "img_link": "2_2002",
+    "primary_genre": "Fantasy/Sci-Fi/Horror",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Kaante",
+    "year": 2002,
+    "movie_db_link": "https://www.themoviedb.org/movie/35907",
+    "img_link": "3_2002",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 4,
+    "movie": "Aankhen",
+    "year": 2002,
+    "movie_db_link": "https://www.themoviedb.org/movie/21982-aankhen",
+    "img_link": "4_2002",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Humraaz",
+    "year": 2002,
+    "movie_db_link": "https://www.themoviedb.org/movie/165404-humraaz",
+    "img_link": "5_2002",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 6,
+    "movie": "Awara Paagal Deewana",
+    "year": 2002,
+    "movie_db_link": "https://www.themoviedb.org/movie/115124",
+    "img_link": "6_2002",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Saathiya",
+    "year": 2002,
+    "movie_db_link": "https://www.themoviedb.org/movie/20656",
+    "img_link": "7_2002",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Company",
+    "year": 2002,
+    "movie_db_link": "https://www.themoviedb.org/movie/15761-company",
+    "img_link": "8_2002",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Maa Tujhhe Salaam",
+    "year": 2002,
+    "movie_db_link": "https://www.themoviedb.org/movie/321335-maa-tujhhe-salaam",
+    "img_link": "9_2002",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 10,
+    "movie": "Hum Tumhare Hain Sanam",
+    "year": 2002,
+    "movie_db_link": "https://www.themoviedb.org/movie/90634",
+    "img_link": "10_2002",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Koi... Mil Gaya",
+    "year": 2003,
+    "movie_db_link": "https://www.themoviedb.org/movie/25516",
+    "img_link": "1_2003",
+    "primary_genre": "Fantasy/Sci-Fi/Horror",
+    "nationalist": false
+  },
+  {
+    "rank": 2,
+    "movie": "Kal Ho Naa Ho",
+    "year": 2003,
+    "movie_db_link": "https://www.themoviedb.org/movie/4254",
+    "img_link": "2_2003",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "The Hero - Love Story of a Spy",
+    "year": 2003,
+    "movie_db_link": "https://www.themoviedb.org/movie/271677-the-hero-love-story-of-a-spy",
+    "img_link": "3_2003",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 4,
+    "movie": "Munnabhai M.B.B.S.",
+    "year": 2003,
+    "movie_db_link": "https://www.themoviedb.org/movie/19625",
+    "img_link": "4_2003",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Baghban",
+    "year": 2003,
+    "movie_db_link": "https://www.themoviedb.org/movie/39839",
+    "img_link": "5_2003",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 6,
+    "movie": "Chalte Chalte",
+    "year": 2003,
+    "movie_db_link": "https://www.themoviedb.org/movie/4252",
+    "img_link": "6_2003",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Main Prem Ki Diwani Hoon",
+    "year": 2003,
+    "movie_db_link": "https://www.themoviedb.org/movie/165402-main-prem-ki-diwani-hoon",
+    "img_link": "7_2003",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Qayamat",
+    "year": 2003,
+    "movie_db_link": "https://www.themoviedb.org/movie/318484",
+    "img_link": "8_2003",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 9,
+    "movie": "L.O.C Kargil",
+    "year": 2003,
+    "movie_db_link": "https://www.themoviedb.org/movie/71920-loc-kargil",
+    "img_link": "9_2003",
+    "primary_genre": "Drama/Serious",
+    "nationalist": true
+  },
+  {
+    "rank": 10,
+    "movie": "Andaaz",
+    "year": 2003,
+    "movie_db_link": "https://www.themoviedb.org/movie/54072",
+    "img_link": "10_2003",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Veer Zaara",
+    "year": 2004,
+    "movie_db_link": "https://www.themoviedb.org/movie/4251",
+    "img_link": "1_2004",
+    "primary_genre": "Romance",
+    "nationalist": true
+  },
+  {
+    "rank": 2,
+    "movie": "Main Hoon Na",
+    "year": 2004,
+    "movie_db_link": "https://www.themoviedb.org/movie/14134",
+    "img_link": "2_2004",
+    "primary_genre": "Romance",
+    "nationalist": true
+  },
+  {
+    "rank": 3,
+    "movie": "Dhoom",
+    "year": 2004,
+    "movie_db_link": "https://www.themoviedb.org/movie/17478",
+    "img_link": "3_2004",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 4,
+    "movie": "Mujhse Shaadi Karogi",
+    "year": 2004,
+    "movie_db_link": "https://www.themoviedb.org/movie/20495",
+    "img_link": "4_2004",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Khakee",
+    "year": 2004,
+    "movie_db_link": "https://www.themoviedb.org/tv/282394-khakee-the-bengal-chapter",
+    "img_link": "5_2004",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 6,
+    "movie": "Lakshya",
+    "year": 2004,
+    "movie_db_link": "https://www.themoviedb.org/movie/21175",
+    "img_link": "6_2004",
+    "primary_genre": "Drama/Serious",
+    "nationalist": true
+  },
+  {
+    "rank": 7,
+    "movie": "Hum Tum",
+    "year": 2004,
+    "movie_db_link": "https://www.themoviedb.org/movie/4253",
+    "img_link": "7_2004",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Masti",
+    "year": 2004,
+    "movie_db_link": "https://www.themoviedb.org/movie/76684",
+    "img_link": "8_2004",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Hulchul",
+    "year": 2004,
+    "movie_db_link": "https://www.themoviedb.org/movie/245690-hulchul",
+    "img_link": "9_2004",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Swades",
+    "year": 2004,
+    "movie_db_link": "https://www.themoviedb.org/movie/15774",
+    "img_link": "10_2004",
+    "primary_genre": "Drama/Serious",
+    "nationalist": true
+  },
+  {
+    "rank": 1,
+    "movie": "No Entry",
+    "year": 2005,
+    "movie_db_link": "https://www.themoviedb.org/movie/20390-no-entry",
+    "img_link": "1_2005",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 2,
+    "movie": "Bunty Aur Babli",
+    "year": 2005,
+    "movie_db_link": "https://www.themoviedb.org/movie/11763",
+    "img_link": "2_2005",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Garam Masala",
+    "year": 2005,
+    "movie_db_link": "https://www.themoviedb.org/movie/19636",
+    "img_link": "3_2005",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 4,
+    "movie": "Mangal Pandey - The Rising",
+    "year": 2005,
+    "movie_db_link": "https://www.themoviedb.org/movie/20496-mangal-pandey-the-rising",
+    "img_link": "4_2005",
+    "primary_genre": "Drama/Serious",
+    "nationalist": true
+  },
+  {
+    "rank": 5,
+    "movie": "Salaam Namaste",
+    "year": 2005,
+    "movie_db_link": "https://www.themoviedb.org/movie/15084-salaam-namaste",
+    "img_link": "5_2005",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 6,
+    "movie": "Maine Pyaar Kyun Kiya?",
+    "year": 2005,
+    "movie_db_link": "https://www.themoviedb.org/movie/39217",
+    "img_link": "6_2005",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Sarkar",
+    "year": 2005,
+    "movie_db_link": "https://www.themoviedb.org/movie/20968",
+    "img_link": "7_2005",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Dus",
+    "year": 2005,
+    "movie_db_link": "https://www.themoviedb.org/movie/58302-dus",
+    "img_link": "8_2005",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 9,
+    "movie": "Black",
+    "year": 2005,
+    "movie_db_link": "https://www.themoviedb.org/movie/31977-black",
+    "img_link": "9_2005",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Waqt - The Race Against Time",
+    "year": 2005,
+    "movie_db_link": "https://www.themoviedb.org/movie/31364",
+    "img_link": "10_2005",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Dhoom 2",
+    "year": 2006,
+    "movie_db_link": "https://www.themoviedb.org/movie/14194",
+    "img_link": "1_2006",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 2,
+    "movie": "Lage Raho Munnabhai",
+    "year": 2006,
+    "movie_db_link": "https://www.themoviedb.org/movie/21461",
+    "img_link": "2_2006",
+    "primary_genre": "Comedy",
+    "nationalist": true
+  },
+  {
+    "rank": 3,
+    "movie": "Krrish",
+    "year": 2006,
+    "movie_db_link": "https://www.themoviedb.org/movie/32740",
+    "img_link": "3_2006",
+    "primary_genre": "Fantasy/Sci-Fi/Horror",
+    "nationalist": false
+  },
+  {
+    "rank": 4,
+    "movie": "Rang De Basanti",
+    "year": 2006,
+    "movie_db_link": "https://www.themoviedb.org/movie/7913",
+    "img_link": "4_2006",
+    "primary_genre": "Drama/Serious",
+    "nationalist": true
+  },
+  {
+    "rank": 5,
+    "movie": "Fanaa",
+    "year": 2006,
+    "movie_db_link": "https://www.themoviedb.org/movie/8453",
+    "img_link": "5_2006",
+    "primary_genre": "Romance",
+    "nationalist": true
+  },
+  {
+    "rank": 6,
+    "movie": "Don - The Chase Begins Again",
+    "year": 2006,
+    "movie_db_link": "https://www.themoviedb.org/movie/17501",
+    "img_link": "6_2006",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Kabhi Alvida Na Kehna",
+    "year": 2006,
+    "movie_db_link": "https://www.themoviedb.org/movie/14395",
+    "img_link": "7_2006",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Phir Hera Pheri",
+    "year": 2006,
+    "movie_db_link": "https://www.themoviedb.org/movie/20359-phir-hera-pheri",
+    "img_link": "8_2006",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Bhagam Bhag",
+    "year": 2006,
+    "movie_db_link": "https://www.themoviedb.org/movie/41188-bhagam-bhag",
+    "img_link": "9_2006",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Vivah",
+    "year": 2006,
+    "movie_db_link": "https://www.themoviedb.org/movie/33142",
+    "img_link": "10_2006",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Om Shanti Om",
+    "year": 2007,
+    "movie_db_link": "https://www.themoviedb.org/movie/8079",
+    "img_link": "1_2007",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 2,
+    "movie": "Welcome",
+    "year": 2007,
+    "movie_db_link": "https://www.themoviedb.org/movie/20294-welcome",
+    "img_link": "2_2007",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Chak De! India",
+    "year": 2007,
+    "movie_db_link": "https://www.themoviedb.org/movie/14163",
+    "img_link": "3_2007",
+    "primary_genre": "Drama/Serious",
+    "nationalist": true
+  },
+  {
+    "rank": 4,
+    "movie": "Partner",
+    "year": 2007,
+    "movie_db_link": "https://www.themoviedb.org/movie/27298-partner",
+    "img_link": "4_2007",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Taare Zameen Par",
+    "year": 2007,
+    "movie_db_link": "https://www.themoviedb.org/movie/7508",
+    "img_link": "5_2007",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 6,
+    "movie": "Bhool Bhulaiyaa",
+    "year": 2007,
+    "movie_db_link": "https://www.themoviedb.org/movie/19025",
+    "img_link": "6_2007",
+    "primary_genre": "Fantasy/Sci-Fi/Horror",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Heyy Babyy",
+    "year": 2007,
+    "movie_db_link": "https://www.themoviedb.org/movie/4157",
+    "img_link": "7_2007",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Guru",
+    "year": 2007,
+    "movie_db_link": "https://www.themoviedb.org/movie/417009-guru",
+    "img_link": "8_2007",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Ta Ra Rum Pum",
+    "year": 2007,
+    "movie_db_link": "https://www.themoviedb.org/movie/14165-ta-ra-rum-pum",
+    "img_link": "9_2007",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Namastey London",
+    "year": 2007,
+    "movie_db_link": "https://www.themoviedb.org/movie/20360-namastey-london",
+    "img_link": "10_2007",
+    "primary_genre": "Romance",
+    "nationalist": true
+  },
+  {
+    "rank": 1,
+    "movie": "Ghajini",
+    "year": 2008,
+    "movie_db_link": "https://www.themoviedb.org/movie/14070",
+    "img_link": "1_2008",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 2,
+    "movie": "Rab Ne Bana Di Jodi",
+    "year": 2008,
+    "movie_db_link": "https://www.themoviedb.org/movie/14072",
+    "img_link": "2_2008",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Singh Is Kinng",
+    "year": 2008,
+    "movie_db_link": "https://www.themoviedb.org/movie/12273-singh-is-kinng/cast",
+    "img_link": "3_2008",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 4,
+    "movie": "Race",
+    "year": 2008,
+    "movie_db_link": "https://www.themoviedb.org/movie/19658-race",
+    "img_link": "4_2008",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Jodhaa Akbar",
+    "year": 2008,
+    "movie_db_link": "https://www.themoviedb.org/movie/14073",
+    "img_link": "5_2008",
+    "primary_genre": "Romance",
+    "nationalist": true
+  },
+  {
+    "rank": 6,
+    "movie": "Jaane Tu... Ya Jaane Na",
+    "year": 2008,
+    "movie_db_link": "https://www.themoviedb.org/movie/14467",
+    "img_link": "6_2008",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Golmaal Returns",
+    "year": 2008,
+    "movie_db_link": "https://www.themoviedb.org/movie/14546-golmaal-returns",
+    "img_link": "7_2008",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Dostana",
+    "year": 2008,
+    "movie_db_link": "https://www.themoviedb.org/movie/14071",
+    "img_link": "8_2008",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Bachna Ae Haseeno",
+    "year": 2008,
+    "movie_db_link": "https://www.themoviedb.org/movie/15864",
+    "img_link": "9_2008",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Sarkar Raj",
+    "year": 2008,
+    "movie_db_link": "https://www.themoviedb.org/movie/14394",
+    "img_link": "10_2008",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "3 Idiots",
+    "year": 2009,
+    "movie_db_link": "https://www.themoviedb.org/movie/20453-3-idiots",
+    "img_link": "1_2009",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 2,
+    "movie": "Love Aaj Kal",
+    "year": 2009,
+    "movie_db_link": "https://www.themoviedb.org/movie/19663",
+    "img_link": "2_2009",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Ajab Prem Ki Ghazab Kahani",
+    "year": 2009,
+    "movie_db_link": "https://www.themoviedb.org/movie/24827",
+    "img_link": "3_2009",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 4,
+    "movie": "Wanted",
+    "year": 2009,
+    "movie_db_link": "https://www.themoviedb.org/movie/22717",
+    "img_link": "4_2009",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "De Dana Dan",
+    "year": 2009,
+    "movie_db_link": "https://www.themoviedb.org/movie/25867-de-dana-dan",
+    "img_link": "5_2009",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 6,
+    "movie": "Kambakkht Ishq",
+    "year": 2009,
+    "movie_db_link": "https://www.themoviedb.org/movie/10788",
+    "img_link": "6_2009",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "New York",
+    "year": 2009,
+    "movie_db_link": "https://www.themoviedb.org/movie/19616-new-york",
+    "img_link": "7_2009",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Kaminey",
+    "year": 2009,
+    "movie_db_link": "https://www.themoviedb.org/movie/20688",
+    "img_link": "8_2009",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "All The Best - Fun Begins",
+    "year": 2009,
+    "movie_db_link": "https://www.themoviedb.org/movie/24603",
+    "img_link": "9_2009",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Blue",
+    "year": 2009,
+    "movie_db_link": "https://www.themoviedb.org/movie/24595-blue",
+    "img_link": "10_2009",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Dabangg",
+    "year": 2010,
+    "movie_db_link": "https://www.themoviedb.org/movie/44425",
+    "img_link": "1_2010",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 2,
+    "movie": "Golmaal 3",
+    "year": 2010,
+    "movie_db_link": "https://www.themoviedb.org/movie/44978-3",
+    "img_link": "2_2010",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Raajneeti",
+    "year": 2010,
+    "movie_db_link": "https://www.themoviedb.org/movie/37951-raajneeti",
+    "img_link": "3_2010",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 4,
+    "movie": "My Name Is Khan",
+    "year": 2010,
+    "movie_db_link": "https://www.themoviedb.org/movie/26022-my-name-is-khan",
+    "img_link": "4_2010",
+    "primary_genre": "Drama/Serious",
+    "nationalist": true
+  },
+  {
+    "rank": 5,
+    "movie": "Housefull",
+    "year": 2010,
+    "movie_db_link": "https://www.themoviedb.org/movie/58051",
+    "img_link": "5_2010",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 6,
+    "movie": "Tees Maar Khan",
+    "year": 2010,
+    "movie_db_link": "https://www.themoviedb.org/movie/46040",
+    "img_link": "6_2010",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Once Upon A Time In Mumbaai",
+    "year": 2010,
+    "movie_db_link": "https://www.themoviedb.org/movie/42966-once-upon-a-time-in-mumbaai",
+    "img_link": "7_2010",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Kites",
+    "year": 2010,
+    "movie_db_link": "https://www.themoviedb.org/movie/37737-kites",
+    "img_link": "8_2010",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "I Hate Luv Storys",
+    "year": 2010,
+    "movie_db_link": "https://www.themoviedb.org/movie/40777-i-hate-luv-storys",
+    "img_link": "9_2010",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Anjaana Anjaani",
+    "year": 2010,
+    "movie_db_link": "https://www.themoviedb.org/movie/44566-anjaana-anjaani",
+    "img_link": "10_2010",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Bodyguard",
+    "year": 2011,
+    "movie_db_link": "https://www.themoviedb.org/movie/73582-bodyguard",
+    "img_link": "1_2011",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 2,
+    "movie": "Ready",
+    "year": 2011,
+    "movie_db_link": "https://www.themoviedb.org/movie/65946-ready",
+    "img_link": "2_2011",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Ra.One",
+    "year": 2011,
+    "movie_db_link": "https://www.themoviedb.org/movie/41517-ra-one",
+    "img_link": "3_2011",
+    "primary_genre": "Fantasy/Sci-Fi/Horror",
+    "nationalist": false
+  },
+  {
+    "rank": 4,
+    "movie": "Don 2",
+    "year": 2011,
+    "movie_db_link": "https://www.themoviedb.org/movie/41109-don-2",
+    "img_link": "4_2011",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Singham",
+    "year": 2011,
+    "movie_db_link": "https://www.themoviedb.org/movie/70590-singham",
+    "img_link": "5_2011",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 6,
+    "movie": "Zindagi Na Milegi Dobara",
+    "year": 2011,
+    "movie_db_link": "https://www.themoviedb.org/movie/61202",
+    "img_link": "6_2011",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "The Dirty Picture",
+    "year": 2011,
+    "movie_db_link": "https://www.themoviedb.org/movie/81273-the-dirty-picture",
+    "img_link": "7_2011",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Rockstar",
+    "year": 2011,
+    "movie_db_link": "https://www.themoviedb.org/movie/79464-rockstar",
+    "img_link": "8_2011",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Mere Brother Ki Dulhan",
+    "year": 2011,
+    "movie_db_link": "https://www.themoviedb.org/movie/74458",
+    "img_link": "9_2011",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Yamla Pagla Deewana",
+    "year": 2011,
+    "movie_db_link": "https://www.themoviedb.org/movie/54639-yamla-pagla-deewana",
+    "img_link": "10_2011",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Ek Tha Tiger",
+    "year": 2012,
+    "movie_db_link": "https://www.themoviedb.org/movie/85985",
+    "img_link": "1_2012",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 2,
+    "movie": "Dabangg 2",
+    "year": 2012,
+    "movie_db_link": "https://www.themoviedb.org/movie/147405-2",
+    "img_link": "2_2012",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Rowdy Rathore",
+    "year": 2012,
+    "movie_db_link": "https://www.themoviedb.org/movie/102632-rowdy-rathore",
+    "img_link": "3_2012",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 4,
+    "movie": "Agneepath (2012)",
+    "year": 2012,
+    "movie_db_link": "https://www.themoviedb.org/movie/84858",
+    "img_link": "4_2012",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Housefull 2",
+    "year": 2012,
+    "movie_db_link": "https://www.themoviedb.org/movie/85052",
+    "img_link": "5_2012",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 6,
+    "movie": "Barfi!",
+    "year": 2012,
+    "movie_db_link": "https://www.themoviedb.org/movie/127501",
+    "img_link": "6_2012",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Jab Tak Hai Jaan",
+    "year": 2012,
+    "movie_db_link": "https://www.themoviedb.org/movie/132316",
+    "img_link": "7_2012",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Bol Bachchan",
+    "year": 2012,
+    "movie_db_link": "https://www.themoviedb.org/movie/112936-bol-bachchan",
+    "img_link": "8_2012",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Talaash: The Answer Lies Within",
+    "year": 2012,
+    "movie_db_link": "https://www.themoviedb.org/movie/86004",
+    "img_link": "9_2012",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Son Of Sardaar",
+    "year": 2012,
+    "movie_db_link": "https://www.themoviedb.org/movie/140896-son-of-sardaar",
+    "img_link": "10_2012",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Dhoom 3",
+    "year": 2013,
+    "movie_db_link": "https://www.themoviedb.org/movie/44977",
+    "img_link": "1_2013",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 2,
+    "movie": "Chennai Express",
+    "year": 2013,
+    "movie_db_link": "https://www.themoviedb.org/movie/205022-chennai-express",
+    "img_link": "2_2013",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Yeh Jawaani Hai Deewani",
+    "year": 2013,
+    "movie_db_link": "https://www.themoviedb.org/movie/185008",
+    "img_link": "3_2013",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 4,
+    "movie": "Krrish 3",
+    "year": 2013,
+    "movie_db_link": "https://www.themoviedb.org/movie/204435",
+    "img_link": "4_2013",
+    "primary_genre": "Fantasy/Sci-Fi/Horror",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Goliyon Ki Raasleela Ram - Leela",
+    "year": 2013,
+    "movie_db_link": "https://www.themoviedb.org/movie/235984",
+    "img_link": "5_2013",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 6,
+    "movie": "Bhaag Milkha Bhaag",
+    "year": 2013,
+    "movie_db_link": "https://www.themoviedb.org/movie/206324",
+    "img_link": "6_2013",
+    "primary_genre": "Drama/Serious",
+    "nationalist": true
+  },
+  {
+    "rank": 7,
+    "movie": "Race 2",
+    "year": 2013,
+    "movie_db_link": "https://www.themoviedb.org/movie/44749-2",
+    "img_link": "7_2013",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Grand Masti",
+    "year": 2013,
+    "movie_db_link": "https://www.themoviedb.org/movie/220714",
+    "img_link": "8_2013",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Aashiqui 2",
+    "year": 2013,
+    "movie_db_link": "https://www.themoviedb.org/movie/192558",
+    "img_link": "9_2013",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "R... Rajkumar",
+    "year": 2013,
+    "movie_db_link": "https://www.themoviedb.org/movie/240614",
+    "img_link": "10_2013",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "PK",
+    "year": 2014,
+    "movie_db_link": "https://www.themoviedb.org/movie/297222",
+    "img_link": "1_2014",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 2,
+    "movie": "Kick",
+    "year": 2014,
+    "movie_db_link": "https://www.themoviedb.org/movie/280690-kick",
+    "img_link": "2_2014",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Happy New Year",
+    "year": 2014,
+    "movie_db_link": "https://www.themoviedb.org/movie/277432-happy-new-year",
+    "img_link": "3_2014",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 4,
+    "movie": "Bang Bang!",
+    "year": 2014,
+    "movie_db_link": "https://www.themoviedb.org/movie/283589",
+    "img_link": "4_2014",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Singham Returns",
+    "year": 2014,
+    "movie_db_link": "https://www.themoviedb.org/movie/285803",
+    "img_link": "5_2014",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 6,
+    "movie": "Holiday - A Soldier Is Never Off Duty",
+    "year": 2014,
+    "movie_db_link": "https://www.themoviedb.org/movie/273886",
+    "img_link": "6_2014",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 7,
+    "movie": "Jai Ho",
+    "year": 2014,
+    "movie_db_link": "https://www.themoviedb.org/movie/244237",
+    "img_link": "7_2014",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "2 States",
+    "year": 2014,
+    "movie_db_link": "https://www.themoviedb.org/movie/259720",
+    "img_link": "8_2014",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Ek Villain",
+    "year": 2014,
+    "movie_db_link": "https://www.themoviedb.org/movie/276935",
+    "img_link": "9_2014",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Gunday",
+    "year": 2014,
+    "movie_db_link": "https://www.themoviedb.org/movie/250551",
+    "img_link": "10_2014",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Bajrangi Bhaijaan",
+    "year": 2015,
+    "movie_db_link": "https://www.themoviedb.org/movie/348892",
+    "img_link": "1_2015",
+    "primary_genre": "Drama/Serious",
+    "nationalist": true
+  },
+  {
+    "rank": 2,
+    "movie": "Prem Ratan Dhan Payo",
+    "year": 2015,
+    "movie_db_link": "https://www.themoviedb.org/movie/362136",
+    "img_link": "2_2015",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Bajirao Mastani",
+    "year": 2015,
+    "movie_db_link": "https://www.themoviedb.org/movie/362045",
+    "img_link": "3_2015",
+    "primary_genre": "Romance",
+    "nationalist": true
+  },
+  {
+    "rank": 4,
+    "movie": "Tanu Weds Manu Returns",
+    "year": 2015,
+    "movie_db_link": "https://www.themoviedb.org/movie/336211",
+    "img_link": "4_2015",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Dilwale",
+    "year": 2015,
+    "movie_db_link": "https://www.themoviedb.org/movie/370665",
+    "img_link": "5_2015",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 6,
+    "movie": "Bahubali - The Beginning",
+    "year": 2015,
+    "movie_db_link": "https://www.themoviedb.org/movie/256040",
+    "img_link": "6_2015",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 7,
+    "movie": "ABCD 2",
+    "year": 2015,
+    "movie_db_link": "https://www.themoviedb.org/movie/336790-2",
+    "img_link": "7_2015",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Welcome Back",
+    "year": 2015,
+    "movie_db_link": "https://www.themoviedb.org/movie/357563-welcome-back",
+    "img_link": "8_2015",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Gabbar Is Back",
+    "year": 2015,
+    "movie_db_link": "https://www.themoviedb.org/movie/337876-gabbar-is-back",
+    "img_link": "9_2015",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 10,
+    "movie": "Baby",
+    "year": 2015,
+    "movie_db_link": "https://www.themoviedb.org/movie/314389-baby",
+    "img_link": "10_2015",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 1,
+    "movie": "Dangal",
+    "year": 2016,
+    "movie_db_link": "https://www.themoviedb.org/movie/360814",
+    "img_link": "1_2016",
+    "primary_genre": "Drama/Serious",
+    "nationalist": true
+  },
+  {
+    "rank": 2,
+    "movie": "Sultan",
+    "year": 2016,
+    "movie_db_link": "https://www.themoviedb.org/movie/376812",
+    "img_link": "2_2016",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Rustom",
+    "year": 2016,
+    "movie_db_link": "https://www.themoviedb.org/movie/392572",
+    "img_link": "3_2016",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": true
+  },
+  {
+    "rank": 4,
+    "movie": "Airlift",
+    "year": 2016,
+    "movie_db_link": "https://www.themoviedb.org/movie/375290-airlift",
+    "img_link": "4_2016",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": true
+  },
+  {
+    "rank": 5,
+    "movie": "M.S. Dhoni - The Untold Story",
+    "year": 2016,
+    "movie_db_link": "https://www.themoviedb.org/movie/388333-m-s-dhoni-the-untold-story",
+    "img_link": "5_2016",
+    "primary_genre": "Drama/Serious",
+    "nationalist": true
+  },
+  {
+    "rank": 6,
+    "movie": "Housefull 3",
+    "year": 2016,
+    "movie_db_link": "https://www.themoviedb.org/movie/391779-3",
+    "img_link": "6_2016",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Ae Dil Hai Mushkil",
+    "year": 2016,
+    "movie_db_link": "https://www.themoviedb.org/movie/393445",
+    "img_link": "7_2016",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Shivaay",
+    "year": 2016,
+    "movie_db_link": "https://www.themoviedb.org/movie/370992",
+    "img_link": "8_2016",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Fan",
+    "year": 2016,
+    "movie_db_link": "https://www.themoviedb.org/movie/377985-fan",
+    "img_link": "9_2016",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Baaghi",
+    "year": 2016,
+    "movie_db_link": "https://www.themoviedb.org/movie/391629",
+    "img_link": "10_2016",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Bahubali 2 - The Conclusion",
+    "year": 2017,
+    "movie_db_link": "https://www.themoviedb.org/movie/350312-2",
+    "img_link": "1_2017",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 2,
+    "movie": "Tiger Zinda Hai",
+    "year": 2017,
+    "movie_db_link": "https://www.themoviedb.org/movie/441909",
+    "img_link": "2_2017",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 3,
+    "movie": "Golmaal Again",
+    "year": 2017,
+    "movie_db_link": "https://www.themoviedb.org/movie/472123",
+    "img_link": "3_2017",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 4,
+    "movie": "Judwaa 2",
+    "year": 2017,
+    "movie_db_link": "https://www.themoviedb.org/movie/456565-2",
+    "img_link": "4_2017",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Toilet Ek Prem Katha",
+    "year": 2017,
+    "movie_db_link": "https://www.themoviedb.org/movie/441875",
+    "img_link": "5_2017",
+    "primary_genre": "Comedy",
+    "nationalist": true
+  },
+  {
+    "rank": 6,
+    "movie": "Raees",
+    "year": 2017,
+    "movie_db_link": "https://www.themoviedb.org/movie/363343",
+    "img_link": "6_2017",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Tubelight",
+    "year": 2017,
+    "movie_db_link": "https://www.themoviedb.org/movie/441881-tubelight",
+    "img_link": "7_2017",
+    "primary_genre": "Drama/Serious",
+    "nationalist": true
+  },
+  {
+    "rank": 8,
+    "movie": "Badrinath Ki Dulhania",
+    "year": 2017,
+    "movie_db_link": "https://www.themoviedb.org/movie/413646-badrinath-ki-dulhania",
+    "img_link": "8_2017",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Jolly LLB 2",
+    "year": 2017,
+    "movie_db_link": "https://www.themoviedb.org/movie/412090-2",
+    "img_link": "9_2017",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Kaabil",
+    "year": 2017,
+    "movie_db_link": "https://www.themoviedb.org/movie/403867",
+    "img_link": "10_2017",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Sanju",
+    "year": 2018,
+    "movie_db_link": "https://www.themoviedb.org/movie/496328",
+    "img_link": "1_2018",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 2,
+    "movie": "Padmaavat",
+    "year": 2018,
+    "movie_db_link": "https://www.themoviedb.org/movie/432527",
+    "img_link": "2_2018",
+    "primary_genre": "Drama/Serious",
+    "nationalist": true
+  },
+  {
+    "rank": 3,
+    "movie": "Simmba",
+    "year": 2018,
+    "movie_db_link": "https://www.themoviedb.org/movie/496524",
+    "img_link": "3_2018",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 4,
+    "movie": "2",
+    "year": 2018,
+    "movie_db_link": "https://www.themoviedb.org/movie/373449-2-0",
+    "img_link": "4_2018",
+    "primary_genre": "Fantasy/Sci-Fi/Horror",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Race 3",
+    "year": 2018,
+    "movie_db_link": "https://www.themoviedb.org/movie/496320-race-3",
+    "img_link": "5_2018",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 6,
+    "movie": "Baaghi 2",
+    "year": 2018,
+    "movie_db_link": "https://www.themoviedb.org/movie/496316-2",
+    "img_link": "6_2018",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Thugs Of Hindostan",
+    "year": 2018,
+    "movie_db_link": "https://www.themoviedb.org/movie/472138-thugs-of-hindostan",
+    "img_link": "7_2018",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 8,
+    "movie": "Badhaai Ho",
+    "year": 2018,
+    "movie_db_link": "https://www.themoviedb.org/movie/547654",
+    "img_link": "8_2018",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Stree",
+    "year": 2018,
+    "movie_db_link": "https://www.themoviedb.org/movie/533991",
+    "img_link": "9_2018",
+    "primary_genre": "Fantasy/Sci-Fi/Horror",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Raazi",
+    "year": 2018,
+    "movie_db_link": "https://www.themoviedb.org/movie/491629",
+    "img_link": "10_2018",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": true
+  },
+  {
+    "rank": 1,
+    "movie": "War",
+    "year": 2019,
+    "movie_db_link": "https://www.themoviedb.org/movie/585268-war",
+    "img_link": "1_2019",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 2,
+    "movie": "Kabir Singh",
+    "year": 2019,
+    "movie_db_link": "https://www.themoviedb.org/movie/577328",
+    "img_link": "2_2019",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Uri: The Surgical Strike",
+    "year": 2019,
+    "movie_db_link": "https://www.themoviedb.org/movie/554600-uri-the-surgical-strike",
+    "img_link": "3_2019",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 4,
+    "movie": "Housefull 4",
+    "year": 2019,
+    "movie_db_link": "https://www.themoviedb.org/movie/611748-housefull-4",
+    "img_link": "4_2019",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Bharat",
+    "year": 2019,
+    "movie_db_link": "https://www.themoviedb.org/movie/569594",
+    "img_link": "5_2019",
+    "primary_genre": "Drama/Serious",
+    "nationalist": true
+  },
+  {
+    "rank": 6,
+    "movie": "Good Newwz",
+    "year": 2019,
+    "movie_db_link": "https://www.themoviedb.org/movie/643534",
+    "img_link": "6_2019",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Mission Mangal",
+    "year": 2019,
+    "movie_db_link": "https://www.themoviedb.org/movie/611594",
+    "img_link": "7_2019",
+    "primary_genre": "Drama/Serious",
+    "nationalist": true
+  },
+  {
+    "rank": 8,
+    "movie": "Kesari",
+    "year": 2019,
+    "movie_db_link": "https://www.themoviedb.org/movie/498448",
+    "img_link": "8_2019",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 9,
+    "movie": "Total Dhamaal",
+    "year": 2019,
+    "movie_db_link": "https://www.themoviedb.org/movie/576121",
+    "img_link": "9_2019",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Saaho",
+    "year": 2019,
+    "movie_db_link": "https://www.themoviedb.org/movie/454292",
+    "img_link": "10_2019",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Tanhaji - The Unsung Warrior",
+    "year": 2020,
+    "movie_db_link": "https://www.themoviedb.org/movie/584850",
+    "img_link": "1_2020",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 2,
+    "movie": "Baaghi 3",
+    "year": 2020,
+    "movie_db_link": "https://www.themoviedb.org/movie/594669",
+    "img_link": "2_2020",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "Street Dancer 3",
+    "year": 2020,
+    "movie_db_link": "https://www.themoviedb.org/movie/644712-street-dancer-3d",
+    "img_link": "3_2020",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 4,
+    "movie": "Shubh Mangal Zyada Saavdhan",
+    "year": 2020,
+    "movie_db_link": "https://www.themoviedb.org/movie/606535",
+    "img_link": "4_2020",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Malang",
+    "year": 2020,
+    "movie_db_link": "https://www.themoviedb.org/movie/661043",
+    "img_link": "5_2020",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 6,
+    "movie": "Love Aaj Kal",
+    "year": 2020,
+    "movie_db_link": "https://www.themoviedb.org/movie/590403",
+    "img_link": "6_2020",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Chhapaak",
+    "year": 2020,
+    "movie_db_link": "https://www.themoviedb.org/movie/590404",
+    "img_link": "7_2020",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Bhoot Part One - The Haunted Ship",
+    "year": 2020,
+    "movie_db_link": "https://www.themoviedb.org/movie/616880-bhoot-part-one-the-haunted-ship",
+    "img_link": "8_2020",
+    "primary_genre": "Fantasy/Sci-Fi/Horror",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Thappad",
+    "year": 2020,
+    "movie_db_link": "https://www.themoviedb.org/movie/668435",
+    "img_link": "9_2020",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Jawaani Jaaneman",
+    "year": 2020,
+    "movie_db_link": "https://www.themoviedb.org/movie/607297",
+    "img_link": "10_2020",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Sooryavanshi",
+    "year": 2021,
+    "movie_db_link": "https://www.themoviedb.org/movie/592508",
+    "img_link": "1_2021",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 2,
+    "movie": "Pushpa - The Rise",
+    "year": 2021,
+    "movie_db_link": "https://www.themoviedb.org/movie/690957-the-rise",
+    "img_link": "2_2021",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 3,
+    "movie": "83",
+    "year": 2021,
+    "movie_db_link": "https://www.themoviedb.org/movie/601337-83",
+    "img_link": "3_2021",
+    "primary_genre": "Drama/Serious",
+    "nationalist": true
+  },
+  {
+    "rank": 4,
+    "movie": "Antim - The Final Truth",
+    "year": 2021,
+    "movie_db_link": "https://www.themoviedb.org/movie/774607",
+    "img_link": "4_2021",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Bell Bottom",
+    "year": 2021,
+    "movie_db_link": "https://www.themoviedb.org/movie/721048-bell-bottom",
+    "img_link": "5_2021",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 6,
+    "movie": "Tadap",
+    "year": 2021,
+    "movie_db_link": "https://www.themoviedb.org/movie/669696",
+    "img_link": "6_2021",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Roohi",
+    "year": 2021,
+    "movie_db_link": "https://www.themoviedb.org/movie/694103",
+    "img_link": "7_2021",
+    "primary_genre": "Fantasy/Sci-Fi/Horror",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Chandigah Kare Aashiqui",
+    "year": 2021,
+    "movie_db_link": "https://www.themoviedb.org/movie/755836",
+    "img_link": "8_2021",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Mumbai Saga",
+    "year": 2021,
+    "movie_db_link": "https://www.themoviedb.org/movie/608746",
+    "img_link": "9_2021",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Satyameva Jayate 2",
+    "year": 2021,
+    "movie_db_link": "https://www.themoviedb.org/movie/695973-2",
+    "img_link": "10_2021",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 1,
+    "movie": "KGF Chapter 2",
+    "year": 2022,
+    "movie_db_link": "https://www.themoviedb.org/movie/587412-chapter-2",
+    "img_link": "1_2022",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 2,
+    "movie": "RRR",
+    "year": 2022,
+    "movie_db_link": "https://www.themoviedb.org/movie/579974",
+    "img_link": "2_2022",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 3,
+    "movie": "The Kashmir Files",
+    "year": 2022,
+    "movie_db_link": "https://www.themoviedb.org/movie/900783",
+    "img_link": "3_2022",
+    "primary_genre": "Drama/Serious",
+    "nationalist": true
+  },
+  {
+    "rank": 4,
+    "movie": "Drishyam 2",
+    "year": 2022,
+    "movie_db_link": "https://www.themoviedb.org/movie/1029827",
+    "img_link": "4_2022",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Brahmāstra: Part One – Shiva",
+    "year": 2022,
+    "movie_db_link": "https://www.themoviedb.org/movie/496331",
+    "img_link": "5_2022",
+    "primary_genre": "Fantasy/Sci-Fi/Horror",
+    "nationalist": true
+  },
+  {
+    "rank": 6,
+    "movie": "Bhool Bhulaiyaa 2",
+    "year": 2022,
+    "movie_db_link": "https://www.themoviedb.org/movie/695962-2",
+    "img_link": "6_2022",
+    "primary_genre": "Fantasy/Sci-Fi/Horror",
+    "nationalist": false
+  },
+  {
+    "rank": 7,
+    "movie": "Gangubai Kathiawadi",
+    "year": 2022,
+    "movie_db_link": "https://www.themoviedb.org/movie/664332",
+    "img_link": "7_2022",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Vikram Vedha",
+    "year": 2022,
+    "movie_db_link": "https://www.themoviedb.org/movie/851783",
+    "img_link": "8_2022",
+    "primary_genre": "Thriller/Crime",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Jugjugg Jeeyo",
+    "year": 2022,
+    "movie_db_link": "https://www.themoviedb.org/movie/765019",
+    "img_link": "9_2022",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Ram Setu",
+    "year": 2022,
+    "movie_db_link": "https://www.themoviedb.org/movie/764081",
+    "img_link": "10_2022",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 1,
+    "movie": "Jawan",
+    "year": 2023,
+    "movie_db_link": "https://www.themoviedb.org/movie/872906",
+    "img_link": "1_2023",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 2,
+    "movie": "Gadar 2 - The Katha Continues",
+    "year": 2023,
+    "movie_db_link": "https://www.themoviedb.org/movie/885331",
+    "img_link": "2_2023",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 3,
+    "movie": "Pathaan",
+    "year": 2023,
+    "movie_db_link": "https://www.themoviedb.org/movie/864692",
+    "img_link": "3_2023",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 4,
+    "movie": "Animal",
+    "year": 2023,
+    "movie_db_link": "https://www.themoviedb.org/movie/781732-animal",
+    "img_link": "4_2023",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Tiger 3",
+    "year": 2023,
+    "movie_db_link": "https://www.themoviedb.org/movie/720557-tiger-3",
+    "img_link": "5_2023",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 6,
+    "movie": "The Kerala Story",
+    "year": 2023,
+    "movie_db_link": "https://www.themoviedb.org/movie/1117411-the-kerala-story",
+    "img_link": "6_2023",
+    "primary_genre": "Drama/Serious",
+    "nationalist": true
+  },
+  {
+    "rank": 7,
+    "movie": "Dunki",
+    "year": 2023,
+    "movie_db_link": "https://www.themoviedb.org/movie/960876",
+    "img_link": "7_2023",
+    "primary_genre": "Drama/Serious",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Salaar",
+    "year": 2023,
+    "movie_db_link": "https://www.themoviedb.org/movie/770906-1",
+    "img_link": "8_2023",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 9,
+    "movie": "Rocky Aur Rani Ki Prem Kahaani",
+    "year": 2023,
+    "movie_db_link": "https://www.themoviedb.org/movie/848116",
+    "img_link": "9_2023",
+    "primary_genre": "Romance",
+    "nationalist": false
+  },
+  {
+    "rank": 10,
+    "movie": "Oh My God! 2",
+    "year": 2023,
+    "movie_db_link": "https://www.themoviedb.org/movie/888710",
+    "img_link": "10_2023",
+    "primary_genre": "Comedy",
+    "nationalist": false
+  },
+  {
+    "rank": 1,
+    "movie": "Pushpa - The Rule Part 2",
+    "year": 2024,
+    "movie_db_link": "https://www.themoviedb.org/movie/857598-2-the-rule",
+    "img_link": "1_2024",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 2,
+    "movie": "Kalki 2898 AD",
+    "year": 2024,
+    "movie_db_link": "https://www.themoviedb.org/movie/801688-2898",
+    "img_link": "2_2024",
+    "primary_genre": "Fantasy/Sci-Fi/Horror",
+    "nationalist": true
+  },
+  {
+    "rank": 3,
+    "movie": "Stree 2",
+    "year": 2024,
+    "movie_db_link": "https://www.themoviedb.org/movie/1112426-2",
+    "img_link": "3_2024",
+    "primary_genre": "Fantasy/Sci-Fi/Horror",
+    "nationalist": false
+  },
+  {
+    "rank": 4,
+    "movie": "The Greatest of All Time",
+    "year": 2024,
+    "movie_db_link": "https://www.themoviedb.org/movie/1129608",
+    "img_link": "4_2024",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 5,
+    "movie": "Bhool Bhulaiyaa 3",
+    "year": 2024,
+    "movie_db_link": "https://www.themoviedb.org/movie/980599-3",
+    "img_link": "5_2024",
+    "primary_genre": "Fantasy/Sci-Fi/Horror",
+    "nationalist": false
+  },
+  {
+    "rank": 6,
+    "movie": "Singham Again",
+    "year": 2024,
+    "movie_db_link": "https://www.themoviedb.org/movie/1014214",
+    "img_link": "6_2024",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 7,
+    "movie": "Devara - Part 1",
+    "year": 2024,
+    "movie_db_link": "https://www.themoviedb.org/movie/811941-devara-part-1",
+    "img_link": "7_2024",
+    "primary_genre": "Action/Adventure",
+    "nationalist": false
+  },
+  {
+    "rank": 8,
+    "movie": "Fighter",
+    "year": 2024,
+    "movie_db_link": "https://www.themoviedb.org/tv/286115-fighter",
+    "img_link": "8_2024",
+    "primary_genre": "Action/Adventure",
+    "nationalist": true
+  },
+  {
+    "rank": 9,
+    "movie": "Hanu Man",
+    "year": 2024,
+    "movie_db_link": "https://www.themoviedb.org/movie/869760",
+    "img_link": "9_2024",
+    "primary_genre": "Fantasy/Sci-Fi/Horror",
+    "nationalist": true
+  },
+  {
+    "rank": 10,
+    "movie": "Shaitaan",
+    "year": 2024,
+    "movie_db_link": "https://www.themoviedb.org/movie/1187619",
+    "img_link": "10_2024",
+    "primary_genre": "Fantasy/Sci-Fi/Horror",
+    "nationalist": false
+  }
+]
