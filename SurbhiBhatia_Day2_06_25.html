@@ -1240,40 +1240,6 @@
   }
 
   /* ====================================================================
-     SLIDE 06.7 — Way of Code: Lao Tzu / Rick Rubin quote + book cover
-     ==================================================================== */
-  .s-wayofcode { background: var(--bg); }
-  .s-wayofcode::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='60' viewBox='0 0 40 60'><g fill='none' stroke='%231a6b3a' stroke-width='0.6' stroke-dasharray='2 3' opacity='0.55'><path d='M0 0H40'/><path d='M0 0V60'/></g></svg>");
-    background-size: 40px 60px;
-    pointer-events: none;
-    z-index: 1;
-  }
-  .woc-layout {
-    position: absolute;
-    inset: 0;
-    padding: 48px 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    z-index: 3;
-  }
-  .woc-pic {
-    flex: 1 1 0;
-    min-width: 0;
-    max-width: 50%;
-    max-height: 88%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    display: block;
-  }
-
-  /* ====================================================================
      SLIDE 06 — Vibe-coding can feel capricious (spiral)
      ==================================================================== */
   .s-spiral {
@@ -1772,37 +1738,63 @@
     background: #e8c95a !important;
     color: var(--fg-deep) !important;
   }
-  /* Once the After-AI Visualisation has split, clear the parent's yellow
-     so faded sub-cells never reveal a competing background colour. */
-  .s-effort-simple:has(.viz-split-after-trigger.shown) .viz-split-mixed {
-    background: transparent !important;
-  }
+  /* The After-AI Visualisation parent stays yellow once it splits. The two
+     absolutely-positioned sub-cells cover the parent (dark-green AI on the
+     left, yellow only-human on the right), leaving only the 1.5px divider
+     gap where the parent shows through — which is what makes the divider
+     visible as a yellow hairline (or bg-colored draw line during animation),
+     matching the Before-AI divider's look. */
   /* When the split is active, the divider matches the underlying border. */
   .s-effort-simple .viz-split-mixed .viz-divider { background: var(--bg); }
   /* Once the After-AI Visualisation has split (its trigger fired), the
      parent is no longer purely only-human — its AI half should brighten
      during the AI highlight phase, and its yellow half should brighten
      during only-human/human+AI phases. Override the default phase fade
-     on the parent, then control fading on each sub-cell instead. */
-  .s-effort-simple:has(.viz-split-after-trigger.shown)[data-phase="2"] .effort-seg.shown.viz-split-mixed,
-  .s-effort-simple:has(.viz-split-after-trigger.shown)[data-phase="3"] .effort-seg.shown.viz-split-mixed,
-  .s-effort-simple:has(.viz-split-after-trigger.shown)[data-phase="4"] .effort-seg.shown.viz-split-mixed {
+     on the parent, then control fading on each sub-cell instead.
+     Apply this whether or not the after-trigger has fired, so the AI
+     sub-slice is visible during the AI highlight phase too. */
+  .s-effort-simple[data-phase="2"] .effort-seg.shown.viz-split-mixed,
+  .s-effort-simple[data-phase="3"] .effort-seg.shown.viz-split-mixed,
+  .s-effort-simple[data-phase="4"] .effort-seg.shown.viz-split-mixed {
+    opacity: 1 !important;
+    filter: none !important;
+  }
+  /* Force the After-AI Visualisation to reveal its split during the highlight
+     phases so the AI half is visible (otherwise only the tiny build chip is
+     lit during phase 4 and the AI presence on the bar reads as empty). */
+  .s-effort-simple[data-phase="2"] .viz-split-mixed .viz-merged-label,
+  .s-effort-simple[data-phase="3"] .viz-split-mixed .viz-merged-label,
+  .s-effort-simple[data-phase="4"] .viz-split-mixed .viz-merged-label {
+    opacity: 0;
+  }
+  .s-effort-simple[data-phase="2"] .viz-split-mixed .viz-sub,
+  .s-effort-simple[data-phase="3"] .viz-split-mixed .viz-sub,
+  .s-effort-simple[data-phase="4"] .viz-split-mixed .viz-sub {
     opacity: 1;
-    filter: none;
+  }
+  .s-effort-simple[data-phase="2"] .viz-split-mixed .viz-divider,
+  .s-effort-simple[data-phase="3"] .viz-split-mixed .viz-divider,
+  .s-effort-simple[data-phase="4"] .viz-split-mixed .viz-divider {
+    opacity: 1;
   }
   /* Fade rules per highlight phase on the After-AI split:
      - Phase 2 (only-human): keep yellow .viz-sub-b bright, fade green .viz-sub-ai.
      - Phase 3 (human+AI):   fade BOTH halves — neither belongs to human+AI.
-     - Phase 4 (AI):         keep green .viz-sub-ai bright, fade yellow .viz-sub-b. */
-  .s-effort-simple:has(.viz-split-after-trigger.shown)[data-phase="3"] .viz-split-mixed .viz-sub-b,
-  .s-effort-simple:has(.viz-split-after-trigger.shown)[data-phase="4"] .viz-split-mixed .viz-sub-b {
-    opacity: 0.22;
-    filter: grayscale(0.55);
+     - Phase 4 (AI):         keep green .viz-sub-ai bright, fade yellow .viz-sub-b.
+     Override the sub's background to a faded gray with !important so the
+     base !important background (from .viz-split-mixed .viz-sub-ai etc.) can't
+     win and let the dark-green / yellow read as still-highlighted. */
+  .s-effort-simple[data-phase="3"] .viz-split-mixed .viz-sub-b,
+  .s-effort-simple[data-phase="4"] .viz-split-mixed .viz-sub-b {
+    background: #d8d4c4 !important;
+    color: rgba(15, 68, 36, 0.45) !important;
+    opacity: 1;
   }
-  .s-effort-simple:has(.viz-split-after-trigger.shown)[data-phase="2"] .viz-split-mixed .viz-sub-ai,
-  .s-effort-simple:has(.viz-split-after-trigger.shown)[data-phase="3"] .viz-split-mixed .viz-sub-ai {
-    opacity: 0.22;
-    filter: grayscale(0.55);
+  .s-effort-simple[data-phase="2"] .viz-split-mixed .viz-sub-ai,
+  .s-effort-simple[data-phase="3"] .viz-split-mixed .viz-sub-ai {
+    background: #d8d4c4 !important;
+    color: rgba(15, 68, 36, 0.5) !important;
+    opacity: 1;
   }
   .s-effort-simple .viz-split-host .viz-divider {
     left: 33.333%;
@@ -5533,7 +5525,7 @@
     flex: 0 0 auto;
     width: 820px;
     max-width: 100%;
-    aspect-ratio: 800 / 540;
+    aspect-ratio: 960 / 590;
     /* No drop shadow — keep it flat. */
     filter: none;
   }
@@ -5590,6 +5582,25 @@
     font-size: 15px;
     fill: var(--fg-deep);
     letter-spacing: -0.1px;
+  }
+  .s-memorable .mm-marker .mm-lbl-host {
+    font-style: italic;
+    font-weight: 500;
+    fill: #5e8a64;
+    font-size: 13px;
+  }
+  .s-memorable .mm-marker .mm-lbl-quote {
+    font-style: italic;
+    font-weight: 400;
+    fill: #5e8a64;
+    font-size: 11px;
+    opacity: 0.85;
+  }
+  .s-memorable .mm-marker .mm-lbl-hosthuman {
+    font-style: italic;
+    font-weight: 600;
+    fill: var(--accent-pink);
+    font-size: 14px;
   }
 
   /* Konti members cluster on the right — three avatars arranged in a
@@ -6547,37 +6558,35 @@
     color: var(--fg-deep);
     opacity: 0.7;
   }
-  /* New layout: 5 questions in a left column, spiral image on the right. */
   .s-watch .wo-layout {
     position: absolute;
-    top: 150px;
-    left: 60px;
-    right: 60px;
-    bottom: 50px;
+    top: 200px;
+    left: 80px;
+    right: 80px;
+    bottom: 60px;
     z-index: 3;
     display: flex;
     flex-direction: row;
     gap: 40px;
-    align-items: center;
+    align-items: flex-start;
   }
   .s-watch .wo-list {
     flex: 1 1 0;
-    list-style: none;
+    max-width: 620px;
     margin: 0;
+    list-style: none;
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 36px;
     font-family: 'New Spirit', serif;
     color: var(--fg-deep);
+    text-align: left;
   }
   .s-watch .wo-list li {
-    display: grid;
-    grid-template-columns: 40px 1fr;
-    gap: 14px;
+    display: flex;
     align-items: baseline;
-    padding-bottom: 12px;
-    border-bottom: 1px dashed rgba(15, 68, 36, 0.3);
+    gap: 18px;
     opacity: 0;
     transform: translateY(6px);
     transition: opacity 0.4s ease, transform 0.4s ease;
@@ -6586,28 +6595,41 @@
     opacity: 1;
     transform: translateY(0);
   }
-  .s-watch .wo-list li:last-child { border-bottom: 1px dashed rgba(15, 68, 36, 0.3); }
   .s-watch .wo-num {
-    font-size: 22px;
+    flex: 0 0 auto;
+    font-family: 'New Spirit', serif;
+    font-size: 12px;
     font-weight: 500;
+    line-height: 1;
     color: var(--accent-pink);
-    letter-spacing: 0.04em;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    min-width: 28px;
   }
   .s-watch .wo-title {
+    flex: 1 1 auto;
+    font-family: 'New Spirit', serif;
     font-size: 24px;
     font-weight: 500;
     line-height: 1.25;
     letter-spacing: -0.3px;
-    margin-bottom: 6px;
-  }
-  .s-watch .wo-title em { font-style: italic; color: var(--fg-deep); font-weight: 500; }
-  .s-watch .wo-sub {
-    font-size: 17px;
-    line-height: 1.35;
     color: var(--fg-deep);
-    opacity: 0.85;
   }
-  .s-watch .wo-sub .pink { color: var(--accent-pink); font-weight: 500; opacity: 1; }
+  .s-watch .wo-title em {
+    font-style: italic;
+    color: var(--accent-pink);
+    font-weight: 500;
+  }
+  .s-watch .wo-spiral {
+    flex: 0 0 46%;
+    max-width: 46%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin-top: -60px;
+  }
   .s-watch .wo-spiral {
     flex: 0 0 46%;
     max-width: 46%;
@@ -6627,7 +6649,7 @@
     top: 0;
     bottom: 0;
     left: 80px;
-    right: 80px;
+    right: 48%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -6635,6 +6657,54 @@
     gap: 36px;
     text-align: left;
   }
+  .s-thanks .th-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 54%;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 18px;
+    text-align: left;
+    font-family: 'New Spirit', serif;
+    color: var(--fg-deep);
+  }
+  .s-thanks .th-quote {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.5;
+    letter-spacing: -0.2px;
+    color: var(--fg-deep);
+  }
+  .s-thanks .th-quote .pink { color: var(--accent-pink); font-style: italic; }
+  .s-thanks .th-quote .th-qline { padding-left: 0; }
+  .s-thanks .th-quote .th-qline:nth-child(2) { padding-left: 24px; }
+  .s-thanks .th-quote .th-qline:nth-child(3) { padding-left: 48px; }
+  .s-thanks .th-quote .th-qline:nth-child(4) { padding-left: 72px; }
+  .s-thanks .th-quote .th-qline:nth-child(5) { padding-left: 96px; }
+  .s-thanks .th-attrib {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    color: var(--fg-deep);
+    opacity: 0.8;
+  }
+  .s-thanks .th-attrib > div:nth-child(1) { padding-left: 160px; }
+  .s-thanks .th-attrib > div:nth-child(2) { padding-left: 184px; }
+  .s-thanks .th-attrib > div:nth-child(3) { padding-left: 184px; }
+  .s-thanks .th-attrib em {
+    font-style: italic;
+    color: var(--accent-pink);
+    font-weight: 500;
+    opacity: 1;
+  }
+  .s-thanks .th-attrib .th-nowrap { white-space: nowrap; }
   /* "Thank you." + "Prompt responsibly." sit tightly together. */
   .s-thanks .th-headline {
     font-family: 'New Spirit', serif;
@@ -7577,14 +7647,6 @@
   </section>
 
 
-  <!-- ============ SLIDE 06.7 — Way of Code: Rick Rubin spreads ============ -->
-  <section class="slide s-wayofcode" id="slideWayOfCode">
-    <div class="woc-layout">
-      <img class="woc-pic" src="assets/rick-rubin.png" alt="The Way of Code — The Timeless Art of Vibe Coding" />
-      <img class="woc-pic" src="assets/rick-rubin-2.png" alt="The Way of Code — verse 47" />
-    </div>
-  </section>
-
   <!-- ============ SLIDE 07 — Vibe-coding is a self-contradictory term ============ -->
   <section class="slide s-spiral" id="slideSpiral">
     <div class="spiral-row spiral-row-flows-only">
@@ -7798,16 +7860,17 @@
             <span class="viz-divider" aria-hidden="true"></span>
           </div>
           <div class="effort-seg w-human          ef-item"           data-step="10" style="--w:30" title="Iterate">ITERATE</div>
-          <div class="effort-seg w-ai             ef-item"           data-step="11" style="--w:6"  title="Host">host</div>
+          <div class="effort-seg w-ai             ef-item"           data-step="11" style="--w:6"  title="Build">build</div>
+          <div class="effort-seg w-only-human     ef-item"           data-step="12" style="--w:5"  title="Host">host</div>
           <!-- Visualisation focus sequence:
-               Step 12: fade everything except both Visualisation segments.
-               Step 13: split the Before AI Visualisation.
-               Step 14: split the After AI Visualisation.
-               Step 15: bring everything back from the fade. -->
-          <span class="ef-item viz-focus-trigger"                              data-step="12" aria-hidden="true"></span>
-          <span class="ef-item viz-focus-trigger viz-split-before-trigger"     data-step="13" aria-hidden="true"></span>
-          <span class="ef-item viz-focus-trigger viz-split-after-trigger"      data-step="14" aria-hidden="true"></span>
-          <span class="ef-item viz-unfocus-trigger"                            data-step="15" aria-hidden="true"></span>
+               Step 13: fade everything except both Visualisation segments.
+               Step 14: split the Before AI Visualisation.
+               Step 15: split the After AI Visualisation.
+               Step 16: bring everything back from the fade. -->
+          <span class="ef-item viz-focus-trigger"                              data-step="13" aria-hidden="true"></span>
+          <span class="ef-item viz-focus-trigger viz-split-before-trigger"     data-step="14" aria-hidden="true"></span>
+          <span class="ef-item viz-focus-trigger viz-split-after-trigger"      data-step="15" aria-hidden="true"></span>
+          <span class="ef-item viz-unfocus-trigger"                            data-step="16" aria-hidden="true"></span>
           <!-- One-afternoon calendar below the After AI bar — sits over the
                Research, data & analysis segment and reveals at step 6 (when
                Research, data & analysis comes in), not at PROMPT (step 5). -->
@@ -8172,7 +8235,7 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
       <div class="mm-donut-col">
         <div class="mm-donut-wrap">
           <div class="mm-donut">
-            <svg viewBox="-220 -60 800 540">
+            <svg viewBox="-250 -60 960 590">
               <title>How 432 prompts broke down</title>
               <!-- Background ring — transparent so the deck background shows through. -->
               <circle cx="200" cy="200" r="140" fill="none" stroke="rgba(15, 68, 36, 0.06)" stroke-width="60"/>
@@ -8180,70 +8243,85 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
                    Greens go dark → light → pink (highlight) following the user's
                    colour spec. -->
               <g transform="rotate(-90 200 200)" fill="none" stroke-width="60">
-                <!-- 5% Scraping & data cleaning — first arc, shown by default. Lightest. -->
-                <circle class="mm-slice mm-slice-green shown" data-step="1" cx="200" cy="200" r="140" stroke="#9ab69e"
-                        stroke-dasharray="43.982 835.664" stroke-dashoffset="0"/>
-                <!-- 28% Tagging & classification — DARKEST green (largest value). -->
+                <!-- 16% Data cleaning, tagging & classification — mid-dark green. -->
+                <circle class="mm-slice mm-slice-green shown" data-step="1" cx="200" cy="200" r="140" stroke="#5e8a64"
+                        stroke-dasharray="140.743 738.903" stroke-dashoffset="0"/>
+                <!-- 29% Chart & visual experiments — DARKEST green (largest non-highlight value). -->
                 <circle class="mm-slice mm-slice-green" data-step="2" cx="200" cy="200" r="140" stroke="#3a6b48"
-                        stroke-dasharray="246.301 633.345" stroke-dashoffset="-43.982"/>
-                <!-- 22% Chart & visual experiments — medium-dark green. -->
-                <circle class="mm-slice mm-slice-green" data-step="3" cx="200" cy="200" r="140" stroke="#5e8a64"
-                        stroke-dasharray="193.522 686.124" stroke-dashoffset="-290.283"/>
-                <!-- 5% Debugging — lightest (same value as Scraping). -->
+                        stroke-dasharray="255.097 624.549" stroke-dashoffset="-140.743"/>
+                <!-- 11% Fighting with AI — mid-light green. -->
+                <circle class="mm-slice mm-slice-green" data-step="3" cx="200" cy="200" r="140" stroke="#7ca27f"
+                        stroke-dasharray="96.761 782.885" stroke-dashoffset="-395.840"/>
+                <!-- 8% Debugging what broke — light green. -->
                 <circle class="mm-slice mm-slice-green" data-step="4" cx="200" cy="200" r="140" stroke="#9ab69e"
-                        stroke-dasharray="43.982 835.664" stroke-dashoffset="-483.805"/>
-                <!-- 40% Visual design, UX & polish — highlighted in pink. -->
-                <circle class="mm-slice slice-highlight" data-step="5" cx="200" cy="200" r="140" stroke="#d0116f"
-                        stroke-dasharray="351.858 527.788" stroke-dashoffset="-527.787"/>
+                        stroke-dasharray="70.372 809.274" stroke-dashoffset="-492.601"/>
+                <!-- 3% Copy edits — lightest green. -->
+                <circle class="mm-slice mm-slice-green" data-step="5" cx="200" cy="200" r="140" stroke="#b8cdb9"
+                        stroke-dasharray="26.389 853.257" stroke-dashoffset="-562.973"/>
+                <!-- 33% Visual design & user experience — highlighted in pink. -->
+                <circle class="mm-slice slice-highlight" data-step="6" cx="200" cy="200" r="140" stroke="#d0116f"
+                        stroke-dasharray="290.283 589.363" stroke-dashoffset="-589.362"/>
               </g>
 
               <!-- Outside markers: L-shaped polyline + percentage + wrapped label. -->
 
-              <!-- 5% Scraping (mid 9°, top-right) — shown by default. -->
+              <!-- 16% Data cleaning, tagging & classification (mid 28.8°, top-right) — shown by default. -->
               <g class="mm-marker mm-marker-green shown" data-step="1">
-                <polyline points="227,32 240,-10 380,-10" fill="none" stroke="#9ab69e"/>
-                <text x="388" y="-18" text-anchor="start" class="mm-pct" fill="#5e8a64">5%</text>
-                <text x="388" y="2"   text-anchor="start" class="mm-lbl">
-                  <tspan x="388" dy="0">Scraping &amp;</tspan>
-                  <tspan x="388" dy="18">data cleaning</tspan>
+                <polyline points="281.8,51 320,10 470,10" fill="none" stroke="#5e8a64"/>
+                <text x="478" y="2" text-anchor="start" class="mm-pct" fill="#5e8a64">16%</text>
+                <text x="478" y="24" text-anchor="start" class="mm-lbl">
+                  <tspan x="478" dy="0">Data cleaning,</tspan>
+                  <tspan x="478" dy="18">tagging &amp; classification</tspan>
                 </text>
               </g>
 
-              <!-- 28% Tagging (mid 68.4°, right) -->
+              <!-- 29% Chart & visual experiments (mid 109.8°, right) -->
               <g class="mm-marker mm-marker-green" data-step="2">
-                <polyline points="358,137 420,137 470,137" fill="none" stroke="#3a6b48"/>
-                <text x="478" y="130" text-anchor="start" class="mm-pct" fill="#3a6b48">28%</text>
-                <text x="478" y="152" text-anchor="start" class="mm-lbl">
-                  <tspan x="478" dy="0">Tagging &amp;</tspan>
-                  <tspan x="478" dy="18">classification</tspan>
+                <polyline points="359.9,257.6 420,247 470,247" fill="none" stroke="#3a6b48"/>
+                <text x="478" y="240" text-anchor="start" class="mm-pct" fill="#3a6b48">29%</text>
+                <text x="478" y="262" text-anchor="start" class="mm-lbl">
+                  <tspan x="478" dy="0">Chart &amp; visual</tspan>
+                  <tspan x="478" dy="18">experiments</tspan>
                 </text>
               </g>
 
-              <!-- 22% Charts (mid 158.4°, bottom-right) -->
+              <!-- 11% Fighting with AI (mid 181.8°, bottom) -->
               <g class="mm-marker mm-marker-green" data-step="3">
-                <polyline points="262,358 262,420 380,420" fill="none" stroke="#5e8a64"/>
-                <text x="388" y="412" text-anchor="start" class="mm-pct" fill="#5e8a64">22%</text>
-                <text x="388" y="434" text-anchor="start" class="mm-lbl">
-                  <tspan x="388" dy="0">Chart &amp; visual</tspan>
-                  <tspan x="388" dy="18">experiments</tspan>
+                <polyline points="194.7,369.9 196,415 320,415" fill="none" stroke="#7ca27f"/>
+                <text x="328" y="408" text-anchor="start" class="mm-pct" fill="#5e8a64">11%</text>
+                <text x="328" y="430" text-anchor="start" class="mm-lbl">Fighting with AI</text>
+                <text x="328" y="452" text-anchor="start" class="mm-lbl mm-lbl-quote">
+                  <tspan x="328" dy="0">&ldquo;The labels are overlapping,</tspan>
+                  <tspan x="328" dy="13">moving title broke y axis labels,</tspan>
+                  <tspan x="328" dy="13">put it back.&rdquo;</tspan>
                 </text>
               </g>
 
-              <!-- 5% Debugging (mid 207°, bottom-left) -->
+              <!-- 8% Debugging what broke (mid 216°, bottom-left) -->
               <g class="mm-marker mm-marker-green" data-step="4">
-                <polyline points="123,352 123,420 40,420" fill="none" stroke="#9ab69e"/>
-                <text x="32" y="412" text-anchor="end" class="mm-pct" fill="#5e8a64">5%</text>
-                <text x="32" y="434" text-anchor="end" class="mm-lbl">Debugging</text>
+                <polyline points="100.1,337.5 90,395 40,395" fill="none" stroke="#9ab69e"/>
+                <text x="32" y="388" text-anchor="end" class="mm-pct" fill="#5e8a64">8%</text>
+                <text x="32" y="410" text-anchor="end" class="mm-lbl">
+                  <tspan x="32" dy="0">Debugging</tspan>
+                  <tspan x="32" dy="18">what broke</tspan>
+                </text>
               </g>
 
-              <!-- 40% Visual design (mid 288°, left, highlighted pink) -->
-              <g class="mm-marker mm-marker-highlight" data-step="5">
-                <polyline points="38,148 -40,148 -90,148" fill="none" stroke="#d0116f"/>
-                <text x="-98" y="138" text-anchor="end" class="mm-pct" fill="#d0116f">40%</text>
-                <text x="-98" y="166" text-anchor="end" class="mm-lbl mm-lbl-pink">
-                  <tspan x="-98" dy="0">Visual design,</tspan>
-                  <tspan x="-98" dy="20">user experience</tspan>
-                  <tspan x="-98" dy="20">&amp; polish</tspan>
+              <!-- 3% Copy edits (mid 235.8°, left) -->
+              <g class="mm-marker mm-marker-green" data-step="5">
+                <polyline points="59.4,295.6 0,275 -48,275" fill="none" stroke="#b8cdb9"/>
+                <text x="-56" y="268" text-anchor="end" class="mm-pct" fill="#5e8a64">3%</text>
+                <text x="-56" y="290" text-anchor="end" class="mm-lbl">Copy edits</text>
+              </g>
+
+              <!-- 33% Visual design & user experience (mid 300.6°, top-left, highlighted pink) -->
+              <g class="mm-marker mm-marker-highlight" data-step="6">
+                <polyline points="53.6,113.6 0,90 -90,90" fill="none" stroke="#d0116f"/>
+                <text x="-98" y="80" text-anchor="end" class="mm-pct" fill="#d0116f">33%</text>
+                <text x="-98" y="108" text-anchor="end" class="mm-lbl mm-lbl-pink">
+                  <tspan x="-98" dy="0">Visual design</tspan>
+                  <tspan x="-98" dy="20">&amp; user</tspan>
+                  <tspan x="-98" dy="20">experience</tspan>
                 </text>
               </g>
 
@@ -8258,7 +8336,7 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
       </div>
 
       <!-- Konti members — single column (vertical line) of three avatars. -->
-      <div class="mm-members" data-step="6">
+      <div class="mm-members" data-step="7">
         <div class="mm-member">
           <img src="assets/konti-member-gg.png" alt="Griselda" />
           <div class="mm-member-name">Griselda <span class="role">Design</span></div>
@@ -8319,38 +8397,23 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
       <ul class="wo-list">
         <li class="reveal-item" data-step="1">
           <span class="wo-num">01</span>
-          <div>
-            <div class="wo-title">Am I building <em>before thinking?</em></div>
-            <div class="wo-sub"><span class="pink">Proactively prompting but reactively choosing.</span></div>
-          </div>
+          <div class="wo-title">Exhaustion of <em>prompt → check → repeat.</em></div>
         </li>
         <li class="reveal-item" data-step="2">
           <span class="wo-num">02</span>
-          <div>
-            <div class="wo-title">Am I losing skills and <em>technical understanding?</em></div>
-            <div class="wo-sub"><span class="pink">Skill &amp; comprehension debt.</span></div>
-          </div>
+          <div class="wo-title">The <em>more I make,</em> the <em>less I understand.</em></div>
         </li>
         <li class="reveal-item" data-step="3">
           <span class="wo-num">03</span>
-          <div>
-            <div class="wo-title">Am I drowning in <em>possibilities?</em> Do I have too many choices and too little clarity?</div>
-            <div class="wo-sub"><span class="pink">Exhaustion &amp; cognitive overload.</span></div>
-          </div>
+          <div class="wo-title">Option paralysis. <em>Infinitely iterating.</em></div>
         </li>
         <li class="reveal-item" data-step="4">
           <span class="wo-num">04</span>
-          <div>
-            <div class="wo-title">How much of my work is <em>portable beyond this tool?</em></div>
-            <div class="wo-sub"><span class="pink">Tool dependency.</span></div>
-          </div>
+          <div class="wo-title">Code-dependent.. <em>co-dependent..</em> claude-dependent.</div>
         </li>
         <li class="reveal-item" data-step="5">
           <span class="wo-num">05</span>
-          <div>
-            <div class="wo-title">Am I signaling skills I <em>don't actually have?</em></div>
-            <div class="wo-sub"><span class="pink">Hiring &amp; career progression.</span></div>
-          </div>
+          <div class="wo-title">Skill <em>decay.</em></div>
         </li>
       </ul>
       <img class="wo-spiral" src="assets/vc-spiral.jpeg" alt="" />
@@ -8372,6 +8435,20 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
           <span class="sep">/</span>
           <span class="h">surbhibhatia.com</span>
         </div>
+      </div>
+    </div>
+    <div class="th-right">
+      <div class="th-quote">
+        <div class="th-qline">&ldquo;The <span class="pink">Vibe Coder</span></div>
+        <div class="th-qline">knows without going,</div>
+        <div class="th-qline">sees without looking,</div>
+        <div class="th-qline">and accomplishes all</div>
+        <div class="th-qline">without doing a thing.&rdquo;</div>
+      </div>
+      <div class="th-attrib">
+        <div>&mdash; Rick Rubin,</div>
+        <div class="th-nowrap"><em>legendary music producer and vibe coder,</em></div>
+        <div>in <em>The Way of Code</em></div>
       </div>
     </div>
   </section>
@@ -9444,7 +9521,7 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
     'slideEffortDiscipline':    { adv: () => effortDisc.advance(),    ret: () => effortDisc.retreat(),    steps: 22 },
     'slideEffortSimple':        { adv: () => effortSimple.advance() || effortSimpleHL.advance(),
                                     ret: () => effortSimpleHL.retreat() || effortSimple.retreat(),
-                                    steps: 19 },
+                                    steps: 20 },
     'slideEffortVertical':      { adv: () => effortVertical.advance(),ret: () => effortVertical.retreat(),steps: effortVertical.stepCount || 12 },
     'slideEffortVert':          { adv: () => effortVert.advance() || effortVertHL.advance(),
                                     ret: () => effortVertHL.retreat() || effortVert.retreat(),
