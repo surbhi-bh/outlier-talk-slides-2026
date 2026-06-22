@@ -473,14 +473,34 @@
   /* Global-reach stage — 2-column layout:
        left col:  gangubai-1 (big) over gangubai-2 (smaller)
        right col: gangubai-3 (big) on top, dangal (bigger) + pc (smaller) at bottom */
+  .s-fandom .fandom-global-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+  }
+  .s-fandom .fandom-global-title {
+    font-family: 'New Spirit', serif;
+    font-weight: 500;
+    color: #e6efe7;
+    font-size: 24px;
+    line-height: 1.15;
+    letter-spacing: -0.4px;
+    text-align: left;
+    margin: 0;
+    flex: 0 0 auto;
+  }
   .s-fandom .fandom-global {
     display: flex;
     align-items: stretch;
     justify-content: center;
     gap: 22px;
     width: 100%;
-    height: 100%;
+    flex: 1 1 0;
+    min-height: 0;
   }
+  .s-fandom .fandom-cap-top { flex: 0 0 auto; align-self: flex-start; margin-left: 110px; }
   .s-fandom .fg-col {
     display: flex;
     flex-direction: column;
@@ -524,11 +544,17 @@
     opacity: 1;
     pointer-events: auto;
   }
-  /* Top half (gangubai-3) is bigger than the bottom row, hugged to the left. */
-  .s-fandom .fg-col-right > .fg-big        { flex: 1.4 1 0; align-items: flex-start; }
-  .s-fandom .fg-col-right > .fg-row-bottom { flex: 1   1 0; align-items: center; }
+  /* Right column: top row = gangubai-3 (big) + gangubai-2 (small);
+     bottom row = dangal (medium) + pc (small). */
+  .s-fandom .fg-col-right > .fg-row-top    { flex: 1.2 1 0; align-items: stretch; }
+  .s-fandom .fg-col-right > .fg-row-bottom { flex: 1.1 1 0; align-items: stretch; padding-left: 120px; }
+  .s-fandom .fg-col-right > .fg-row-top { gap: 4px; }
+  .s-fandom .fg-row-top .fg-big   { flex: 2.4 1 0; align-items: flex-start; }
+  .s-fandom .fg-row-top .fg-small { flex: 1   1 0; align-items: center; justify-content: flex-end; padding-bottom: 12px; }
+  .s-fandom .fg-row-top .fg-small img { max-height: 75%; margin-top: 30px; margin-right: 90px; }
+  .s-fandom .fg-row-top .fg-small .fandom-cap { margin-right: 90px; }
   .s-fandom .fg-row-bottom .fg-medium { flex: 2.4 1 0; }
-  .s-fandom .fg-row-bottom .fg-small  { flex: 1   1 0; }
+  .s-fandom .fg-row-bottom .fg-small  { flex: 1.7 1 0; align-items: center; margin-left: 40px; }
   /* PC cell — reserve space for the two-line caption so
      "Priyanka Chopra and Nick Jonas..." and "Source: Entertainment Weekly"
      both stay visible, and cap the image height to leave room. */
@@ -541,17 +567,36 @@
     flex: 0 0 auto;
   }
   .s-fandom .fg-row-bottom .fg-small img {
-    max-height: 65%;
+    max-height: 85%;
     flex: 0 1 auto;
   }
+  /* White outline on pc + gangubai-2 to make them pop against the dark bg. */
+  .s-fandom img[src*="gangubai-2"],
+  .s-fandom img[src*="/pc.png"] {
+    outline: 2px solid #f5f1ea;
+    outline-offset: 0;
+  }
   .s-fandom .fg-row-bottom .fg-medium .fandom-cap {
+    font-size: 12px;
+    line-height: 1.35;
+    max-width: none;
+    white-space: normal;
+    overflow: visible;
     flex: 0 0 auto;
   }
   .s-fandom .fg-row-bottom .fg-medium img {
     max-height: 100%;
+    flex: 0 1 auto;
+    transform: scale(1.25);
+    transform-origin: center bottom;
   }
+  .s-fandom .fg-row-bottom .fg-medium { overflow: visible; }
+  .s-fandom .fg-col-right > .fg-row-bottom { overflow: visible; }
   /* Tighter gap between left and right columns so gangubai-3 sits closer to the left side. */
   .s-fandom .fandom-stage-4 .fandom-global { gap: 10px; }
+  /* Pull the gangubai stage up so the bottom row (dangal + pc) doesn't get
+     cut by the slide edge — captions need every pixel below them. */
+  .s-fandom .fandom-stage-4 { padding-top: 50px; padding-bottom: 30px; align-items: flex-start; }
   .s-fandom .fg-cell img {
     max-width: 100%;
     max-height: 100%;
@@ -651,7 +696,7 @@
     max-width: 560px;
     text-align: center;
   }
-  .s-fandom .fandom-cap em { font-style: italic; opacity: 0.75; }
+  .s-fandom .fandom-cap em { font-style: italic; opacity: 0.7; font-size: 0.78em; }
 
   /* Stripe reveal — same engine as slideBolly's bc-love, but driven by
      .stripes-on on this slide. */
@@ -1050,6 +1095,28 @@
     border-radius: 14px;
     text-transform: uppercase;
   }
+  /* Pink heart next to the date. When the Chhaava poster (step 2) appears,
+     it swaps to a pink question mark. */
+  .s-chat-big .cb-heart-mark {
+    color: #d0116f;
+    margin-left: 4px;
+    font-size: 13px;
+    vertical-align: -1px;
+    display: inline-block;
+  }
+  .s-chat-big .cb-heart-mark .hm-heart,
+  .s-chat-big .cb-heart-mark .hm-q {
+    color: #d0116f;
+    transition: opacity 0.35s ease;
+  }
+  .s-chat-big .cb-heart-mark .hm-q {
+    display: none;
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+  }
+  .s-chat-big:has(.cb-bubble.poster[data-step="2"].shown) .cb-heart-mark .hm-heart { display: none; }
+  .s-chat-big:has(.cb-bubble.poster[data-step="2"].shown) .cb-heart-mark .hm-q     { display: inline; }
   /* Body — two-column layout: chat stream on the left, "this should be
      quick" caption on the right. Both are within the WhatsApp dark area
      below the header. */
@@ -2448,8 +2515,9 @@
   }
   .s-effort-simple[data-phase="6"] .effort-row.after .effort-bar {
     height: 8px;
-    border-width: 1px;
+    border: 1px solid var(--fg-deep);
     box-shadow: none;
+    overflow: hidden;
   }
   /* The After AI label collapses to zero width so the bar fills the strip. */
   .s-effort-simple[data-phase="6"] .effort-row.after .effort-row-label {
@@ -2468,14 +2536,55 @@
     font-size: 0;
     padding: 0;
     color: transparent;
-    border-right: 1.5px solid #fff;
+    border-right: 1.5px solid #fff !important;
   }
   .s-effort-simple[data-phase="6"] .effort-seg:last-child {
-    border-right: none;
+    border-right: none !important;
   }
-  /* Phase 6 viz divider matches the white partition lines. */
+  /* Rotated PROMPT segs flip their right border to the LEFT visually due to
+     the rotate(180deg) transform — at phase 6 we don't need the rotation
+     (labels are font-size:0), so cancel it so border-right sits where expected. */
+  .s-effort-simple[data-phase="6"] .effort-seg.label-rotate {
+    writing-mode: horizontal-tb !important;
+    transform: none !important;
+  }
+  /* Dim-segment separators use a darker color so the boundary stays visible
+     when both adjacent segs are cream — matches the persistent top marker. */
+  .s-effort-simple[data-phase="6"] .effort-row.after .effort-seg:nth-child(n+5):not(:nth-child(1)) {
+    border-right-color: var(--fg-deep) !important;
+  }
+  /* Phase 6 viz divider matches the white partition lines on the top marker.
+     Position at 8/(8+15) = 34.78% to match marker's --w:8 + --w:15 split.
+     Hide the absolutely-positioned viz-divider element and draw the line as a
+     border-right on viz-sub-a so it renders identically to .sm-seg's border-right
+     in the persistent marker. */
   .s-effort-simple[data-phase="6"] .viz-split-mixed .viz-divider {
-    background: #fff !important;
+    display: none !important;
+  }
+  .s-effort-simple[data-phase="6"] .viz-split-mixed .viz-sub-a {
+    left: 0 !important;
+    width: 34.7826% !important;
+    border-right: 1.5px solid #fff !important;
+    box-sizing: border-box !important;
+  }
+  .s-effort-simple[data-phase="6"] .viz-split-mixed .viz-sub-b {
+    left: 34.7826% !important;
+    right: 0 !important;
+  }
+  /* Phase 6: dim segments outside the Data section so the morphed bar matches
+     the next slide's persistent marker (data-current="data" dims segs 5+). */
+  .s-effort-simple[data-phase="6"] .effort-row.after .effort-seg:nth-child(n+5):not(:nth-child(1)):not(.striped) {
+    background: #ece6d6 !important;
+    background-image: none !important;
+  }
+  .s-effort-simple[data-phase="6"] .effort-row.after .effort-seg:nth-child(n+5):not(:nth-child(1))::after {
+    display: none;
+  }
+  /* Dim the viz-split sub-cells too, otherwise Make50 (green) + Choose (yellow)
+     stay bright while the rest of segs 5+ go cream. */
+  .s-effort-simple[data-phase="6"] .effort-row.after .viz-split-mixed .viz-sub-ai,
+  .s-effort-simple[data-phase="6"] .effort-row.after .viz-split-mixed .viz-sub-b {
+    background: #ece6d6 !important;
   }
   /* Striped Idea — match the marker's yellow/dark stripe pattern with a
      subtle scratched-out line through it, same as the source segment.   */
@@ -2519,7 +2628,7 @@
   .s-effort-simple[data-phase="6"] .viz-split-mixed .viz-divider {
     opacity: 1;
     visibility: visible;
-    background: var(--fg-deep) !important;
+    background: #fff !important;
     animation: none;
   }
   /* Counter the row's horizontal scaleX so the sub-cells stay proportional
@@ -2566,7 +2675,8 @@
     transform: translateY(-6px);
     transition: opacity 0.4s ease, transform 0.4s ease;
   }
-  .s-effort-simple[data-phase="5"] .effort-brackets {
+  .s-effort-simple[data-phase="5"] .effort-brackets,
+  .s-effort-simple[data-phase="6"] .effort-brackets {
     opacity: 1;
     transform: translateY(0);
   }
@@ -5338,13 +5448,6 @@
   .s-mom2 .mom2-bubbles::-webkit-scrollbar { display: none; }
   /* When the trailer reveals, hide the bubbles so the image takes their space. */
   .s-mom2 .mom2-right:has(.mom2-trailer.shown) .mom2-bubbles { display: none; }
-  /* Phone screen swap: once the step-9 ("is the genre correct?") bubble is
-     shown, fade screen 2 in over screen 1. */
-  .s-mom2:has(.bubble[data-step="9"].shown) .mom-phone .mom-screen[data-screen="1"] { opacity: 0; }
-  .s-mom2:has(.bubble[data-step="9"].shown) .mom-phone .mom-screen[data-screen="2"] {
-    opacity: 1;
-    transform: translateY(0);
-  }
   .s-mom2 .mom2-bubbles .bubble {
     background: var(--bg);
     border: 2px solid var(--fg-deep);
@@ -5917,9 +6020,9 @@
     top: 150px;
     left: 60px;
     right: 60px;
-    bottom: 80px;
+    bottom: 55px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     z-index: 3;
   }
@@ -5933,13 +6036,13 @@
   }
   .s-bostock-big .bb-credit {
     position: absolute;
-    bottom: 40px;
+    bottom: 30px;
     left: 60px;
     right: 60px;
     z-index: 3;
     text-align: center;
     font-family: 'New Spirit', serif;
-    font-size: 14px;
+    font-size: 18px;
     color: var(--fg-deep);
     opacity: 0.85;
   }
@@ -7774,7 +7877,7 @@
      sits more squarely over the video. */
   .slide.has-section-marker.s-lovesongs-scraper .ls-head {
     top: 100px;
-    left: 100px;
+    left: 270px;
     right: auto;
     width: calc((100% - 120px - 60px) / 2);
     text-align: center;
@@ -7821,6 +7924,15 @@
     border-right: 1.5px solid #fff;
   }
   .section-marker .sm-seg:last-child { border-right: none; }
+  /* Dim-segment separators use a darker color so the boundary stays visible
+     when both adjacent segs are cream. */
+  .section-marker .sm-seg-dim,
+  .section-marker[data-current="data"]    .sm-seg:nth-child(n+5):not(:nth-child(1)),
+  .section-marker[data-current="visuals"] .sm-seg:nth-child(-n+4):not(:nth-child(1)),
+  .section-marker[data-current="visuals"] .sm-seg:nth-child(n+8),
+  .section-marker[data-current="design"]  .sm-seg:nth-child(-n+7):not(:nth-child(1)) {
+    border-right-color: var(--fg-deep) !important;
+  }
   /* Dim utility — a segment that's outside the active section reverts to
      a neutral cream so the active-section block reads as the focus. */
   .section-marker .sm-seg-dim {
@@ -7840,6 +7952,18 @@
   .section-marker[data-current="design"]  .sm-seg:nth-child(-n+7):not(:nth-child(1)) {
     background: #ece6d6 !important;
     background-image: none !important;
+    opacity: 0.35;
+  }
+  /* Idea (striped, first seg) — fade out clearly on every section page. */
+  .section-marker[data-current="data"]    .sm-seg:first-child,
+  .section-marker[data-current="visuals"] .sm-seg:first-child,
+  .section-marker[data-current="design"]  .sm-seg:first-child {
+    opacity: 0.35;
+  }
+  .section-marker[data-current="data"]    .sm-seg:first-child::after,
+  .section-marker[data-current="visuals"] .sm-seg:first-child::after,
+  .section-marker[data-current="design"]  .sm-seg:first-child::after {
+    opacity: 0.45;
   }
   .section-marker[data-current="data"]    .sm-seg:nth-child(n+5):not(:nth-child(1))::after,
   .section-marker[data-current="visuals"] .sm-seg:nth-child(-n+4):not(:nth-child(1))::after,
@@ -7891,7 +8015,7 @@
     padding: 6px 4px 0;
     margin: 0 2px;
     border-top: 1.25px solid currentColor;
-    opacity: 0.42;
+    opacity: 0.28;
     transition: color 0.3s ease, opacity 0.3s ease;
   }
   .section-marker .sm-bracket::before,
@@ -8269,10 +8393,11 @@
       <div class="fandom-pair">
         <div class="fandom-pair-item">
           <img src="assets/amitabh-0.jpg" alt="Amitabh Bachchan greeting fans" />
+          <div class="fandom-cap">The Big B of Bollywood: Amitabh Bachchan<br><em>Source: Bollywood Hungama</em></div>
         </div>
         <div class="fandom-pair-item">
           <img src="assets/amitabh-temple.jpg" alt="Amitabh Bachchan temple" />
-          <div class="fandom-cap">A temple to worship bollywood superstar Amitabh Bachchan in Kolkata, India. <em>Source: Orissa Post</em></div>
+          <div class="fandom-cap">A temple to worship bollywood superstar Amitabh Bachchan in Kolkata, India.<br><em>Source: Orissa Post</em></div>
         </div>
       </div>
     </div>
@@ -8282,11 +8407,11 @@
       <div class="fandom-pair">
         <div class="fandom-pair-item">
           <img src="assets/srk-mannat.png" alt="SRK greeting fans outside Mannat" />
-          <div class="fandom-cap">Shah Rukh Khan, greeting fans outside his home in Mumbai on his 57th birthday. <em>Source: Atul Loke, New York Times</em></div>
+          <div class="fandom-cap">Shah Rukh Khan, greeting fans outside Mannat, his home in Mumbai on his 57th birthday.<br><em>Source: Atul Loke, New York Times</em></div>
         </div>
         <div class="fandom-pair-item">
           <img src="assets/srk-fans.webp" alt="Fans gathered outside Shah Rukh Khan's house" />
-          <div class="fandom-cap">Fans gathered outside Shah Rukh Khan's house.<br><em>Source: @iamsrk on Instagram</em></div>
+          <div class="fandom-cap">Thousands make a pilgrimage to Mannat for a glimpse of King Khan.<br><em>Source: @iamsrk on Instagram</em></div>
         </div>
       </div>
     </div>
@@ -8294,7 +8419,7 @@
     <!-- Stage 3: Dance medley — 3 on top, 2 on bottom -->
     <div class="fandom-stage fandom-stage-3">
       <div class="fandom-medley">
-        <h2 class="fandom-medley-title">A cultural medley of music, dance, and storytelling</h2>
+        <h2 class="fandom-medley-title">A medley of music, dance, storytelling and cinematic grandeur</h2>
         <div class="fandom-medley-row fandom-medley-row-top">
           <div class="fandom-trio-item">
             <img src="assets/dola-re-dance.jpeg" alt="Dola Re Dola dance sequence" />
@@ -8312,10 +8437,10 @@
         <div class="fandom-medley-row fandom-medley-row-bottom">
           <div class="fandom-trio-item">
             <img src="assets/ramleela.jpg" alt="Nagada Sang Dhol dance sequence" />
-            <div class="fandom-cap">Ramleela (2013)</div>
+            <div class="fandom-cap">Goliyon Ki Raasleela Ram-Leela (2013)</div>
           </div>
           <div class="fandom-trio-item">
-            <video src="assets/ek-pal-ka-jeena.mp4" autoplay muted loop playsinline preload="auto"></video>
+            <video src="assets/ek-pal-ka-jeena.mp4" autoplay muted loop playsinline preload="auto" data-skip-head="1"></video>
             <div class="fandom-cap">Ek Pal Ka Jeena, signature step</div>
           </div>
         </div>
@@ -8325,27 +8450,34 @@
     <!-- Stage 4: Global reach — gangubai (1/2/3) shown by default;
          dangal is revealed on the first click within the stage, pc on the next click. -->
     <div class="fandom-stage fandom-stage-4" data-substep="0">
-      <div class="fandom-global">
-        <div class="fg-col fg-col-left">
-          <div class="fg-cell fg-big">
-            <img src="assets/gangubai-1.png" alt="Gangubai Kathiawadi still" />
-          </div>
-          <div class="fg-cell fg-small">
-            <img src="assets/gangubai-2.png" alt="Gangubai Kathiawadi still" />
-          </div>
-        </div>
-        <div class="fg-col fg-col-right">
-          <div class="fg-cell fg-big">
-            <img src="assets/gangubai-3.png" alt="Pimpan Chalaikupp and Lingling Sirilak Kwong dressed as Gangubai" />
-          </div>
-          <div class="fg-row fg-row-bottom">
-            <div class="fg-cell fg-medium fg-reveal" data-reveal="1">
-              <img src="assets/dangal.png" alt="Chinese fans taking a selfie with a Dangal poster in Beijing" />
-              <div class="fandom-cap"><em>Source: Indian Express</em></div>
+      <div class="fandom-global-wrap">
+        <h2 class="fandom-global-title">India's cultural export to the world</h2>
+        <div class="fandom-global">
+          <div class="fg-col fg-col-left">
+            <div class="fg-cell fg-big">
+              <img src="assets/gangubai-1.png" alt="Gangubai Kathiawadi still" />
             </div>
-            <div class="fg-cell fg-small fg-reveal" data-reveal="2">
-              <img src="assets/pc.png" alt="Priyanka Chopra and Nick Jonas at the Met Gala, 2017" />
-              <div class="fandom-cap">Priyanka Chopra and Nick Jonas at the Met Gala, 2017.<br><em>Source: Entertainment Weekly</em></div>
+          </div>
+          <div class="fg-col fg-col-right">
+            <div class="fg-row fg-row-top">
+              <div class="fg-cell fg-big">
+                <div class="fandom-cap fandom-cap-top">A bollywood blockbuster that captivated Thailand.</div>
+                <img src="assets/gangubai-3.png" alt="Pimpan Chalaikupp and Lingling Sirilak Kwong dressed as Gangubai" />
+              </div>
+              <div class="fg-cell fg-small">
+                <img src="assets/gangubai-2.png" alt="Gangubai Kathiawadi still" />
+                <div class="fandom-cap">Indian actress Alia Bhatt</div>
+              </div>
+            </div>
+            <div class="fg-row fg-row-bottom">
+              <div class="fg-cell fg-medium fg-reveal" data-reveal="1">
+                <img src="assets/dangal.png" alt="Chinese fans taking a selfie with a Dangal poster in Beijing" />
+                <div class="fandom-cap">A sports drama that conquered the Chinese box office.<br><em>Source: Indian Express</em></div>
+              </div>
+              <div class="fg-cell fg-small fg-reveal" data-reveal="2">
+                <img src="assets/pc.png" alt="Priyanka Chopra and Nick Jonas at the Met Gala, 2017" />
+                <div class="fandom-cap">Priyanka Chopra and Nick Jonas at the Met Gala, 2017.<br><em>Source: Entertainment Weekly</em></div>
+              </div>
             </div>
           </div>
         </div>
@@ -8411,7 +8543,7 @@
       <div class="cb-avatar">F</div>
       <div class="cb-name">friday-night-plans-friend<span class="cb-status">● online</span></div>
     </div>
-    <div class="cb-date-banner">February 14, 2025</div>
+    <div class="cb-date-banner">February 14, 2025 <span class="cb-heart-mark"><span class="hm-heart">♥&#xFE0E;</span><span class="hm-q">???</span></span></div>
     <div class="cb-body">
       <div class="cb-stream">
         <div class="cb-bubble me reveal-item" data-step="1">
@@ -8485,7 +8617,7 @@
          intersections form pink petals.
          Reveal order on slide-class .hf-1 → .hf-6:
            1: Academia, 2: + Journalism, 3: + Public Policy,
-           4: + Business & corporates, 5: + Design studios, 6: + pink petals + legend -->
+           4: + Business & tech, 5: + Design studios, 6: + pink petals + legend -->
     <div class="hello-figure">
       <svg viewBox="0 0 680 680" role="img" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -8522,7 +8654,7 @@
         </text>
         <text class="hf-label hf-label-4" x="229" y="468">
           <tspan x="229" dy="0">Business &amp;</tspan>
-          <tspan x="229" dy="22">corporates</tspan>
+          <tspan x="229" dy="22">tech</tspan>
         </text>
         <text class="hf-label hf-label-5" x="198" y="251">
           <tspan x="198" dy="0">Design</tspan>
@@ -8564,7 +8696,7 @@
         <li>Since then — collaborations across.</li>
         <li>Public policy and think tanks.</li>
         <li>Multilateral and government stakeholders.</li>
-        <li>Businesses and corporates.</li>
+        <li>Business and tech.</li>
         <li>Design studios.</li>
         <li>Common thread — dataviz.</li>
       </ul>
@@ -8964,7 +9096,7 @@
           <div class="console-bar">
             <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
             <span class="console-title">claude · genre-prompt · v1 — pick relevant genres</span>
-            <span class="console-count">v1 / 4</span>
+            <span class="console-count">v1 / 5</span>
           </div>
           <div class="console-body"><span class="role">Prompt v1:</span> <span class="key">Pick relevant genres</span>
 
@@ -8980,13 +9112,11 @@ For each Bollywood movie in my input [year, movie], pick relevant genres from th
           <div class="console-bar">
             <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
             <span class="console-title">claude · genre-prompt · v2 — + Masala</span>
-            <span class="console-count">v2 / 4</span>
+            <span class="console-count">v2 / 5</span>
           </div>
           <div class="console-body"><span class="role">Prompt v2:</span> <span class="key">+ Masala</span>
 
 <span class="diff-add">"Masala":</span> <span class="diff-add">A Masala film is a mainstream Indian movie that blends multiple genres (typically action, romance, comedy, drama, and music) in a single storyline. These films often include stylized action, melodrama, emotional plot twists, and frequent song-and-dance sequences. The tone is usually exaggerated, aiming for mass appeal and entertainment.</span>
-
-<span class="role pr-dim">— same six categories as v1 —</span>
 
 <span class="pr-note">Result: the model labelled <span class="pink-text">half the dataset</span> Masala. Useless.</span><span class="cursor-blink">▍</span></div>
         </div>
@@ -8996,7 +9126,7 @@ For each Bollywood movie in my input [year, movie], pick relevant genres from th
           <div class="console-bar">
             <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
             <span class="console-title">claude · genre-prompt · v3 — + Nota</span>
-            <span class="console-count">v3 / 4</span>
+            <span class="console-count">v3 / 5</span>
           </div>
           <div class="console-body"><span class="role">Prompt v3:</span> <span class="key">+ Nota</span>
 
@@ -9004,48 +9134,56 @@ For each Bollywood movie in my input [year, movie], pick relevant genres from th
 
 <span class="diff-add">"Nota":</span> <span class="diff-add">None of the above. Films that don't clearly fit into any of the six categories — use sparingly.</span>
 
-<span class="role pr-dim">— same six categories as v1 —</span>
-
 <span class="pr-note">Result: model treats Nota as a <span class="pink-text">comfortable escape hatch.</span> Anything ambiguous gets dumped here. The dataset loses signal.</span><span class="cursor-blink">▍</span></div>
         </div>
 
-        <!-- v4: final — original full-form prompt with all six definitions -->
-        <div class="pr-card" data-ver="4" data-label="Final">
+        <!-- v4: Defining Romance — focused on the Romance definition -->
+        <div class="pr-card" data-ver="4" data-label="Defining Romance">
           <div class="console-bar">
             <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
-            <span class="console-title">claude · genre-prompt · v4 — final</span>
-            <span class="console-count">v4 / 4</span>
+            <span class="console-title">claude · genre-prompt · v4 — defining romance</span>
+            <span class="console-count">v4 / 5</span>
           </div>
-          <div class="console-body"><span class="role">Prompt v4 (final):</span> <span class="key">Primary Genre Tagging</span>
+          <div class="console-body"><span class="role">Prompt v4:</span> <span class="key">Defining Romance</span>
 
-You are an expert film critic who can determine the primary genre of a Bollywood movie by analyzing its core elements – plot, cast, themes, poster, narrative structure.
-
-For each movie in my input [year, movie], I want you to respond with a comma separated file of: [movie, year, justification, primary_genre]. The justification is a short snippet explaining why the movie best fits the chosen genre. primary_genre labels come from these definitions <span class="diff-add">(if the movie fits multiple genres, pick the most suitable one)</span>.
-
-<span class="role">"Action/Adventure":</span> Films focused on physical challenges, excitement, and spectacle. Features pursuits, fights, stunts, explosions, or daring quests. Heroes often face external threats or obstacles. Emphasis on thrilling sequences, physical fights and big spectacle conflicts.
-
-<span class="role">"Drama/Serious":</span> Character-driven stories dealing with realistic emotional conflicts, moral dilemmas, or social issues. Focus on relationships, personal growth, or psychological development. Tone is typically serious and grounded, aiming for emotional depth.
-
-<span class="role">"Romance":</span> Stories with a love story at its core. Includes traditional love stories, passionate love. Includes romantic comedies, where romance is enhanced by comedy but humor is a subplot — lighthearted, feel-good stories with uplifting endings; also romantic dramas, which explore deep emotional themes like family, cultural traditions, or personal struggles, adding intensity to the romance. A key test: <span class="pink-text">if removing the romantic storyline would make the film fall apart, it's likely a romance film.</span>
-
-<span class="role">"Comedy":</span> Films primarily intended to amuse and entertain through humor, whether subtle or broad. Includes farce, satire — but excludes romantic comedies. Made to make the audience laugh; tone is upbeat and playful.
-
-<span class="role">"Thriller/Crime":</span> Stories involving criminal activity, mystery, suspense, or psychological tension. Focus on investigation, pursuit of justice, or moral ambiguity. Often features twists, rising tension, and complex plotting.
-
-<span class="role">"Fantasy/Sci-Fi/Horror":</span> Films featuring supernatural, futuristic, or horror elements that depart from everyday reality. Includes magical worlds, advanced technology, alien life, monsters, or psychological horror.
-
-<span class="diff-strike">"Masala"</span> · <span class="diff-strike">"Nota"</span><span class="cursor-blink">▍</span></div>
+<span class="role">"Romance":</span> Stories with a love story at its core. Includes traditional love stories, passionate love. Includes romantic comedies, where romance is enhanced by comedy but humor is a subplot — lighthearted, feel-good stories with uplifting endings; also romantic dramas, which explore deep emotional themes like family, cultural traditions, or personal struggles, adding intensity to the romance. A key test: <span class="pink-text">if removing the romantic storyline would make the film fall apart, it's likely a romance film.</span><span class="cursor-blink">▍</span></div>
         </div>
 
-        <!-- v5: flashing "PROMPT FATIGUE" — full-card warning, no terminal chrome -->
-        <div class="pr-card pr-card-fatigue" data-ver="5" data-label="Prompt fatigue">
+        <!-- v5: final — Primary Genre Tagging prompt with all six definitions -->
+        <div class="pr-card" data-ver="5" data-label="Primary Genre Tagging">
+          <div class="console-bar">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="console-title">claude · genre-prompt · v5 — primary genre tagging</span>
+            <span class="console-count">v5 / 5</span>
+          </div>
+          <div class="console-body"><span class="role">Prompt 1:</span> <span class="key">For Primary Genre Tagging</span>
+
+You are an expert Hindi film critic who can determine the dominant genre of each Bollywood movie in the input list [year, movie] based on its plot, cast, themes, narrative structure.
+
+For each movie, please respond with a comma separated file of: [movie, year, justification, primary_genre]. The justification is a short snippet explaining why the movie best fits the chosen genre. The primary_genre labels come from genre categories defined below. <span class="diff-add">If the movie fits multiple genres, pick the most suitable one.</span>
+
+<span class="role">"Action/Adventure":</span> Films focused on physical action such as fights, chase sequences, explosions, dangerous stunts, and large-scale conflicts. Heroes often face external threats. Emphasis on adrenaline-filled scenes and moments of heightened violence.
+
+<span class="role">"Drama":</span> Character-driven stories that explore emotional conflicts, moral dilemmas, or social issues. Films that focus on relationships, family dynamics, biographies, internal struggles, social tensions and realities, unfolding through strong emotional arcs.
+
+<span class="role">"Romance":</span> Stories with a love story at the core. Love shapes the emotional arc, main conflicts and narrative tensions in these films. Movies focused on romantic pursuits, desire, longing and connection. Includes traditional love stories, passionate love, and also romantic comedies, where romance is enhanced by comedy, but humor is a subplot, creating lighthearted, feel-good stories with uplifting endings.
+
+<span class="role">"Comedy":</span> Films that amuse and entertain through humor, using jokes, situations, or eccentric characters to provoke laughter. Includes farce, slapstick, adult humor, situational comedy, and satire, as long as humor is the film's main appeal. The tone is generally light, cheerful, and upbeat.
+
+<span class="role">"Thriller/Crime":</span> Stories involving criminal activity, mystery, suspense, investigations, or psychological tensions. Films with focus on conspiracies, revenge, uncovering the truth, pursuit of justice, heists, that build suspense through rising tensions and unexpected plot twists.
+
+<span class="role">"Fantasy/Sci-Fi/Horror":</span> Films featuring supernatural, futuristic, or horror elements that depart from everyday reality. These are films that create magical worlds, imagined futures, and feature advanced technology, alien life, superheroes, robots, ghosts, haunted places, monsters, or psychological horror.<span class="cursor-blink">▍</span></div>
+        </div>
+
+        <!-- flashing "PROMPT FATIGUE" — full-card warning, no terminal chrome -->
+        <div class="pr-card pr-card-fatigue" data-ver="6" data-label="Prompt fatigue">
           <div class="pf-body">
             <div class="pf-big pf-blink">PROMPT FATIGUE</div>
           </div>
         </div>
 
-        <!-- v6: final reveal — the CSV output image, raw, no console wrapper -->
-        <div class="pr-card pr-card-img" data-ver="6" data-label="Output">
+        <!-- final reveal — the CSV output image, raw, no console wrapper -->
+        <div class="pr-card pr-card-img" data-ver="7" data-label="Output">
           <img src="assets/prompt-response.png" alt="CSV output — movie, year, plot summary, cast, themes, visual style, narrative structure, primary genre" />
         </div>
 
@@ -9115,8 +9253,7 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
     <div class="mom2-body">
       <div class="mom2-phone-wrap">
         <div class="mom-phone">
-          <div class="mom-screen" data-screen="1"><img src="assets/mom-1.jpg" alt="Mom WhatsApp — screen 1" /></div>
-          <div class="mom-screen" data-screen="2"><img src="assets/mom-2.jpg" alt="Mom WhatsApp — screen 2" /></div>
+          <div class="mom-screen" data-screen="1"><img src="assets/mom-1.png" alt="Mom WhatsApp" /></div>
         </div>
       </div>
       <div class="mom2-right">
@@ -9163,7 +9300,7 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
           <img src="assets/maa.jpeg" alt="Mere paas maa hai — Deewaar (1975)" />
           <div class="mom2-trailer-caption">
             <span class="translates">Translates to:</span>
-            You may have a house, bungalow, car, and <span class="pink">five LLM subscriptions.</span> I have <em>mom.</em>
+            You may have<br>a house, bungalow, car, and <span class="pink">five LLM subscriptions.</span> I have <em>mom.</em>
           </div>
         </div>
       </div>
@@ -9705,6 +9842,30 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
       }
     };
     v.addEventListener('timeupdate', checkTail);
+  });
+
+  // Skip the first N seconds: jump past data-skip-head on load and on every loop.
+  document.querySelectorAll('video[data-skip-head]').forEach(v => {
+    const skip = parseFloat(v.dataset.skipHead);
+    if (!Number.isFinite(skip) || skip <= 0) return;
+    const jump = () => {
+      try {
+        if (v.currentTime < skip) v.currentTime = skip;
+      } catch (_) { /* ignore */ }
+    };
+    v.addEventListener('loadedmetadata', jump);
+    v.addEventListener('seeked', () => {
+      if (v.currentTime < skip) {
+        try { v.currentTime = skip; } catch (_) {}
+      }
+    });
+    // `loop` resets currentTime to 0 silently — catch it via timeupdate.
+    v.addEventListener('timeupdate', () => {
+      if (v.currentTime < skip) {
+        try { v.currentTime = skip; } catch (_) {}
+      }
+    });
+    if (v.readyState >= 1) jump();
   });
 
   // Trim a video to its first N seconds: when currentTime >= N, loop to 0.
@@ -10906,12 +11067,24 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
 
   // Mark every slide as "current" so the existing :is-current rules
   // (axis line drawing, etc.) still fire when the slide is on screen.
+  function resetScraperVideo() {
+    const slide = document.getElementById('slideGetData');
+    if (!slide) return;
+    slide.querySelectorAll('video').forEach(v => {
+      try {
+        v.currentTime = 0;
+        const p = v.play();
+        if (p && typeof p.catch === 'function') p.catch(() => {});
+      } catch (_) { /* ignore */ }
+    });
+  }
   Reveal.on('slidechanged', e => {
     document.querySelectorAll('section.slide.is-current').forEach(s => s.classList.remove('is-current'));
     if (e.currentSlide && e.currentSlide.classList.contains('slide')) {
       e.currentSlide.classList.add('is-current');
       if (e.currentSlide.id === 'slideRecordings') resetRecordingsVideos();
       if (e.currentSlide.id === 'slideBTS') resetBTSVideos();
+      if (e.currentSlide.id === 'slideGetData') resetScraperVideo();
     }
   });
   // Trigger once for the first slide.
@@ -10921,6 +11094,7 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
       e.currentSlide.classList.add('is-current');
       if (e.currentSlide.id === 'slideRecordings') resetRecordingsVideos();
       if (e.currentSlide.id === 'slideBTS') resetBTSVideos();
+      if (e.currentSlide.id === 'slideGetData') resetScraperVideo();
     }
   });
 </script>
