@@ -41,11 +41,11 @@
   }
   .reveal section.slide .footnote-left {
     left: 24px;
-    font-size: 12px;
-    font-weight: 400;
-    color: var(--fg-deep);
-    opacity: 0.6;
-    letter-spacing: 0.04em;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent-pink);
+    opacity: 1;
+    letter-spacing: 0.06em;
     text-transform: none;   /* keep "surbhibhatia.com" lowercase */
   }
   .reveal section.slide .footnote-right {
@@ -56,10 +56,11 @@
     letter-spacing: 0.18em;
     text-transform: uppercase;
   }
-  /* On dark-background slides the left footnote needs to be cream to stay legible. */
+  /* On dark-background slides the left footnote needs a brighter colour to
+     stay legible while keeping the new prominent weight/size. */
   .reveal section.slide.s-workflow .footnote-left,
   .reveal section.slide.s-romantics .footnote-left,
-  .reveal section.slide.s-romantics-sm .footnote-left { color: var(--bg); opacity: 0.7; }
+  .reveal section.slide.s-romantics-sm .footnote-left { color: #ffb4d4; opacity: 1; }
   /* The .deck wrapper IS the reveal .slides element in this version, so the
      legacy .deck (flex column) rules are scoped not to apply via :not(.slides)
      further down in the original stylesheet. */
@@ -391,6 +392,308 @@
   .bc-credit em { font-style: italic; opacity: 1; }
   /* Hide the Pinterest credit once the slide flips to the "love stories" state. */
   .s-bolly.love-on .bc-credit { display: none; }
+
+  /* ====================================================================
+     SLIDE 02b — Fandom: Amitabh temple, SRK Mannat, Dola-re dance
+     ==================================================================== */
+  .s-fandom {
+    background: #0e1610;
+  }
+  .s-fandom .fandom-stage {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 60px;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.45s ease;
+  }
+  .s-fandom[data-stage="1"] .fandom-stage-1,
+  .s-fandom[data-stage="2"] .fandom-stage-2,
+  .s-fandom[data-stage="3"] .fandom-stage-3,
+  .s-fandom[data-stage="4"] .fandom-stage-4,
+  .s-fandom[data-stage="5"] .fandom-stage-4 {
+    opacity: 1;
+  }
+
+  /* Dance medley — title + single row of all 5 panels */
+  .s-fandom .fandom-medley {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 22px;
+  }
+  .s-fandom .fandom-medley-title {
+    font-family: 'New Spirit', serif;
+    font-weight: 500;
+    color: #e6efe7;
+    font-size: 28px;
+    line-height: 1.15;
+    letter-spacing: -0.4px;
+    text-align: center;
+    margin: 0;
+    flex: 0 0 auto;
+  }
+  .s-fandom .fandom-medley-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    flex: 1 1 0;
+    min-height: 0;
+    width: 100%;
+  }
+  .s-fandom .fandom-trio-item {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+  }
+  .s-fandom .fandom-trio-item img,
+  .s-fandom .fandom-trio-item video {
+    max-width: 100%;
+    max-height: 88%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    filter: saturate(0.95);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  }
+
+  /* Global-reach stage — 2-column layout:
+       left col:  gangubai-1 (big) over gangubai-2 (smaller)
+       right col: gangubai-3 (big) on top, dangal (bigger) + pc (smaller) at bottom */
+  .s-fandom .fandom-global {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 22px;
+    width: 100%;
+    height: 100%;
+  }
+  .s-fandom .fg-col {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 0;
+    min-height: 0;
+    flex: 1 1 0;
+  }
+  .s-fandom .fg-row {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 18px;
+    min-width: 0;
+    min-height: 0;
+  }
+  .s-fandom .fg-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 0;
+    min-height: 0;
+  }
+  /* Relative sizing — bigger items get more flex-grow than smaller ones. */
+  .s-fandom .fg-big    { flex: 2.2 1 0; }
+  .s-fandom .fg-medium { flex: 1.6 1 0; }
+  .s-fandom .fg-small  { flex: 1   1 0; }
+  /* Right column wider so gangubai-3 + dangal feel large. */
+  .s-fandom .fg-col-right { flex: 1.6 1 0; }
+  /* Stage 4 sub-step reveals — dangal and pc are hidden until clicked in. */
+  .s-fandom .fg-reveal {
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+  }
+  .s-fandom .fandom-stage-4[data-substep="1"] .fg-reveal[data-reveal="1"],
+  .s-fandom .fandom-stage-4[data-substep="2"] .fg-reveal[data-reveal="1"],
+  .s-fandom .fandom-stage-4[data-substep="2"] .fg-reveal[data-reveal="2"] {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  /* Top half (gangubai-3) is bigger than the bottom row, hugged to the left. */
+  .s-fandom .fg-col-right > .fg-big        { flex: 1.4 1 0; align-items: flex-start; }
+  .s-fandom .fg-col-right > .fg-row-bottom { flex: 1   1 0; align-items: center; }
+  .s-fandom .fg-row-bottom .fg-medium { flex: 2.4 1 0; }
+  .s-fandom .fg-row-bottom .fg-small  { flex: 1   1 0; }
+  /* PC cell — reserve space for the two-line caption so
+     "Priyanka Chopra and Nick Jonas..." and "Source: Entertainment Weekly"
+     both stay visible, and cap the image height to leave room. */
+  .s-fandom .fg-row-bottom .fg-small .fandom-cap {
+    font-size: 12px;
+    line-height: 1.35;
+    max-width: none;
+    white-space: normal;
+    overflow: visible;
+    flex: 0 0 auto;
+  }
+  .s-fandom .fg-row-bottom .fg-small img {
+    max-height: 65%;
+    flex: 0 1 auto;
+  }
+  .s-fandom .fg-row-bottom .fg-medium .fandom-cap {
+    flex: 0 0 auto;
+  }
+  .s-fandom .fg-row-bottom .fg-medium img {
+    max-height: 100%;
+  }
+  /* Tighter gap between left and right columns so gangubai-3 sits closer to the left side. */
+  .s-fandom .fandom-stage-4 .fandom-global { gap: 10px; }
+  .s-fandom .fg-cell img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    filter: saturate(0.95);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  }
+
+  /* Stacked column variant — used for the Gangubai stage where the left
+     column holds two images stacked vertically. */
+  .s-fandom .fandom-pair-item.stack {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .s-fandom .fandom-pair-item.stack img {
+    max-height: 46%;
+  }
+  .s-fandom .fandom-stack-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-height: 0;
+    flex: 1 1 0;
+  }
+  .s-fandom .fandom-stack-item img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    filter: saturate(0.95);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  }
+
+  /* Single-image stage (Amitabh temple) */
+  .s-fandom .fandom-single {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    max-height: 100%;
+    max-width: 80%;
+  }
+  .s-fandom .fandom-single img {
+    max-width: 100%;
+    max-height: 78%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    filter: saturate(0.95);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  }
+
+  /* Two-image stages */
+  .s-fandom .fandom-pair {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    width: 100%;
+    height: 100%;
+  }
+  .s-fandom .fandom-pair-item {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    min-width: 0;
+    height: 100%;
+  }
+  .s-fandom .fandom-pair-item img,
+  .s-fandom .fandom-pair-item video {
+    max-width: 100%;
+    max-height: 78%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    filter: saturate(0.95);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  }
+
+  .s-fandom .fandom-cap {
+    font-family: 'New Spirit', serif;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #e6efe7;
+    max-width: 560px;
+    text-align: center;
+  }
+  .s-fandom .fandom-cap em { font-style: italic; opacity: 0.75; }
+
+  /* Stripe reveal — same engine as slideBolly's bc-love, but driven by
+     .stripes-on on this slide. */
+  .s-fandom .fandom-stripes { z-index: 4; }
+  .s-fandom.stripes-on .fandom-stripes .stripe { opacity: 1; transform: translateY(0); }
+  .s-fandom.stripes-seamless .fandom-stripes .stripe {
+    transition: opacity 0.55s ease, transform 0.6s ease-in-out, margin 0.6s ease-in-out;
+    margin: 0 -0.5px;
+  }
+
+  /* DDLJ caption — fades in together with the stripes on stage 4 */
+  .s-fandom .fandom-ddlj-cap {
+    position: absolute;
+    left: 80px;
+    bottom: 76px;
+    z-index: 5;
+    text-align: left;
+    max-width: 760px;
+    opacity: 0;
+    transition: opacity 0.55s ease;
+  }
+  .s-fandom.stripes-on .fandom-ddlj-cap { opacity: 1; }
+  .s-fandom .fandom-ddlj-cap .bc-title {
+    text-shadow: 0 2px 16px rgba(255, 255, 255, 0.75);
+  }
+
+  /* DDLJ static slide — single full-bleed image, pink caption hugging bottom-left */
+  .s-bolly-love .bc-grid-love {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+  .s-bolly-love .bc-grid-love img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .s-bolly-love .bc-overlay { display: none; }
+  .s-bolly-love .bc-caption .bc-title {
+    text-shadow: 0 2px 16px rgba(255, 255, 255, 0.75);
+  }
 
   /* ====================================================================
      SLIDE 03 — "This should be quick" / chat reveal
@@ -730,6 +1033,23 @@
     color: var(--accent-pink);
     text-transform: uppercase;
   }
+  /* Date banner — a WhatsApp-style centered chip below the header bar. */
+  .s-chat-big .cb-date-banner {
+    position: absolute;
+    top: 84px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    font-family: 'New Spirit', serif;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: #d3dce2;
+    background: rgba(31, 44, 51, 0.92);
+    padding: 6px 14px;
+    border-radius: 14px;
+    text-transform: uppercase;
+  }
   /* Body — two-column layout: chat stream on the left, "this should be
      quick" caption on the right. Both are within the WhatsApp dark area
      below the header. */
@@ -949,6 +1269,23 @@
   }
   .s-chat-big .cb-stream > .reveal-item:not(.shown) { display: none; }
   .s-chat-big .cb-right > .reveal-item:not(.shown):not(.cb-final) { display: none; }
+  /* Movies-today poster grid — sits on the right column from step 3.
+     Kept in normal flow so the .reveal-item base rules (display:none ↔ shown)
+     work without extra overrides; sized large but capped so it doesn't push
+     the bottom-anchored chat stream. Tucks away once step 6 lands. */
+  .s-chat-big .cb-movies-today {
+    align-self: center;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  }
+  .s-chat-big:has(.cb-bubble.me[data-step="6"].shown) .cb-movies-today {
+    display: none;
+  }
   /* Dark-background slide — cream-coloured footnotes. */
   .reveal section.slide.s-chat-big .footnote-left { color: #E8EDE4; opacity: 0.55; }
   /* Image credit for the i-can-do-it-all image — only shows when that
@@ -1353,7 +1690,7 @@
     align-items: center;
     text-align: center;
     gap: 60px;
-    max-width: 1080px;
+    max-width: 1200px;
   }
   .spiral-row.spiral-row-flows-only .spiral-title {
     text-align: center;
@@ -1363,16 +1700,16 @@
     line-height: 1.05;
   }
   .spiral-row.spiral-row-flows-only .spiral-flow {
-    font-size: 22px;
+    font-size: 18px;
     /* Fixed grid so the boxes line up column-by-column across both flows:
-       Two people | → | Same prompt | → | pivot | → | end */
+       Two people | → | Same prompt | → | pivot | → | end | → | tail */
     display: grid;
-    grid-template-columns: 200px 40px 200px 40px 260px 40px 260px;
+    grid-template-columns: 130px 28px 150px 28px 200px 28px 200px 28px 170px;
     align-items: center;
     justify-items: stretch;
     column-gap: 0;
     width: 100%;
-    max-width: 1080px;
+    max-width: 1200px;
   }
   .spiral-row.spiral-row-flows-only .spiral-flow .step {
     text-align: center;
@@ -1395,17 +1732,44 @@
     box-shadow: 3px 3px 0 var(--fg-deep);
   }
 
-  /* Reveal each flow on next press. */
-  .s-spiral .spiral-flow {
+  /* Both flows are always laid out (so their column grids match), but each
+     chip / arrow stays hidden until its data-sp step is reached. The
+     grid cells are preserved by keeping visibility hidden (not display:none),
+     so things don't reflow as items reveal. */
+  .s-spiral .spiral-flow .sp-item {
     opacity: 0;
     transform: translateY(6px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: opacity 0.4s ease, transform 0.4s ease;
   }
-  .s-spiral[data-phase="1"] .spiral-flow.flow-1,
-  .s-spiral[data-phase="2"] .spiral-flow.flow-1,
-  .s-spiral[data-phase="2"] .spiral-flow.flow-2,
-  .s-spiral[data-phase="3"] .spiral-flow.flow-1,
-  .s-spiral[data-phase="3"] .spiral-flow.flow-2 {
+  .s-spiral[data-phase="1"] .sp-item[data-sp="1"],
+  .s-spiral[data-phase="2"] .sp-item[data-sp="1"],
+  .s-spiral[data-phase="2"] .sp-item[data-sp="2"],
+  .s-spiral[data-phase="3"] .sp-item[data-sp="1"],
+  .s-spiral[data-phase="3"] .sp-item[data-sp="2"],
+  .s-spiral[data-phase="3"] .sp-item[data-sp="3"],
+  .s-spiral[data-phase="4"] .sp-item[data-sp="1"],
+  .s-spiral[data-phase="4"] .sp-item[data-sp="2"],
+  .s-spiral[data-phase="4"] .sp-item[data-sp="3"],
+  .s-spiral[data-phase="4"] .sp-item[data-sp="4"],
+  .s-spiral[data-phase="5"] .sp-item[data-sp="1"],
+  .s-spiral[data-phase="5"] .sp-item[data-sp="2"],
+  .s-spiral[data-phase="5"] .sp-item[data-sp="3"],
+  .s-spiral[data-phase="5"] .sp-item[data-sp="4"],
+  .s-spiral[data-phase="5"] .sp-item[data-sp="5"],
+  .s-spiral[data-phase="6"] .sp-item[data-sp="1"],
+  .s-spiral[data-phase="6"] .sp-item[data-sp="2"],
+  .s-spiral[data-phase="6"] .sp-item[data-sp="3"],
+  .s-spiral[data-phase="6"] .sp-item[data-sp="4"],
+  .s-spiral[data-phase="6"] .sp-item[data-sp="5"],
+  .s-spiral[data-phase="6"] .sp-item[data-sp="6"],
+  .s-spiral[data-phase="7"] .sp-item[data-sp="1"],
+  .s-spiral[data-phase="7"] .sp-item[data-sp="2"],
+  .s-spiral[data-phase="7"] .sp-item[data-sp="3"],
+  .s-spiral[data-phase="7"] .sp-item[data-sp="4"],
+  .s-spiral[data-phase="7"] .sp-item[data-sp="5"],
+  .s-spiral[data-phase="7"] .sp-item[data-sp="6"],
+  .s-spiral[data-phase="7"] .sp-item[data-sp="7"],
+  .s-spiral[data-phase="8"] .sp-item {
     opacity: 1;
     transform: translateY(0);
   }
@@ -2023,6 +2387,222 @@
     opacity: 0.18;
     filter: grayscale(0.55);
     transition: opacity 0.4s ease, filter 0.4s ease;
+  }
+  /* Phase 5: restore full color on every After AI segment (overriding any
+     phase-4 fade that targeted non-AI segments) and reveal the Data /
+     Visualisation / Design brackets underneath the After AI bar. */
+  .s-effort-simple[data-phase="5"] .effort-seg.shown,
+  .s-effort-simple[data-phase="6"] .effort-seg.shown {
+    opacity: 1;
+    filter: none;
+  }
+  /* Phase 6: the After AI bar + brackets fly up to the exact position/size
+     of the persistent section-marker that appears on every following slide,
+     so the marker on the next slide reads as a direct continuation. The
+     exact translate/scale values come from JS measurements at phase entry
+     and are exposed as --morph-dx / --morph-dy / --morph-sx CSS variables. */
+  .s-effort-simple .effort-row.after {
+    transition:
+      transform 0.7s cubic-bezier(0.65, 0.05, 0.36, 1),
+      gap 0.5s ease;
+    transform-origin: top left;
+  }
+  .s-effort-simple .effort-row.after .effort-bar {
+    transition:
+      height 0.7s cubic-bezier(0.65, 0.05, 0.36, 1),
+      border-width 0.5s ease,
+      box-shadow 0.5s ease;
+  }
+  .s-effort-simple .effort-row.after .effort-row-label {
+    transition: opacity 0.35s ease, flex-basis 0.5s ease, padding 0.5s ease, border-width 0.4s ease;
+  }
+  .s-effort-simple .effort-seg { transition: font-size 0.5s ease, padding 0.5s ease, color 0.4s ease; }
+  .s-effort-simple .effort-brackets {
+    transition:
+      opacity 0.4s ease,
+      margin-top 0.5s ease;
+  }
+  .s-effort-simple .eb-label { transition: font-size 0.5s ease; }
+  .s-effort-simple .eb-bracket {
+    transition: padding 0.5s ease, color 0.3s ease, opacity 0.3s ease, border-top-width 0.4s ease, margin 0.4s ease;
+  }
+  /* Fade-able siblings during the morph. */
+  .s-effort-simple .effort-row.before,
+  .s-effort-simple .effort-head,
+  .s-effort-simple .es-legend {
+    transition: opacity 0.5s ease;
+  }
+  .s-effort-simple[data-phase="6"] .effort-row.before,
+  .s-effort-simple[data-phase="6"] .effort-head,
+  .s-effort-simple[data-phase="6"] .es-legend {
+    opacity: 0;
+    pointer-events: none;
+  }
+  /* The After AI row morphs to the marker's exact spot via the JS-measured
+     transform variables. Gap collapses with the row label so the bar fills
+     the strip. */
+  .s-effort-simple[data-phase="6"] .effort-row.after {
+    transform: translate(var(--morph-dx, -160px), var(--morph-dy, -360px)) scaleX(var(--morph-sx, 1.05));
+    gap: 0;
+    z-index: 30;
+  }
+  .s-effort-simple[data-phase="6"] .effort-row.after .effort-bar {
+    height: 8px;
+    border-width: 1px;
+    box-shadow: none;
+  }
+  /* The After AI label collapses to zero width so the bar fills the strip. */
+  .s-effort-simple[data-phase="6"] .effort-row.after .effort-row-label {
+    opacity: 0;
+    flex-basis: 0;
+    padding: 0;
+    border-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  /* Segment labels vanish in the thin replica — only the colored bar remains.
+     Borders between segments switch from background-color (invisible) to
+     dark hairlines so each ownership block reads as a distinct slice,
+     exactly like the persistent marker on the following slides. */
+  .s-effort-simple[data-phase="6"] .effort-seg {
+    font-size: 0;
+    padding: 0;
+    color: transparent;
+    border-right: 1.5px solid #fff;
+  }
+  .s-effort-simple[data-phase="6"] .effort-seg:last-child {
+    border-right: none;
+  }
+  /* Phase 6 viz divider matches the white partition lines. */
+  .s-effort-simple[data-phase="6"] .viz-split-mixed .viz-divider {
+    background: #fff !important;
+  }
+  /* Striped Idea — match the marker's yellow/dark stripe pattern with a
+     subtle scratched-out line through it, same as the source segment.   */
+  .s-effort-simple[data-phase="6"] .effort-seg.striped {
+    background: repeating-linear-gradient(
+      45deg,
+      #e8c95a,
+      #e8c95a 4px,
+      rgba(15, 68, 36, 0.55) 4px,
+      rgba(15, 68, 36, 0.55) 6px
+    ) !important;
+  }
+  /* Add a pink strike line across the Idea segment to echo the dataviz bar's
+     "scratched out" Idea — the line-through CSS doesn't show with font-size:0,
+     so draw it as a centered pseudo-element instead. */
+  .s-effort-simple[data-phase="6"] .effort-seg.striped::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    top: 50%;
+    height: 1.5px;
+    background: var(--accent-pink);
+    transform: translateY(-50%);
+  }
+  /* In the thin replica: hide only the TEXT of the merged label and the
+     viz sub-labels. Keep the colored backgrounds (Make 50 charts green /
+     Choose chart type yellow) and the divider visible so the split reads
+     like the persistent marker. */
+  .s-effort-simple[data-phase="6"] .effort-seg .viz-merged-label {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .s-effort-simple[data-phase="6"] .viz-split-mixed .viz-sub {
+    opacity: 1;
+    visibility: visible;
+    color: transparent;
+    font-size: 0;
+    padding: 0;
+  }
+  .s-effort-simple[data-phase="6"] .viz-split-mixed .viz-divider {
+    opacity: 1;
+    visibility: visible;
+    background: var(--fg-deep) !important;
+    animation: none;
+  }
+  /* Counter the row's horizontal scaleX so the sub-cells stay proportional
+     to the original 33% / 67% layout. */
+  /* Hide the vertical y-axis line on the slide during the morph. */
+  .s-effort-simple[data-phase="6"] .effort-body::before {
+    opacity: 0;
+  }
+  .s-effort-simple .effort-body::before {
+    transition: opacity 0.4s ease;
+  }
+  /* Brackets shrink to match the marker's bracket styling. */
+  .s-effort-simple[data-phase="6"] .effort-brackets { margin-top: 4px; }
+  .s-effort-simple[data-phase="6"] .eb-bracket {
+    padding: 6px 4px 0;
+    margin: 0 2px;
+    border-top-width: 1.25px;
+  }
+  .s-effort-simple[data-phase="6"] .eb-label {
+    font-size: 9px;
+    /* Counter the row's horizontal scale so the text reads natural. */
+    transform: scaleX(calc(1 / var(--morph-sx, 1.05)));
+    transform-origin: center;
+    display: inline-block;
+  }
+  /* Highlight Data bracket at phase 6 since the next slide opens the Data section. */
+  .s-effort-simple[data-phase="6"] .eb-bracket:not(.eb-data) { opacity: 0.42; }
+  .s-effort-simple[data-phase="6"] .eb-bracket.eb-data { color: var(--accent-pink); opacity: 1; }
+  /* Hide the persistent top marker on the dataviz slide itself — the
+     morphing bar plays its role. */
+  #slideEffortSimple .section-marker { display: none; }
+  /* Brackets row sits flush under the After AI bar; hidden until phase 5. */
+  .s-effort-simple .effort-row.after .effort-bar { position: relative; }
+  .s-effort-simple .effort-brackets {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin-top: 12px;
+    display: flex;
+    align-items: stretch;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  .s-effort-simple[data-phase="5"] .effort-brackets {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .s-effort-simple .eb-spacer { flex-grow: var(--w, 1); flex-basis: 0; }
+  .s-effort-simple .eb-bracket {
+    flex-grow: var(--w, 1);
+    flex-basis: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 8px 0;
+    color: var(--fg-deep);
+    border-top: 2px solid currentColor;
+    margin: 0 4px;
+  }
+  /* Bracket tick marks — short verticals dropping from the corners. */
+  .s-effort-simple .eb-bracket::before,
+  .s-effort-simple .eb-bracket::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 9px;
+    background: currentColor;
+  }
+  .s-effort-simple .eb-bracket::before { left: 0; }
+  .s-effort-simple .eb-bracket::after  { right: 0; }
+  .s-effort-simple .eb-label {
+    font-family: 'New Spirit', serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    color: var(--fg-deep);
+    text-transform: uppercase;
+    white-space: nowrap;
   }
 
   /* ====================================================================
@@ -3983,6 +4563,7 @@
     line-height: 1.12;
     color: var(--fg-deep);
     letter-spacing: -0.4px;
+    text-align: center;
   }
   .s-prompt .pr-head em {
     font-style: italic;
@@ -5446,7 +6027,7 @@
     filter: grayscale(0.6) brightness(0.92);
   }
   .s-protogal .pg-cell.is-zoom {
-    z-index: 30;
+    z-index: 60;
     box-shadow: 4px 4px 0 var(--fg-deep);
     transition:
       transform 0.45s cubic-bezier(.2,.7,.2,1),
@@ -5454,6 +6035,12 @@
       filter 0.32s ease,
       box-shadow 0.32s ease,
       z-index 0s linear 0s;
+  }
+  /* Fade the persistent section marker while a chart is zoomed in so the
+     zoomed chart can read cleanly without the bar bleeding through. */
+  .s-protogal.is-zoomed .section-marker {
+    opacity: 0;
+    transition: opacity 0.32s ease;
   }
 
   /* ====================================================================
@@ -7159,6 +7746,206 @@
   }
 
   /* ====================================================================
+     Section marker — persistent thin strip injected on every slide within
+     the Data / Visualisation / Design-and-development arc. Mirrors the
+     "After AI" bar + brackets shown at the end of slideEffortSimple:
+     a miniature striped bar with the same segments on top, then the three
+     brackets (Data / Visualisation / Design and development) underneath.
+     The bracket matching this slide's section is highlighted in pink.
+     ==================================================================== */
+  .section-marker {
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    right: 60px;
+    z-index: 30;
+    pointer-events: none;
+    color: var(--fg-deep);
+  }
+  /* Marker is short enough that most slides clear it; for the few with
+     absolute-positioned headings that sit right at the top, nudge those
+     specific headings down so they don't sit right under the bar.
+     (margin-top is ignored on absolutely positioned elements, so we adjust
+     the `top` instead.) */
+  .slide.has-section-marker .ls-head    { top: 84px; }
+  /* "A web scraper in seconds" sits centered directly above the scraper
+     video — bounds match the video column inside .scraper-body so the
+     title hugs the top of the mp4 frame. Nudged slightly right so it
+     sits more squarely over the video. */
+  .slide.has-section-marker.s-lovesongs-scraper .ls-head {
+    top: 100px;
+    left: 100px;
+    right: auto;
+    width: calc((100% - 120px - 60px) / 2);
+    text-align: center;
+    padding-left: 0;
+  }
+  /* Push the scraper body down so the title has visible space above the video. */
+  .slide.has-section-marker.s-lovesongs-scraper .scraper-body { top: 150px; }
+  .slide.has-section-marker .pf-head    { top: 84px; }
+  .slide.has-section-marker .pr-head    { top: 84px; }
+  .slide.has-section-marker .ec-head    { top: 84px; }
+  /* Tighter heads that should sit closer to the marker. */
+  .slide.has-section-marker .pg-head    { top: 70px; }
+  .slide.has-section-marker .mb-head    { top: 70px; }
+  /* Headings that originally sat very close to the top — bring them down so
+     they clear the marker bar. */
+  .slide.has-section-marker .bb-title   { top: 84px; }
+  .slide.has-section-marker .mm-quote   { top: 92px; }
+  .slide.has-section-marker .ed-title   { top: 84px; }
+  .slide.has-section-marker .il-title   { top: 84px; }
+  /* Trailers slide — the dense poster grid runs near the top of the slide.
+     Push it down so it doesn't sit under the marker. */
+  .slide.has-section-marker .tr-grid    { top: 80px; height: 620px; }
+  /* The trailers head also sits at top: 18px — bump it down past the marker. */
+  .slide.has-section-marker .tr-head    { top: 60px; }
+  /* Love songs slide — add breathing space between the title and the image. */
+  .slide.has-section-marker.s-lovesongs:not(.s-lovesongs-scraper) .ls-frame { top: 160px; }
+  /* Ask Mom slide — head and body are tightly stacked, so push both down
+     together to clear the marker without colliding. */
+  .slide.has-section-marker .mom2-head  { top: 70px; }
+  .slide.has-section-marker .mom2-body  { top: 130px; }
+  /* Thin replica of the After AI bar — segments use the same --w grow values
+     as the full bar on slideEffortSimple so the brackets align beneath. */
+  .section-marker .sm-bar {
+    height: 8px;
+    border: 1px solid currentColor;
+    background: var(--bg);
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+  }
+  .section-marker .sm-seg {
+    flex-grow: var(--w, 1);
+    flex-basis: 0;
+    border-right: 1.5px solid #fff;
+  }
+  .section-marker .sm-seg:last-child { border-right: none; }
+  /* Dim utility — a segment that's outside the active section reverts to
+     a neutral cream so the active-section block reads as the focus. */
+  .section-marker .sm-seg-dim {
+    background: #ece6d6 !important;
+    background-image: none !important;
+  }
+  .section-marker .sm-seg-dim::after { display: none; }
+  /* Per-section colouring on the persistent marker:
+       Data    section → keep segments 2/3/4 lit (PROMPT, Research, CHECKS)
+       Visuals section → keep segments 5/6/7 lit (PROMPT, Make 50, Choose)
+       Design  section → keep segments 8/9/10 lit (ITERATE, build, host)
+     Idea (segment 1) keeps its striped colour on every slide as a fixed
+     left anchor. */
+  .section-marker[data-current="data"]    .sm-seg:nth-child(n+5):not(:nth-child(1)),
+  .section-marker[data-current="visuals"] .sm-seg:nth-child(-n+4):not(:nth-child(1)),
+  .section-marker[data-current="visuals"] .sm-seg:nth-child(n+8),
+  .section-marker[data-current="design"]  .sm-seg:nth-child(-n+7):not(:nth-child(1)) {
+    background: #ece6d6 !important;
+    background-image: none !important;
+  }
+  .section-marker[data-current="data"]    .sm-seg:nth-child(n+5):not(:nth-child(1))::after,
+  .section-marker[data-current="visuals"] .sm-seg:nth-child(-n+4):not(:nth-child(1))::after,
+  .section-marker[data-current="visuals"] .sm-seg:nth-child(n+8)::after,
+  .section-marker[data-current="design"]  .sm-seg:nth-child(-n+7):not(:nth-child(1))::after {
+    display: none;
+  }
+  /* Ownership colors mirror the After AI bar exactly. */
+  .section-marker .sm-seg.w-only-human { background: #e8c95a; }
+  .section-marker .sm-seg.w-human      { background: var(--accent-pink); }
+  .section-marker .sm-seg.w-ai         { background: var(--fg-deep); }
+  .section-marker .sm-seg.striped {
+    position: relative;
+    background-image: repeating-linear-gradient(
+      45deg,
+      #e8c95a 0 4px,
+      rgba(15, 68, 36, 0.55) 4px 6px
+    );
+  }
+  /* Pink scratched-out line across the Idea segment — mirrors the dataviz
+     bar's line-through Idea label. */
+  .section-marker .sm-seg.striped::after {
+    content: '';
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    top: 50%;
+    height: 1.5px;
+    background: var(--accent-pink);
+    transform: translateY(-50%);
+  }
+  /* Brackets row sits directly under the mini bar, same flex-grow widths. */
+  .section-marker .sm-brackets {
+    margin-top: 4px;
+    display: flex;
+    align-items: stretch;
+  }
+  .section-marker .sm-spacer {
+    flex-grow: var(--w, 1);
+    flex-basis: 0;
+  }
+  .section-marker .sm-bracket {
+    flex-grow: var(--w, 1);
+    flex-basis: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 4px 0;
+    margin: 0 2px;
+    border-top: 1.25px solid currentColor;
+    opacity: 0.42;
+    transition: color 0.3s ease, opacity 0.3s ease;
+  }
+  .section-marker .sm-bracket::before,
+  .section-marker .sm-bracket::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 1.25px;
+    height: 5px;
+    background: currentColor;
+  }
+  .section-marker .sm-bracket::before { left: 0; }
+  .section-marker .sm-bracket::after  { right: 0; }
+  .section-marker .sm-label {
+    font-family: 'New Spirit', serif;
+    font-weight: 500;
+    font-size: 9px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  /* Sub-label under each bracket name — "Web ≠ Dataset" / "50 charts ≠ story"
+     / "Interface ≠ Experience". Reads as a quiet caption when the bracket is
+     inactive; the active bracket lifts both lines into full pink. */
+  .section-marker .sm-sub {
+    font-family: 'New Spirit', serif;
+    font-weight: 400;
+    font-size: 9.5px;
+    line-height: 1.1;
+    margin-top: 2px;
+    white-space: nowrap;
+    color: var(--fg-deep);
+    opacity: 0.85;
+  }
+  .section-marker .sm-sub .sm-neq { font-weight: 500; }
+  .section-marker .sm-sub .sm-it  { font-style: italic; color: var(--accent-pink); }
+  /* Highlight the bracket matching this slide's section. */
+  .section-marker[data-current="data"]    .sm-bracket[data-key="data"],
+  .section-marker[data-current="visuals"] .sm-bracket[data-key="visuals"],
+  .section-marker[data-current="design"]  .sm-bracket[data-key="design"] {
+    color: var(--accent-pink);
+    opacity: 1;
+  }
+  /* Cream type on dark-background slides. */
+  .s-chat-big .section-marker,
+  .s-bts .section-marker,
+  .s-recordings .section-marker {
+    color: #E8EDE4;
+  }
+  .s-chat-big .section-marker .sm-bar,
+  .s-bts .section-marker .sm-bar,
+  .s-recordings .section-marker .sm-bar { background: transparent; }
+
+  /* ====================================================================
      SLIDE 14.1 — Ishita Sengupta quote + 2023 genre scores image
      ==================================================================== */
   .s-quote-stories { background: var(--bg); }
@@ -7426,9 +8213,23 @@
         <span class="h">surbhibhatia.com</span>
       </div>
     </div>
+    <aside class="notes">
+      <ul>
+        <li>Hi everyone.</li>
+        <li>Thanks for joining.</li>
+        <li>Really glad to be a part of this year's Outlier conf.</li>
+        <li>And true to this year's theme — Final Draft —</li>
+        <li>I'm going to talk about vibe coding.</li>
+        <li>Which can give you a chart, a webpage, a dashboard — in minutes.</li>
+        <li>Really fast.</li>
+        <li>Creates an illusion of being done.</li>
+        <li>Final draft? Different story.</li>
+        <li>Fast is not finished.</li>
+      </ul>
+    </aside>
   </section>
 
-  <!-- ============ SLIDE 02 — Bollywood collage ============ -->
+  <!-- ============ SLIDE 02 — Bollywood collage (prolific) ============ -->
   <section class="slide s-bolly" id="slideBolly">
     <div class="bc-grid">
       <div class="tile"><img src="assets/bolly1.jpeg" alt="" /></div>
@@ -7439,17 +8240,6 @@
       <div class="tile"><img src="assets/bolly6.jpeg" alt="" /></div>
     </div>
 
-    <div class="bc-action bc-love" aria-hidden="true">
-      <div class="stripe"></div><div class="stripe"></div>
-      <div class="stripe"></div><div class="stripe"></div>
-      <div class="stripe"></div><div class="stripe"></div>
-      <div class="stripe"></div><div class="stripe"></div>
-      <div class="stripe"></div><div class="stripe"></div>
-      <div class="stripe"></div><div class="stripe"></div>
-      <div class="stripe"></div><div class="stripe"></div>
-      <div class="stripe"></div><div class="stripe"></div>
-    </div>
-
     <div class="bc-overlay"></div>
 
     <div class="bc-caption">
@@ -7458,13 +8248,161 @@
           Bollywood: India's prolific Hindi film industry
         </div>
       </div>
-      <div class="bc-cap-love">
-        <div class="bc-title bc-title-pink">
-          Raised on larger-than-life love stories
+    </div>
+    <div class="bc-credit">Image credits: <em>Pinterest</em></div>
+    <aside class="notes">
+      <ul>
+        <li>I come from the land of Bollywood.</li>
+        <li>India's Hindi film industry.</li>
+        <li>Magic of the movies is huge.</li>
+        <li>A universal language — fashion, music, dance, identity.</li>
+        <li>A source of escape for many.</li>
+        <li>Cultural heartbeat of the country.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- ============ SLIDE 02a — Fandom: temple, Mannat, dance ============ -->
+  <section class="slide s-fandom" id="slideFandom" data-stage="1">
+    <!-- Stage 1: Amitabh greeting fans (left) + Amitabh temple (right) -->
+    <div class="fandom-stage fandom-stage-1">
+      <div class="fandom-pair">
+        <div class="fandom-pair-item">
+          <img src="assets/amitabh-0.jpg" alt="Amitabh Bachchan greeting fans" />
+        </div>
+        <div class="fandom-pair-item">
+          <img src="assets/amitabh-temple.jpg" alt="Amitabh Bachchan temple" />
+          <div class="fandom-cap">A temple to worship bollywood superstar Amitabh Bachchan in Kolkata, India. <em>Source: Orissa Post</em></div>
         </div>
       </div>
     </div>
-    <div class="bc-credit">Image credits: <em>Pinterest</em></div>
+
+    <!-- Stage 2: SRK Mannat + SRK fans -->
+    <div class="fandom-stage fandom-stage-2">
+      <div class="fandom-pair">
+        <div class="fandom-pair-item">
+          <img src="assets/srk-mannat.png" alt="SRK greeting fans outside Mannat" />
+          <div class="fandom-cap">Shah Rukh Khan, greeting fans outside his home in Mumbai on his 57th birthday. <em>Source: Atul Loke, New York Times</em></div>
+        </div>
+        <div class="fandom-pair-item">
+          <img src="assets/srk-fans.webp" alt="Fans gathered outside Shah Rukh Khan's house" />
+          <div class="fandom-cap">Fans gathered outside Shah Rukh Khan's house.<br><em>Source: @iamsrk on Instagram</em></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage 3: Dance medley — 3 on top, 2 on bottom -->
+    <div class="fandom-stage fandom-stage-3">
+      <div class="fandom-medley">
+        <h2 class="fandom-medley-title">A cultural medley of music, dance, and storytelling</h2>
+        <div class="fandom-medley-row fandom-medley-row-top">
+          <div class="fandom-trio-item">
+            <img src="assets/dola-re-dance.jpeg" alt="Dola Re Dola dance sequence" />
+            <div class="fandom-cap">Dola Re Dola, an iconic dance-off from Devdas (2002)</div>
+          </div>
+          <div class="fandom-trio-item">
+            <img src="assets/pinga.webp" alt="Pinga dance sequence" />
+            <div class="fandom-cap">Pinga, from Bajirao Mastani (2015)</div>
+          </div>
+          <div class="fandom-trio-item">
+            <img src="assets/dhoom.jpg" alt="Dhoom Machale dance sequence" />
+            <div class="fandom-cap">Dhoom Machale (2006)</div>
+          </div>
+        </div>
+        <div class="fandom-medley-row fandom-medley-row-bottom">
+          <div class="fandom-trio-item">
+            <img src="assets/ramleela.jpg" alt="Nagada Sang Dhol dance sequence" />
+            <div class="fandom-cap">Ramleela (2013)</div>
+          </div>
+          <div class="fandom-trio-item">
+            <video src="assets/ek-pal-ka-jeena.mp4" autoplay muted loop playsinline preload="auto"></video>
+            <div class="fandom-cap">Ek Pal Ka Jeena, signature step</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage 4: Global reach — gangubai (1/2/3) shown by default;
+         dangal is revealed on the first click within the stage, pc on the next click. -->
+    <div class="fandom-stage fandom-stage-4" data-substep="0">
+      <div class="fandom-global">
+        <div class="fg-col fg-col-left">
+          <div class="fg-cell fg-big">
+            <img src="assets/gangubai-1.png" alt="Gangubai Kathiawadi still" />
+          </div>
+          <div class="fg-cell fg-small">
+            <img src="assets/gangubai-2.png" alt="Gangubai Kathiawadi still" />
+          </div>
+        </div>
+        <div class="fg-col fg-col-right">
+          <div class="fg-cell fg-big">
+            <img src="assets/gangubai-3.png" alt="Pimpan Chalaikupp and Lingling Sirilak Kwong dressed as Gangubai" />
+          </div>
+          <div class="fg-row fg-row-bottom">
+            <div class="fg-cell fg-medium fg-reveal" data-reveal="1">
+              <img src="assets/dangal.png" alt="Chinese fans taking a selfie with a Dangal poster in Beijing" />
+              <div class="fandom-cap"><em>Source: Indian Express</em></div>
+            </div>
+            <div class="fg-cell fg-small fg-reveal" data-reveal="2">
+              <img src="assets/pc.png" alt="Priyanka Chopra and Nick Jonas at the Met Gala, 2017" />
+              <div class="fandom-cap">Priyanka Chopra and Nick Jonas at the Met Gala, 2017.<br><em>Source: Entertainment Weekly</em></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stripe reveal of DDLJ (triggered after stage 4) -->
+    <div class="bc-action bc-love fandom-stripes" aria-hidden="true">
+      <div class="stripe"></div><div class="stripe"></div>
+      <div class="stripe"></div><div class="stripe"></div>
+      <div class="stripe"></div><div class="stripe"></div>
+      <div class="stripe"></div><div class="stripe"></div>
+      <div class="stripe"></div><div class="stripe"></div>
+      <div class="stripe"></div><div class="stripe"></div>
+      <div class="stripe"></div><div class="stripe"></div>
+      <div class="stripe"></div><div class="stripe"></div>
+    </div>
+
+    <!-- DDLJ caption — revealed together with the stripes on stage 4 -->
+    <div class="fandom-ddlj-cap">
+      <div class="bc-title bc-title-pink">
+        Dilwale Dulhaniya Le Jayenge<br>Still on the big screen 30 years later
+      </div>
+    </div>
+
+    <aside class="notes">
+      <ul>
+        <li>Fandom in India is on another level.</li>
+        <li>A temple built for Amitabh Bachchan.</li>
+        <li>Crowds outside SRK's house, Mannat, every birthday.</li>
+        <li>Songs and dances that everyone knows by heart.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- ============ SLIDE 02b — DDLJ (love story) ============ -->
+  <section class="slide s-bolly s-bolly-love" id="slideBollyLove">
+    <div class="bc-grid-love">
+      <img src="assets/bolly-love.jpg" alt="Dilwale Dulhaniya Le Jayenge" />
+    </div>
+    <div class="bc-overlay"></div>
+    <div class="bc-caption">
+      <div class="bc-cap-love-static">
+        <div class="bc-title bc-title-pink">
+          Dilwale Dulhaniya Le Jayenge<br>Still on the big screen 30 years later
+        </div>
+      </div>
+    </div>
+    <aside class="notes">
+      <ul>
+        <li>On screen: the most iconic image from DDLJ.</li>
+        <li>SRK — arms wide open in a mustard field.</li>
+        <li>Simran (Kajol) running into them.</li>
+        <li>Still running in Indian theatres — 30 years on.</li>
+        <li>For millennials — this was the definition of love.</li>
+      </ul>
+    </aside>
   </section>
 
   <!-- ============ SLIDE 03 — Big WhatsApp conversation ============ -->
@@ -7472,8 +8410,8 @@
     <div class="cb-header">
       <div class="cb-avatar">F</div>
       <div class="cb-name">friday-night-plans-friend<span class="cb-status">● online</span></div>
-      <div class="cb-date">February 14, 2025</div>
     </div>
+    <div class="cb-date-banner">February 14, 2025</div>
     <div class="cb-body">
       <div class="cb-stream">
         <div class="cb-bubble me reveal-item" data-step="1">
@@ -7484,35 +8422,51 @@
           <img src="assets/chhaava.jpg" alt="Chhaava poster" />
           <div class="cb-cap">Romance is officially dead<span class="cb-time">3:52 PM<span class="cb-ticks">✓✓</span></span></div>
         </div>
-        <div class="cb-bubble them reveal-item" data-step="3">
+        <div class="cb-bubble them reveal-item" data-step="4">
           Omg I hear you so loud
           <span class="cb-time">4:00 PM</span>
         </div>
-        <div class="cb-bubble them reveal-item" data-step="4">
+        <div class="cb-bubble them reveal-item" data-step="5">
           You should check what's going on
           <span class="cb-time">4:08 PM</span>
         </div>
-        <div class="cb-bubble me reveal-item" data-step="5">
+        <div class="cb-bubble me reveal-item" data-step="6">
           Yeah, I am so annoyed. I think I can get something out pretty fast now that AI can do all the scraping and building. This should be quick
           <span class="cb-time">4:14 PM<span class="cb-ticks">✓✓</span></span>
         </div>
-        <div class="cb-system reveal-item" data-step="8">✦ Claude has joined the chat</div>
-        <div class="cb-claude reveal-item" data-step="9">
+        <div class="cb-system reveal-item" data-step="9">✦ Claude has joined the chat</div>
+        <div class="cb-claude reveal-item" data-step="10">
           <div class="cb-cl-icon"><img src="assets/Claude.png" alt="Claude" /></div>
           <div class="cb-cl-text">You are absolutely right!</div>
           <div class="cb-cl-time">4:15 PM</div>
         </div>
-        <img class="cb-final reveal-item" data-step="10" src="assets/i-can-do-it-all.png" alt="I can do it all" data-credit="www.brightcarbon.com" />
-        <img class="cb-final reveal-item" data-step="11" src="assets/oreilly.jpeg" alt="O'Reilly Vibe Coding book" />
+        <img class="cb-final reveal-item" data-step="11" src="assets/i-can-do-it-all.png" alt="I can do it all" data-credit="www.brightcarbon.com" />
+        <img class="cb-final reveal-item" data-step="12" src="assets/oreilly.jpeg" alt="O'Reilly Vibe Coding book" />
       </div>
       <div class="cb-right">
-        <div class="cb-headline reveal-item" data-step="6">
+        <img class="cb-movies-today reveal-item" data-step="3" src="assets/movies-today.png" alt="Bollywood movie posters from the last year" />
+        <div class="cb-headline reveal-item" data-step="7">
           <span class="quote-mark">"</span>This should be quick<span class="quote-mark">"</span>
         </div>
-        <div class="cb-flw reveal-item" data-step="7">— famous last words</div>
+        <div class="cb-flw reveal-item" data-step="8">— famous last words</div>
       </div>
     </div>
     <div class="cb-image-credit">Image credit: <em>www.brightcarbon.com</em></div>
+    <aside class="notes">
+      <ul>
+        <li>Last year, Feb 14 — Valentine's Day — was different.</li>
+        <li>The release of the day was Chhaava.</li>
+        <li>Super bummed.</li>
+        <li>Complaining to my friend about the lack of love at the movies.</li>
+        <li>I was confident.</li>
+        <li>Because confident Claude assured me I was absolutely right.</li>
+        <li>I thought I could be self-sufficient.</li>
+        <li>I was a Swiss knife.</li>
+        <li>I thought I could deliver in two weeks. Alone.</li>
+        <li>But turns out — there's no rule book for vibe coding.</li>
+        <li>It's just vibes.</li>
+      </ul>
+    </aside>
   </section>
 
   <!-- ============ SLIDE 04 — Hello / fields ============ -->
@@ -7530,8 +8484,8 @@
     <!-- Five-circle pentagonal flower — base circles green, 5 adjacent
          intersections form pink petals.
          Reveal order on slide-class .hf-1 → .hf-6:
-           1: Academia, 2: + Journalism, 3: + Design,
-           4: + Communications, 5: + Public Policy, 6: + pink petals + legend -->
+           1: Academia, 2: + Journalism, 3: + Public Policy,
+           4: + Business & corporates, 5: + Design studios, 6: + pink petals + legend -->
     <div class="hello-figure">
       <svg viewBox="0 0 680 680" role="img" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -7563,16 +8517,16 @@
         <text class="hf-label hf-label-1" x="340" y="170">Academia</text>
         <text class="hf-label hf-label-2" x="478" y="258">Journalism</text>
         <text class="hf-label hf-label-3" x="446" y="468">
-          <tspan x="446" dy="0">Design</tspan>
-          <tspan x="446" dy="22">studios</tspan>
+          <tspan x="446" dy="0">Public</tspan>
+          <tspan x="446" dy="22">Policy</tspan>
         </text>
         <text class="hf-label hf-label-4" x="229" y="468">
           <tspan x="229" dy="0">Business &amp;</tspan>
           <tspan x="229" dy="22">corporates</tspan>
         </text>
         <text class="hf-label hf-label-5" x="198" y="251">
-          <tspan x="198" dy="0">Public</tspan>
-          <tspan x="198" dy="22">Policy</tspan>
+          <tspan x="198" dy="0">Design</tspan>
+          <tspan x="198" dy="22">studios</tspan>
         </text>
       </svg>
     </div>
@@ -7598,6 +8552,23 @@
       </svg>
       <span class="lg-val">dataviz</span>
     </div>
+    <aside class="notes">
+      <ul>
+        <li>Quick intro before the story.</li>
+        <li>I'm Surbhi — data journalist.</li>
+        <li>Started in a finance research lab.</li>
+        <li>Worked with professors.</li>
+        <li>Learnt to code in R and Python.</li>
+        <li>Moved to a newsroom.</li>
+        <li>Simplifying and communicating data through visuals.</li>
+        <li>Since then — collaborations across.</li>
+        <li>Public policy and think tanks.</li>
+        <li>Multilateral and government stakeholders.</li>
+        <li>Businesses and corporates.</li>
+        <li>Design studios.</li>
+        <li>Common thread — dataviz.</li>
+      </ul>
+    </aside>
   </section>
 
   <!-- ============ SLIDE 05 — Behind the Scenes ============ -->
@@ -7614,66 +8585,14 @@
         <video src="assets/konti-story-panel.mov" autoplay muted loop playsinline></video>
       </div>
     </div>
-  </section>
-
-  <!-- ============ SLIDE 06 — Vibe-coding can feel capricious ============ -->
-  <!-- ============ SLIDE 06.5 — The vibe shift: an unlock for non-coders ============ -->
-  <section class="slide s-unlock" id="slideUnlock">
-    <div class="unlock-head">
-      <div class="unlock-title">The <span class="pink">vibe shift</span>: An unlock for non-coders</div>
-    </div>
-    <div class="unlock-row">
-      <!-- Stage 1: the flow chart, centred. Each step still reveals one at
-           a time via .ur-item / data-step. -->
-      <div class="unlock-stage" id="unlockStageFlow">
-        <div class="unlock-flow">
-          <div class="unlock-step ur-item" data-step="1"><span class="num">01</span>Start with the <em>idea</em></div>
-          <div class="unlock-arrow ur-item" data-step="2"></div>
-          <div class="unlock-strike ur-item" data-step="3">
-            <div class="overlay">Forget that the code exists</div>
-            <div class="unlock-step strikeable"><span class="num">02</span>Write some code</div>
-          </div>
-          <div class="unlock-arrow ur-item" data-step="5"></div>
-          <div class="unlock-step ur-item" data-step="6"><span class="num">03</span>Iterate in minutes</div>
-          <div class="unlock-arrow ur-item" data-step="7"></div>
-          <div class="unlock-step ur-item" data-step="8"><span class="num">04</span>Build &amp; ship before you overthink</div>
-        </div>
-      </div>
-      <!-- Stage 2: "something is changing" image, centred and large. -->
-      <div class="unlock-stage unlock-stage-img" id="unlockStageChanging">
-        <img src="assets/something-changing.png" alt="Something is changing in vibe-coding" />
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============ SLIDE 07 — Vibe-coding is a self-contradictory term ============ -->
-  <section class="slide s-spiral" id="slideSpiral">
-    <div class="spiral-row spiral-row-flows-only">
-      <div class="spiral-left">
-        <div class="spiral-title">
-          Vibe-coding is a <span class="pink">self-contradictory</span> term.
-        </div>
-        <div class="spiral-flow flow-1">
-          <span class="step">Two people</span>
-          <span class="arrow">→</span>
-          <span class="step">Same prompt</span>
-          <span class="arrow">→</span>
-          <span class="step pivot pivot-diff">Different results</span>
-          <span class="arrow">→</span>
-          <span class="step end">Reproducibility?</span>
-        </div>
-        <div class="spiral-flow flow-2">
-          <span class="step">Two people</span>
-          <span class="arrow">→</span>
-          <span class="step">Same prompt</span>
-          <span class="arrow">→</span>
-          <span class="step pivot pivot-same">Same result</span>
-          <span class="arrow">→</span>
-          <span class="step end pink-fill">AI slop!</span>
-        </div>
-      </div>
-    </div>
+    <aside class="notes">
+      <ul>
+        <li>Today — taking you behind the scenes.</li>
+        <li>The story: how Bollywood fell out of love.</li>
+        <li>Published with Kontinentalist.</li>
+        <li>But before I unpack it…</li>
+      </ul>
+    </aside>
   </section>
 
   <!-- ============ SLIDE 07.6 — The chart of vibe-coding (7 points, animated) ============ -->
@@ -7766,6 +8685,13 @@
         <text x="1050" y="262" font-family="New Spirit, serif" font-weight="600" font-size="14" fill="#d0116f" text-anchor="middle">"I need help"</text>
       </g>
     </svg>
+    <aside class="notes">
+      <ul>
+        <li>love hate relationship</li>
+        <li>I was spellbound by the potential.</li>
+        <li>Then — deep distrust.</li>
+      </ul>
+    </aside>
   </section>
 
   <!-- ============ SLIDE 11.4 — Recordings: FAST and FINISHED, static + moving ============ -->
@@ -7801,6 +8727,18 @@
     </div>
     <!-- Tagline at the bottom -->
     <div class="rec-tag">The difference between a <span class="pink">powerloom</span> vs <span class="pink">handloom</span> textile.</div>
+    <aside class="notes">
+      <ul>
+        <li>They say vibes can help you make the minimum viable product.</li>
+        <li>On the left — the fast, vibe-coded version of the story.</li>
+        <li>On the right — the finished one.</li>
+        <li>I'd argue it's not viable — it's just visible.</li>
+        <li>The difference in feel — machine-made vs a handloom jacket.</li>
+        <li>Faster has always been the agenda.</li>
+        <li>We compromise on completeness, polish, and certainty all the time.</li>
+        <li>In the name of learning and delivery.</li>
+      </ul>
+    </aside>
   </section>
 
   <!-- ============ SLIDE 11.9 — Simplified Discovery → Delivery (yellow/blue palette) ============ -->
@@ -7862,6 +8800,22 @@
           <div class="effort-seg w-human          ef-item"           data-step="10" style="--w:30" title="Iterate">ITERATE</div>
           <div class="effort-seg w-ai             ef-item"           data-step="11" style="--w:6"  title="Build">build</div>
           <div class="effort-seg w-only-human     ef-item"           data-step="12" style="--w:5"  title="Host">host</div>
+          <!-- Phase-5 brackets — appear underneath the After AI bar to group
+               the segments into Data / Visualisation / Design. Widths mirror
+               the --w sums of the segments they span (Idea sits to the left
+               as a spacer, host sits to the right as a spacer). -->
+          <div class="effort-brackets" aria-hidden="true">
+            <span class="eb-spacer"  style="--w:6"></span>
+            <span class="eb-bracket eb-data"  style="--w:30">
+              <span class="eb-label">Data</span>
+            </span>
+            <span class="eb-bracket eb-viz"   style="--w:28">
+              <span class="eb-label">Visualisation</span>
+            </span>
+            <span class="eb-bracket eb-design" style="--w:41">
+              <span class="eb-label">Design and development</span>
+            </span>
+          </div>
           <!-- Visualisation focus sequence:
                Step 13: fade everything except both Visualisation segments.
                Step 14: split the Before AI Visualisation.
@@ -7898,6 +8852,26 @@
         </div>
       </div>
     </div>
+    <aside class="notes">
+      <ul>
+        <li>Something has flipped.</li>
+        <li>Did not rely on AI for the idea.</li>
+        <li>Before — decide a chart, then code it.</li>
+        <li>Now — make 50 charts, then decide.</li>
+        <li>AI alone can give me 50 charts.</li>
+        <li>Something a human can't do in a short time.</li>
+        <li>And AI can build too.</li>
+        <li>My role has shifted — to checks and auditing.</li>
+        <li>Hosting — another thing journalists had to learn.</li>
+        <li>You can't send a localhost page to a friend.</li>
+        <li>AI's role has moved — from code to prompt.</li>
+        <li>Discovery is upstream of delivery.</li>
+        <li>ARCHITECTURE.</li>
+        <li>REACTIVE vs PROACTIVE.</li>
+        <li>The path from input to output — a shortcut. Jam with it.</li>
+        <li>Tooth-comb through the results.</li>
+      </ul>
+    </aside>
   </section>
 
   <!-- ============ SLIDE 12 — Section divider: Data ============ -->
@@ -7915,6 +8889,12 @@
         </div>
       </div>
     </div>
+    <aside class="notes">
+      <ul>
+        <li>Three things I learnt along the way.</li>
+        <li>First — web is not a dataset.</li>
+      </ul>
+    </aside>
   </section>
 
   <!-- ============ SLIDE 12.1 — A web scraper in seconds (scrolly + sources) ============ -->
@@ -7934,6 +8914,17 @@
         </div>
       </div>
     </div>
+    <aside class="notes">
+      <ul>
+        <li>To get the top-grossing films.</li>
+        <li>I used Box Office India and the Wayback Machine.</li>
+        <li>Did not rely on AI to find data sources.</li>
+        <li>Wrote the scraper in seconds.</li>
+        <li>No manual typing.</li>
+        <li>No knowing the code syntax.</li>
+        <li>DRUDGERY OF CODE.</li>
+      </ul>
+    </aside>
   </section>
 
   <!-- ============ SLIDE 12.15 — Love songs: a category problem ============ -->
@@ -7945,6 +8936,14 @@
       <img src="assets/love-songs.png" alt="Love songs as a share of all songs — categories you can switch on and off" />
     </div>
     <div class="ls-tag">Is the Love Song Dying, <span class="pink">The Pudding</span></div>
+    <aside class="notes">
+      <ul>
+        <li>This was a classification problem.</li>
+        <li>Saw a recent story by The Pudding.</li>
+        <li>They used an LLM to tag love songs.</li>
+        <li>Thought it could be a great methodology to apply here.</li>
+      </ul>
+    </aside>
   </section>
 
   <!-- ============ SLIDE 12.2 — Good AI prompt design requires human judgement ============ -->
@@ -8052,6 +9051,20 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
 
       </div>
     </div>
+    <aside class="notes">
+      <ul>
+        <li>Started prompting.</li>
+        <li>Buckets of genres.</li>
+        <li>But a movie can be a cocktail of genres.</li>
+        <li>In India — that's called a masala film.</li>
+        <li>Tried Masala as a category.</li>
+        <li>Tried NOTA — none of the above.</li>
+        <li>Kept tweaking — till I was fatigued.</li>
+        <li>Finally decided — most dominant genre per film.</li>
+        <li>Based on plot, cast, visual style, narrative.</li>
+        <li>An editorial choice.</li>
+      </ul>
+    </aside>
   </section>
 
   <!-- ============ SLIDE 12.3 — Edge cases (box on left) ============ -->
@@ -8082,6 +9095,14 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
         </div>
       </div>
     </div>
+    <aside class="notes">
+      <ul>
+        <li>For latest movies — the internet has a lot of information.</li>
+        <li>But the LLM would see "robot" and tag it Sci-Fi.</li>
+        <li>For older movies — LLM is only as good as the information on the internet.</li>
+        <li>I had to go to the source — my mom.</li>
+      </ul>
+    </aside>
   </section>
 
   <!-- ============ SLIDE 12.36 — Asking Mom 2: phone left, bubbles right, trailer reveal ============ -->
@@ -8147,6 +9168,17 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
         </div>
       </div>
     </div>
+    <aside class="notes">
+      <ul>
+        <li>Mom had a straightjacket answer — and a reason why.</li>
+        <li>I verified by watching the trailer.</li>
+        <li>Was indeed a comedy film.</li>
+        <li>You can't describe it — you just know it when you see it.</li>
+        <li>For any Indians watching — this dialogue will resonate.</li>
+        <li>You could have five LLMs.</li>
+        <li>I have a mom.</li>
+      </ul>
+    </aside>
   </section>
 
 
@@ -8183,6 +9215,18 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
       <div class="pg-cell" data-idx="9"><img src="assets/actors-genre-distribution.png" alt="Actors' genre distribution" /></div>
       <div class="pg-cell" data-idx="10"><img src="assets/actor-timeline.png" alt="Actor timeline — genre blocks per release" /></div>
     </div>
+    <aside class="notes">
+      <ul>
+        <li>What AI helped me with — making 50 types of charts.</li>
+        <li>Even using D3 animations.</li>
+        <li>A chord chart like this one — would have taken me so long to hand-code three years ago.</li>
+        <li>Was possible in minutes.</li>
+        <li>But still useless to my story.</li>
+        <li>"The four most expensive words in the English language are: this time it's different." — Sir John Templeton.</li>
+        <li>This time it's different.</li>
+        <li>More is less.</li>
+      </ul>
+    </aside>
   </section>
 
   <!-- ============ SLIDE 13.3 — Two finalists: per-year genre tiles + nationalist sentiment ============ -->
@@ -8196,6 +9240,15 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
       <div class="pf-cell"><img src="assets/genre-breakup.png" alt="Genre breakup of top 10 movies per year" /></div>
       <div class="pf-cell"><img src="assets/nation.png" alt="Nationalist sentiment in top 10 movies per year" /></div>
     </div>
+    <aside class="notes">
+      <ul>
+        <li>What worked — the good old ggplot.</li>
+        <li>Something I knew in my muscle memory.</li>
+        <li>Romance was going down in the movies.</li>
+        <li>Nationalism was going up.</li>
+        <li>That was the hypothesis.</li>
+      </ul>
+    </aside>
   </section>
 
   <!-- ============ SLIDE 13.5 — Pitch deck → Kontinentalist ============ -->
@@ -8207,6 +9260,11 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
       <img src="assets/pitch-stage.png" alt="Pitch stage — early prototype of the Kontinentalist piece" />
     </div>
     <div class="bb-credit">From the <em>pitch deck</em> to <em>Kontinentalist</em></div>
+    <aside class="notes">
+      <ul>
+        <li>Having a mock-up is persuasive at the pitching stage.</li>
+      </ul>
+    </aside>
   </section>
 
   <!-- ============ SLIDE 14 — Section divider: Stories ============ -->
@@ -8249,7 +9307,7 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
                 <!-- 29% Chart & visual experiments — DARKEST green (largest non-highlight value). -->
                 <circle class="mm-slice mm-slice-green" data-step="2" cx="200" cy="200" r="140" stroke="#3a6b48"
                         stroke-dasharray="255.097 624.549" stroke-dashoffset="-140.743"/>
-                <!-- 11% Fighting with AI — mid-light green. -->
+                <!-- 11% Negotiating with AI — mid-light green. -->
                 <circle class="mm-slice mm-slice-green" data-step="3" cx="200" cy="200" r="140" stroke="#7ca27f"
                         stroke-dasharray="96.761 782.885" stroke-dashoffset="-395.840"/>
                 <!-- 8% Debugging what broke — light green. -->
@@ -8285,15 +9343,16 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
                 </text>
               </g>
 
-              <!-- 11% Fighting with AI (mid 181.8°, bottom) -->
+              <!-- 11% Negotiating with AI (mid 181.8°, bottom) -->
               <g class="mm-marker mm-marker-green" data-step="3">
                 <polyline points="194.7,369.9 196,415 320,415" fill="none" stroke="#7ca27f"/>
                 <text x="328" y="408" text-anchor="start" class="mm-pct" fill="#5e8a64">11%</text>
-                <text x="328" y="430" text-anchor="start" class="mm-lbl">Fighting with AI</text>
+                <text x="328" y="430" text-anchor="start" class="mm-lbl">Negotiating with AI</text>
                 <text x="328" y="452" text-anchor="start" class="mm-lbl mm-lbl-quote">
                   <tspan x="328" dy="0">&ldquo;The labels are overlapping,</tspan>
                   <tspan x="328" dy="13">moving title broke y axis labels,</tspan>
-                  <tspan x="328" dy="13">put it back.&rdquo;</tspan>
+                  <tspan x="328" dy="13">put it back. still doesnt work,</tspan>
+                  <tspan x="328" dy="13">make it better, fix.&rdquo;</tspan>
                 </text>
               </g>
 
@@ -8351,6 +9410,12 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
         </div>
       </div>
     </div>
+    <aside class="notes">
+      <ul>
+        <li>On one particular day — I decided to zoom out.</li>
+        <li>And see what it was I was actually asking for.</li>
+      </ul>
+    </aside>
   </section>
 
   <!-- ============ SLIDE 14.2 — Thinking of visual style ============ -->
@@ -8388,6 +9453,17 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
   <section class="slide s-trailers" id="slideTrailers">
     <!-- Tiles are injected by JS from posters/movies.json. -->
     <div class="tr-grid"></div>
+    <aside class="notes">
+      <ul>
+        <li>And that's how — with four people instead of just Claude + me —</li>
+        <li>The story came alive.</li>
+        <li>Became something that worked.</li>
+        <li>Trustworthy.</li>
+        <li>Understandable.</li>
+        <li>But most importantly — memorable.</li>
+        <li>Performance — image loading and all of that — also got sorted in the process.</li>
+      </ul>
+    </aside>
   </section>
 
   <!-- ============ SLIDE — From Maker to Checker (Things I worry about) ============ -->
@@ -8418,6 +9494,17 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
       </ul>
       <img class="wo-spiral" src="assets/vc-spiral.jpeg" alt="" />
     </div>
+    <aside class="notes">
+      <ul>
+        <li>01 — EXHAUSTING. Becoming a data auditor — bypassing a technical process.</li>
+        <li>02 — Comprehension debt. A confidence crisis — for both producers and consumers of dataviz.</li>
+        <li>03 — Paralysis and fatigue from the sheer amount of options.</li>
+        <li>04 — Dependence on the tool.</li>
+        <li>05 — Skill debt. Is it a career skill — or does it have a shelf life?</li>
+        <li>Take the escalator up — and come back down the floors using the steps, to see how water and electricity are working.</li>
+        <li>AI-enabled vs AI-dependent.</li>
+      </ul>
+    </aside>
   </section>
 
   <!-- ============ FINAL SLIDE — Thank you ============ -->
@@ -8451,6 +9538,12 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
         <div>in <em>The Way of Code</em></div>
       </div>
     </div>
+    <aside class="notes">
+      <ul>
+        <li>Thank you for joining.</li>
+        <li>Looking forward to learning from — and being inspired by — the other talks at this year's Outlier.</li>
+      </ul>
+    </aside>
   </section>
 
 </div><!-- /.slides + /#deck -->
@@ -8653,6 +9746,75 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
       bolly.classList.remove('love-on', 'seamless');
       clearTimeout(bollySeamlessTimer);
       bollyStage = 0;
+      return true;
+    }
+    return false;
+  }
+
+  // Slide 2a (fandom) — 3 image stages, then a stripe reveal of DDLJ as the
+  // exit transition. Stage 4 is the stripes-on state; the next advance after
+  // that hands off to the next slide.
+  const fandom = document.getElementById('slideFandom');
+  let fandomStage = 1;
+  let fandomSeamlessTimer = null;
+  function fandomSetStage(s) {
+    if (!fandom) return;
+    const prev = fandomStage;
+    fandomStage = s;
+    fandom.setAttribute('data-stage', String(s));
+    // Stage 4 sub-step bookkeeping: reset to 0 when entering from before,
+    // jump to fully revealed when retreating back from stripes.
+    if (fandom.querySelector('.fandom-stage-4')) {
+      if (s === 4 && prev < 4) fandom.querySelector('.fandom-stage-4').setAttribute('data-substep', '0');
+      else if (s === 4 && prev > 4) fandom.querySelector('.fandom-stage-4').setAttribute('data-substep', '2');
+      else if (s !== 4) fandom.querySelector('.fandom-stage-4').setAttribute('data-substep', s > 4 ? '2' : '0');
+    }
+    if (s === 5) {
+      fandom.classList.add('stripes-on');
+      clearTimeout(fandomSeamlessTimer);
+      fandomSeamlessTimer = setTimeout(() => fandom.classList.add('stripes-seamless'), STRIPE_TRAVEL_MS);
+    } else {
+      fandom.classList.remove('stripes-on', 'stripes-seamless');
+      clearTimeout(fandomSeamlessTimer);
+    }
+    if (s === 3) {
+      fandom.querySelectorAll('.fandom-stage-3 video').forEach(v => {
+        try {
+          v.currentTime = 0;
+          const p = v.play();
+          if (p && typeof p.catch === 'function') p.catch(() => {});
+        } catch (_) { /* ignore */ }
+      });
+    }
+  }
+  // Stage 4 has sub-steps that reveal dangal then pc before the slide moves on.
+  const fandomStage4 = fandom ? fandom.querySelector('.fandom-stage-4') : null;
+  const FANDOM_STAGE4_MAX_SUBSTEP = 2;
+  function fandomStage4Sub() {
+    return fandomStage4 ? parseInt(fandomStage4.getAttribute('data-substep') || '0', 10) : 0;
+  }
+  function fandomStage4SetSub(n) {
+    if (fandomStage4) fandomStage4.setAttribute('data-substep', String(n));
+  }
+  function fandomAdvance() {
+    if (!fandom || !fandom.classList.contains('is-current')) return false;
+    if (fandomStage === 4 && fandomStage4Sub() < FANDOM_STAGE4_MAX_SUBSTEP) {
+      fandomStage4SetSub(fandomStage4Sub() + 1);
+      return true;
+    }
+    if (fandomStage < 5) { fandomSetStage(fandomStage + 1); return true; }
+    return false;
+  }
+  function fandomRetreat() {
+    if (!fandom || !fandom.classList.contains('is-current')) return false;
+    if (fandomStage === 4 && fandomStage4Sub() > 0) {
+      fandomStage4SetSub(fandomStage4Sub() - 1);
+      return true;
+    }
+    if (fandomStage > 1) {
+      fandomSetStage(fandomStage - 1);
+      // Re-entering stage 4 from stripes/whatever: reset sub-steps if we're not yet on 4.
+      if (fandomStage !== 4) fandomStage4SetSub(0);
       return true;
     }
     return false;
@@ -8970,8 +10132,61 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
   const effortHighlight    = makePhaseWalker('slideEffortHighlight', 4);
   // Highlight phases on slide 11.9 ("What changed in my dataviz process?"):
   // run AFTER all reveal steps are done. Phase 1 brings in the legend; phases
-  // 2/3/4 highlight Only human → Human+AI → AI in turn.
-  const effortSimpleHL     = makePhaseWalker('slideEffortSimple', 4);
+  // 2/3/4 highlight Only human → Human+AI → AI in turn. Phase 5 brings the
+  // whole After AI bar back to full color and reveals the Data / Visualisation
+  // / Design brackets underneath it. Phase 6 shrinks the After AI bar +
+  // brackets up to the top-of-slide position so it morphs into the persistent
+  // section-marker that follows on the next slides.
+  const effortSimpleHL     = makePhaseWalker('slideEffortSimple', 6);
+  // Measure the natural After AI row position and compute the morph
+  // transform to land exactly on the persistent section-marker's coordinates
+  // (top:10, left:60, right:60). We measure as soon as the slide becomes
+  // current — BEFORE phase 6 is entered — so the CSS variable is already
+  // set when the transform kicks in.
+  (() => {
+    const slide = document.getElementById('slideEffortSimple');
+    if (!slide) return;
+    function applyMorph() {
+      const row = slide.querySelector('.effort-row.after');
+      if (!row) return;
+      // If the row is mid-morph, briefly drop the data-phase class so
+      // measurements come from the natural untransformed layout.
+      const wasPhase6 = slide.dataset.phase === '6';
+      if (wasPhase6) row.style.transform = 'none';
+      // Force layout
+      void row.offsetWidth;
+      const slideRect = slide.getBoundingClientRect();
+      const scale = slideRect.width / slide.offsetWidth || 1;
+      const rowRect = row.getBoundingClientRect();
+      const rowLeftLocal = (rowRect.left - slideRect.left) / scale;
+      const rowTopLocal  = (rowRect.top  - slideRect.top)  / scale;
+      const rowWidthLocal = rowRect.width / scale;
+      const dx = 60 - rowLeftLocal;
+      const dy = 10 - rowTopLocal;
+      const targetWidth = slide.offsetWidth - 120;
+      const scaleX = targetWidth / rowWidthLocal;
+      slide.style.setProperty('--morph-dx', dx.toFixed(2) + 'px');
+      slide.style.setProperty('--morph-dy', dy.toFixed(2) + 'px');
+      slide.style.setProperty('--morph-sx', scaleX.toFixed(4));
+      if (wasPhase6) row.style.transform = '';
+    }
+    // Measure on slide-current and on resize so the values are set before
+    // phase 6 is ever reached.
+    if (typeof Reveal !== 'undefined' && Reveal.on) {
+      Reveal.on('slidechanged', e => {
+        if (e.currentSlide === slide) {
+          // Defer one frame so layout is finalised.
+          requestAnimationFrame(applyMorph);
+        }
+      });
+    }
+    window.addEventListener('resize', () => {
+      if (slide.classList.contains('is-current')) applyMorph();
+    });
+    // First measurement after initial load.
+    if (document.readyState === 'complete') requestAnimationFrame(applyMorph);
+    else window.addEventListener('load', () => requestAnimationFrame(applyMorph));
+  })();
   // Vertical sibling slide: phases 1–4 mirror the horizontal (legend +
   // only-human/human+AI/AI highlight). Phase 5 shrinks the After AI bar;
   // phase 6 grows it back tall and shows the rhetorical question.
@@ -9039,7 +10254,7 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
   const dkWalker  = makePhaseWalker('slideDunningKruger', 7);
   function dkAdvance() { return dkWalker.advance(); }
   function dkRetreat() { return dkWalker.retreat(); }
-  const spiralWalker = makePhaseWalker('slideSpiral', 2);
+  const spiralWalker = makePhaseWalker('slideSpiral', 8);
   function spiralAdvance() { return spiralWalker.advance(); }
   function spiralRetreat() { return spiralWalker.retreat(); }
 
@@ -9411,10 +10626,13 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
   function showSlide(i) {
     slides.forEach((s, idx) => s.classList.toggle('is-current', idx === i));
     current = i;
+    // Reset fandom slide stage whenever we leave it, so re-entering starts fresh.
+    if (fandom && slides[i] !== fandom) fandomSetStage(1);
     fitCurrent();
   }
   function next() {
     if (bollyAdvance()) return;
+    if (fandomAdvance()) return;
     if (chatAdvance()) return;
     if (chatBigAdvance()) return;
     if (helloAdvance()) return;
@@ -9432,6 +10650,7 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
   }
   function prev() {
     if (bollyRetreat()) return;
+    if (fandomRetreat()) return;
     if (chatRetreat()) return;
     if (chatBigRetreat()) return;
     if (helloRetreat()) return;
@@ -9491,6 +10710,71 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
     slide.appendChild(right);
   });
 
+  // Inject the Data / Visualisation / Design section marker bar on every
+  // slide between slideDataAI and slideWatchOut (inclusive). Picks the
+  // highlighted segment from the slide id range — switches at slideVisualsAI
+  // and slideStoriesAI.
+  (() => {
+    const SECTION_BOUNDARIES = [
+      { startId: 'slideDataAI',    section: 'data'    },
+      { startId: 'slideVisualsAI', section: 'visuals' },
+      { startId: 'slideStoriesAI', section: 'design'  },
+    ];
+    // Stop injecting the marker when we hit slideWatchOut — "Things I worry
+    // about" and the slides after it (Thanks) should not show the top bar.
+    const STOP_ID = 'slideWatchOut';
+    const slides = Array.from(document.querySelectorAll('section.slide'));
+    let active = null;
+    for (const slide of slides) {
+      if (slide.id === STOP_ID) break;
+      const switchTo = SECTION_BOUNDARIES.find(b => b.startId === slide.id);
+      if (switchTo) active = switchTo.section;
+      if (!active) continue;
+      slide.classList.add('has-section-marker');
+      const marker = document.createElement('div');
+      marker.className = 'section-marker';
+      marker.setAttribute('data-current', active);
+      marker.setAttribute('aria-hidden', 'true');
+      marker.innerHTML = [
+        // Thin replica of the After AI bar — same --w values as the full bar.
+        // The Visualisation segment is split into two cells like the source:
+        //   Make 50 charts (AI, ~33% of the 23-unit Viz block = 8)
+        //   Choose chart type (only-human, ~67% = 15)
+        '<div class="sm-bar">',
+          '<span class="sm-seg striped w-only-human" style="--w:6"></span>',
+          '<span class="sm-seg w-human"      style="--w:5"></span>',
+          '<span class="sm-seg w-human"      style="--w:9"></span>',
+          '<span class="sm-seg w-only-human" style="--w:16"></span>',
+          '<span class="sm-seg w-human"      style="--w:5"></span>',
+          '<span class="sm-seg w-ai"         style="--w:8"></span>',
+          '<span class="sm-seg w-only-human" style="--w:15"></span>',
+          '<span class="sm-seg w-human"      style="--w:30"></span>',
+          '<span class="sm-seg w-ai"         style="--w:6"></span>',
+          '<span class="sm-seg w-only-human" style="--w:5"></span>',
+        '</div>',
+        // Brackets row — Idea is a left spacer; Data/Viz/Design span the rest.
+        // Each bracket carries two labels: the bracket name (Data / etc.) and
+        // the section's defining equation (Web ≠ Dataset / etc.).
+        '<div class="sm-brackets">',
+          '<span class="sm-spacer" style="--w:6"></span>',
+          '<span class="sm-bracket" data-key="data" style="--w:30">',
+            '<span class="sm-label">Data</span>',
+            '<span class="sm-sub">Web <span class="sm-neq">≠</span> <span class="sm-it">Dataset</span></span>',
+          '</span>',
+          '<span class="sm-bracket" data-key="visuals" style="--w:28">',
+            '<span class="sm-label">Visualisation</span>',
+            '<span class="sm-sub">50 charts <span class="sm-neq">≠</span> <span class="sm-it">story</span></span>',
+          '</span>',
+          '<span class="sm-bracket" data-key="design" style="--w:41">',
+            '<span class="sm-label">Design &amp; development</span>',
+            '<span class="sm-sub">Interface <span class="sm-neq">≠</span> <span class="sm-it">Experience</span></span>',
+          '</span>',
+        '</div>',
+      ].join('');
+      slide.appendChild(marker);
+    }
+  })();
+
   // Inject an <aside class="notes"> on every slide so the speaker view
   // always has a notes pane. Empty notes are fine — fill them in by editing
   // the HTML, e.g. <aside class="notes">your note here</aside>.
@@ -9509,19 +10793,20 @@ For each movie in my input [year, movie], I want you to respond with a comma sep
 
   // Map of slide id → { advance, retreat, steps }.
   const walkerRegistry = {
-    'slideBolly':               { adv: bollyAdvance,   ret: bollyRetreat,   steps: 1 },
+    'slideBolly':               { adv: () => false,    ret: () => false,    steps: 0 },
+    'slideFandom':              { adv: fandomAdvance,  ret: fandomRetreat,  steps: 6 },
     'slideChatBig':             { adv: chatBigAdvance, ret: chatBigRetreat, steps: document.querySelectorAll('#slideChatBig .reveal-item').length },
     'slideHello':               { adv: helloAdvance,   ret: helloRetreat,   steps: 6 },
     'slideUnlock':              { adv: unlockAdvance,  ret: unlockRetreat,  steps: document.querySelectorAll('#slideUnlock .ur-item').length + 2 },
     'slideDunningKruger':       { adv: dkAdvance,      ret: dkRetreat,      steps: 7 },
-    'slideSpiral':              { adv: spiralAdvance,  ret: spiralRetreat,  steps: 2 },
+    'slideSpiral':              { adv: spiralAdvance,  ret: spiralRetreat,  steps: 8 },
     'slideMemorable':           { adv: memorableAdvance, ret: memorableRetreat, steps: memorableWalker.stepCount || 6 },
     'slideWatchOut':            { adv: watchAdvance, ret: watchRetreat, steps: watchWalker.stepCount || 5 },
     'slideEffort':              { adv: () => effortMain.advance(),    ret: () => effortMain.retreat(),    steps: 22 },
     'slideEffortDiscipline':    { adv: () => effortDisc.advance(),    ret: () => effortDisc.retreat(),    steps: 22 },
     'slideEffortSimple':        { adv: () => effortSimple.advance() || effortSimpleHL.advance(),
                                     ret: () => effortSimpleHL.retreat() || effortSimple.retreat(),
-                                    steps: 20 },
+                                    steps: 22 },
     'slideEffortVertical':      { adv: () => effortVertical.advance(),ret: () => effortVertical.retreat(),steps: effortVertical.stepCount || 12 },
     'slideEffortVert':          { adv: () => effortVert.advance() || effortVertHL.advance(),
                                     ret: () => effortVertHL.retreat() || effortVert.retreat(),
